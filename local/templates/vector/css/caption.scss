@@ -1,0 +1,14 @@
+@import "./../scss/style";
+section {
+	&.caption {
+		background: $red;
+		.container {
+			h2 {
+				text-align: center;
+				width: 100%;
+				color: $white;
+				text-transform: uppercase;
+			}
+		}
+	}
+}

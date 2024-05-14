@@ -1,0 +1,29 @@
+@import "./../scss/style";
+section {
+	&.section__link {
+		margin: 20px 0;
+		.container {
+			-webkit-box-pack: center;
+			    -ms-flex-pack: center;
+			        justify-content: center;
+			a {
+				text-align: center;
+				@include default-transition();
+				@include btn();
+				@include btn-color-default($red);
+				text-decoration: none;
+				width: -webkit-max-content;
+				width: -moz-max-content;
+				width: max-content;
+				-ms-flex-item-align: start;
+				    -ms-grid-row-align: start;
+				    align-self: start;
+				font-size: 16px;
+				font-weight: 700;
+				&:hover {
+					@include btn-color-default($black);
+				}
+			}
+		}
+	}
+}

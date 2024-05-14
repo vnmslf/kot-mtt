@@ -1,0 +1,53 @@
+/* colors*/
+/* breakpoints*/
+/* 480   small*/
+/* 768   medium*/
+/* 992   xmedium*/
+/* 1024  large*/
+/* 1280  xlarge*/
+/* 1440  xxlarge*/
+/* 1920  big*/
+/* buttons mixins*/
+/* links*/
+/* flex mixes*/
+/* default transitions */
+section.section__link {
+  margin: 20px 0; }
+  section.section__link .container {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    section.section__link .container a {
+      text-align: center;
+      -webkit-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+      display: inline-block;
+      border-radius: 6px;
+      -webkit-transition: 0.3s;
+      transition: 0.3s;
+      cursor: pointer;
+      border-width: 1px;
+      border-style: solid;
+      padding: 0.8em;
+      text-decoration: none;
+      line-height: 1.25;
+      font-weight: 500;
+      font-size: 16px;
+      /*@include btn();*/
+      background-color: #ca4e5d;
+      border-color: #ca4e5d;
+      color: white;
+      text-decoration: none;
+      width: -webkit-max-content;
+      width: -moz-max-content;
+      width: max-content;
+      -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+      font-size: 16px;
+      font-weight: 700; }
+      section.section__link .container a:hover {
+        /*@include btn();*/
+        background-color: #000;
+        border-color: #000;
+        color: white; }

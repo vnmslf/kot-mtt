@@ -1,0 +1,76 @@
+/* colors*/
+/* breakpoints*/
+/* 480   small*/
+/* 768   medium*/
+/* 992   xmedium*/
+/* 1024  large*/
+/* 1280  xlarge*/
+/* 1440  xxlarge*/
+/* 1920  big*/
+/* buttons mixins*/
+/* links*/
+/* flex mixes*/
+/* default transitions */
+.modal {
+  display: none;
+  position: fixed;
+  height: 100%;
+  visibility: hidden;
+  width: 100%;
+  z-index: 5;
+  -webkit-transform: translate(0, 100%);
+  transform: translate(0, 100%);
+  -webkit-transition: all .5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
+  .modal.opened {
+    display: block;
+    visibility: visible;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0); }
+  .modal.modal__portfolio {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    z-index: 20; }
+    .modal.modal__portfolio .modal__close {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      font-size: 30px;
+      line-height: 30px;
+      width: 30px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+    .modal.modal__portfolio .portfolio__item {
+      width: 95%;
+      height: 95%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .modal.modal__portfolio .portfolio__item img {
+        max-width: 100%;
+        max-height: 100%; }
