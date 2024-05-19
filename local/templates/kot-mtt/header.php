@@ -3,6 +3,7 @@ use Bitrix\Main\Page\Asset;
 CJSCore::Init(array('jquery'));
 Asset::getInstance()->addJs(SITE_TEMPLATE_PATH.'/js/main.min.js');
 Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/main__styles.min.css');
+Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/header.min.css');
 $now_url = ((!empty($_SERVER['HTTPS'])) ? 'https' : 'http').'://'.$_SERVER['HTTP_HOST'].'/';?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
@@ -34,6 +35,12 @@ $now_url = ((!empty($_SERVER['HTTPS'])) ? 'https' : 'http').'://'.$_SERVER['HTTP
 <body>
 	<div id="panel"><?$APPLICATION->ShowPanel();?></div>
 	<header>
+		<div class="container">
+			<a class="logo" href="/">
+				<img src="<?=SITE_TEMPLATE_PATH?>/images/logo.svg" alt="КОТ-МТТ, логотип" />
+				<span>Школа Покера</span>
+			</a>
+			<div class="actions">
 <?$APPLICATION->IncludeComponent(
 	'bitrix:menu',
 	'header_menu',
@@ -49,12 +56,12 @@ $now_url = ((!empty($_SERVER['HTTPS'])) ? 'https' : 'http').'://'.$_SERVER['HTTP
 		'MENU_CACHE_TYPE' => 'A',
 		'MENU_CACHE_USE_GROUPS' => 'Y',
 		'MENU_THEME' => 'blue',
-		'ROOT_MENU_TYPE' => 'header__all',
+		'ROOT_MENU_TYPE' => 'top',
 		'USE_EXT' => 'Y',
 	),
 	false
 );?>
-<?$APPLICATION->IncludeComponent(
+<?/*$APPLICATION->IncludeComponent(
 	'bitrix:main.include',
 	'',
 	Array(
@@ -68,5 +75,7 @@ $now_url = ((!empty($_SERVER['HTTPS'])) ? 'https' : 'http').'://'.$_SERVER['HTTP
 		'BUTTON_TEXT' => 'Задать вопрос',
 		'MODAL_BUTTON_TEXT' => 'Задать вопрос',
 	)
-);?>
+);*/?>
+			</div>
+		</div>
 	</header>

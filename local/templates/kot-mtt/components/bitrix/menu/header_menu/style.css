@@ -1,0 +1,46 @@
+/* colors*/
+/* breakpoints*/
+/* 480   small*/
+/* 768   medium*/
+/* 992   xmedium*/
+/* 1024  large*/
+/* 1280  xlarge*/
+/* 1440  xxlarge*/
+/* 1920  big*/
+/* buttons mixins*/
+/* links*/
+/* flex mixes*/
+/* default transitions */
+/* shadows */
+.menu__block .menu__button {
+  position: relative;
+  z-index: 2;
+  background: radial-gradient(#360508, #810507);
+  display: inline-flex;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer; }
+  .menu__block .menu__button .close__menu {
+    display: none; }
+.menu__block .header__menu {
+  display: none; }
+.menu__block.open .menu__button .open__menu {
+  display: none; }
+.menu__block.open .menu__button .close__menu {
+  display: block; }
+.menu__block.open .header__menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  position: fixed;
+  z-index: 1;
+  background: #0f0f15;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+
+/*# sourceMappingURL=style.css.map */

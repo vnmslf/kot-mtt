@@ -16,7 +16,8 @@
   font-family: "TacticSans";
   src: url("./../fonts/TacticSans/TacticSans-Thn.ttf") format("truetype");
   font-weight: 100;
-  font-style: normal; }
+  font-style: normal;
+  font-size: 44px; }
 @font-face {
   font-family: "TacticSans";
   src: url("./../fonts/TacticSans/TacticSans-ThnIt.ttf") format("truetype");
@@ -97,8 +98,6 @@ body {
   background-color: #000;
   font-family: "TacticSans", sans-serif;
   font-size: 16px;
-  margin: 0;
-  padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 

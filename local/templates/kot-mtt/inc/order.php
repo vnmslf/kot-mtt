@@ -10,7 +10,7 @@ $button_color = ($arParams['BUTTON_COLOR'] !== '' ? ' '.$arParams['BUTTON_COLOR'
 $button_text = $arParams['BUTTON_TEXT'];
 $modal_button_text = $arParams['MODAL_BUTTON_TEXT'];?>
 <<?=$tag?> class="order<?if($arParams['BG_COLOR']) {?> <?=$arParams['BG_COLOR']?><?}?>">
-	<div class="container">
+	<div class="order__container">
 		<div class="order__block">
 			<div class="actions__block">
 				<span class="button<?=$button_color?>" data-order="<?=$prefix?>-order"><?=$button_text?></span>

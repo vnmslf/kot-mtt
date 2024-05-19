@@ -1,0 +1,38 @@
+/* colors*/
+/* breakpoints*/
+/* 480   small*/
+/* 768   medium*/
+/* 992   xmedium*/
+/* 1024  large*/
+/* 1280  xlarge*/
+/* 1440  xxlarge*/
+/* 1920  big*/
+/* buttons mixins*/
+/* links*/
+/* flex mixes*/
+/* default transitions */
+/* shadows */
+header {
+  padding: 8px 0;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  width: 100%;
+  background: rgba(15, 15, 21, 0.5); }
+  header .container {
+    justify-content: space-between; }
+    header .container .logo {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 14px; }
+      header .container .logo span {
+        font-weight: 400;
+        max-width: 70px; }
+    header .container .actions {
+      position: relative;
+      z-index: 1; }
+
+/*# sourceMappingURL=header.css.map */

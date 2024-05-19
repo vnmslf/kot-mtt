@@ -1,0 +1,45 @@
+@import "./../../../../scss/style";
+.menu__block {
+	.menu__button {
+		position: relative;
+		z-index: 2;
+		background: radial-gradient($grad_one_red, $grad_two_red);
+		display: inline-flex;
+		padding: 10px;
+		border-radius: 4px;
+		cursor: pointer;
+		.open__menu {
+		}
+		.close__menu {
+			display: none;
+		}
+	}
+	.header__menu {
+		display: none;
+	}
+	&.open {
+		.menu__button {
+			.open__menu {
+				display: none;
+			}
+			.close__menu {
+				display: block;
+			}
+		}
+		.header__menu {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			padding: 0;
+			margin: 0;
+			position: fixed;
+			z-index: 1;
+			background: $dark_gray;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+		}
+	}
+}
