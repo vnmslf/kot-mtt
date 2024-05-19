@@ -1,17 +1,5 @@
 /* colors*/
 /* breakpoints*/
-/* 480   small*/
-/* 768   medium*/
-/* 992   xmedium*/
-/* 1024  large*/
-/* 1280  xlarge*/
-/* 1440  xxlarge*/
-/* 1920  big*/
-/* buttons mixins*/
-/* links*/
-/* flex mixes*/
-/* default transitions */
-/* shadows */
 header {
   padding: 8px 0;
   position: fixed;
@@ -33,6 +21,6 @@ header {
         max-width: 70px; }
     header .container .actions {
       position: relative;
-      z-index: 1; }
+      z-index: 2; }
 
 /*# sourceMappingURL=header.css.map */

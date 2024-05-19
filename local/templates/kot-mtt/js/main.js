@@ -1,9 +1,3 @@
-$(document).ready(function() {
-	var body = $('body'),
-		header = $('header');
-	body.css('padding-top', header.outerHeight());
-
-})
 $(document).on('click', '.menu__button', function() {
 	var menu__block = $(this).parents('.menu__block');
 	if(menu__block.hasClass('open')) {
@@ -11,4 +5,12 @@ $(document).on('click', '.menu__button', function() {
 	} else {
 		$(this).parents('.menu__block').addClass('open');
 	}
+})
+$(document).on('click', '.order__btn', function() {
+	var modal = $('.modal');
+	modal.addClass('open');
+})
+$('body').on('click', '.modal__close', function() {
+	console.log('lol');
+	$(this).parents('.modal').removeClass('open');
 })
