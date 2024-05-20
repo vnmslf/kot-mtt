@@ -1,4 +1,65 @@
 @import "./../scss/style";
-.order__container {
-
+form {
+	width: calc(100% - 40px);
+	.form-section {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		.form-group {
+			display: flex;
+			flex-direction: column;
+			gap: 2px;
+			label {
+				font-weight: 500;
+				font-size: 14px;
+				line-height: 17px; 
+				span {
+					color: $light_red;
+				}
+			}
+			input {
+				padding: 10px;
+				background: $gray;
+				border-radius: 4px;
+				border: 0;
+				font-weight: 400;
+				font-size: 18px;
+				line-height: 22px; 
+			}
+		}
+		.form-submit {
+			button {
+				@include default_btn($accent_red, $dark_red);
+				width: 100%;
+				color: $white;
+				font-weight: 500;
+				font-size: 14px;
+				line-height: 17px;
+			}
+		}
+	}
+}
+::-webkit-input-placeholder {
+	color: $dark_white;
+	opacity: 1;
+}
+:-moz-placeholder {
+	color: $dark_white;
+	opacity: 1;
+}
+::-moz-placeholder {
+	color: $dark_white;
+	opacity: 1;
+}
+:-ms-input-placeholder {
+	color: $dark_white;
+	opacity: 1;
+}
+::-ms-input-placeholder {
+	color: $dark_white;
+	opacity: 1;
+}
+::placeholder {
+	color: $dark_white;
+	opacity: 1;
 }

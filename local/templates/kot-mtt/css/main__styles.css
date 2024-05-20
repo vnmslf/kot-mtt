@@ -1,17 +1,5 @@
 /* colors*/
 /* breakpoints*/
-/* 480   small*/
-/* 768   medium*/
-/* 992   xmedium*/
-/* 1024  large*/
-/* 1280  xlarge*/
-/* 1440  xxlarge*/
-/* 1920  big*/
-/* buttons mixins*/
-/* links*/
-/* flex mixes*/
-/* default transitions */
-/* shadows */
 @font-face {
   font-family: "TacticSans";
   src: url("./../fonts/TacticSans/TacticSans-Thn.ttf") format("truetype");
@@ -204,5 +192,8 @@ pre {
     .container {
       padding: 0;
       width: 1216px; } }
+
+.d-none {
+  display: none; }
 
 /*# sourceMappingURL=main__styles.css.map */

@@ -68,8 +68,6 @@
 			.order__btn {
 				margin-top: 29px;
 				@include default_btn($accent_red, $dark_red);
-				width: calc(100% - 32px);
-				text-align: center;
 			}
 		}
 	}

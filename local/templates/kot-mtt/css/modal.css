@@ -29,6 +29,11 @@
       cursor: pointer;
       padding: 10px;
       border-radius: 4px; }
+  .modal .caption {
+    margin: 60px auto 6px;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px; }
   .modal.open {
     transform: translateY(0%); }
 

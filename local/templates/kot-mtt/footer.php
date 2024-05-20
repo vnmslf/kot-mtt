@@ -29,7 +29,17 @@
 				</svg>
 			</div>
 		</div>
-		*form*
+		<div class="caption">Вступай к котам</div>
+<?$APPLICATION->IncludeComponent(
+	'bitrix:main.include',
+	'',
+	Array(
+		'AREA_FILE_SHOW' => 'file',
+		'PATH' => SITE_TEMPLATE_PATH.'/inc/order.php',
+		'PREFIX' => 'header',
+		'MODAL_BUTTON_TEXT' => 'Отправить заявку'
+	)
+);?>
 	</div>
 </body>
 </html>
