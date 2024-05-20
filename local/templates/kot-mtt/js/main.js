@@ -10,6 +10,10 @@ $(document).on('click', '.order__btn', function() {
 	var modal = $('.modal');
 	modal.addClass('open');
 })
+$(document).on('click', '.modal__close', function() {
+	var modal = $('.modal');
+	modal.removeClass('open');
+})
 $('body').on('click', '.modal__close', function() {
 	console.log('lol');
 	$(this).parents('.modal').removeClass('open');
