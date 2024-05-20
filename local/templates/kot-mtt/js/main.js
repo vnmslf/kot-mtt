@@ -14,7 +14,3 @@ $(document).on('click', '.modal__close', function() {
 	var modal = $('.modal');
 	modal.removeClass('open');
 })
-$('body').on('click', '.modal__close', function() {
-	console.log('lol');
-	$(this).parents('.modal').removeClass('open');
-})
