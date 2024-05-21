@@ -40,6 +40,18 @@ form {
       font-weight: 500;
       font-size: 14px;
       line-height: 17px; }
+    form .form-section .form-submit .checkbox__block {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-top: 13px; }
+      form .form-section .form-submit .checkbox__block label {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 14px; }
+        form .form-section .form-submit .checkbox__block label a {
+          color: #db6868;
+          text-decoration: underline; }
 
 ::-webkit-input-placeholder {
   color: #d1d1d1;

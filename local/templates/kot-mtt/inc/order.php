@@ -16,8 +16,10 @@ $modal_button_text = $arParams['MODAL_BUTTON_TEXT'];?>
 		</div>
 		<div class="form-submit">
 			<button type="submit" name="<?=$prefix?>-submit"><?=$modal_button_text?></button>
-			<input type="checkbox" name="checkbox" id="checkbox" class="required" value="" />
-			<label for="checkbox">Согласен на <a href="/">обработку персональных данных</a></label>
+			<div class="checkbox__block">
+				<input type="checkbox" name="checkbox" id="checkbox" class="required" value="" />
+				<label for="checkbox">Согласен на <a href="/">обработку персональных данных</a></label>
+			</div>
 		</div>
 		<input type="hidden" name="prefix" value="<?=$prefix?>-">
 		<input type="hidden" name="autoresponder" value="true">
