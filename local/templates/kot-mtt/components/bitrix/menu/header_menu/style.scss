@@ -8,7 +8,7 @@
 		@include default_icon($grad_one_red, $grad_two_red);
 	}
 	.header__menu {
-		display: flex;
+		display: none;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
@@ -31,43 +31,110 @@
 			display: flex;
 			justify-content: space-between;
 		}
+		ul {
+			margin: 0;
+			padding: 0;
+			display: flex;
+			flex-direction: column;
+			list-style: none;
+			gap: 36px;
+			li {
+				a {
+					font-weight: 500;
+					font-size: 24px;
+					color: #fff;
+				}
+			}
+		}
+		.social__links {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			gap: 31px;
+			.link {
+				@include default_icon($grad_one_red, $grad_two_red);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+		}
+		.order__btn {
+			margin-top: 29px;
+			@include default_btn($accent_red, $dark_red);
+			.zero-up {
+				display: inline-block;
+			}
+			.medium-up {
+				display: none;
+			}
+		}
 	}
 	&.open {
 		.menu__button {
 		}
 		.header__menu {
+			display: flex;
 			@include default-transition();
 			transform: translateY(0%);
 			ul {
-				margin: 0;
-				padding: 0;
-				display: flex;
-				flex-direction: column;
-				list-style: none;
-				gap: 36px;
 				li {
 					a {
-						font-weight: 500;
-						font-size: 24px;
-						color: #fff;
 					}
 				}
 			}
 			.social__links {
-				display: flex;
-				flex-direction: row;
-				justify-content: space-between;
-				gap: 31px;
 				.link {
-					@include default_icon($grad_one_red, $grad_two_red);
-					display: flex;
-					justify-content: center;
-					align-items: center;
 				}
 			}
 			.order__btn {
-				margin-top: 29px;
-				@include default_btn($accent_red, $dark_red);
+			}
+		}
+	}
+	@include media-up(medium) {
+		.menu__button {
+			display: none;
+		}
+		.header__menu {
+			position: relative;
+			transform: translateY(0);
+			display: flex;
+			flex-direction: row;
+			gap: 40px;
+			background: transparent;
+			.actions {
+				display: none;
+			}
+			ul {
+				flex-direction: row;
+				gap: 36px;
+				order: 1;
+				li {
+					a {
+						font-size: 16px;
+					}
+				}
+			}
+			.social__links {
+				order: 3;
+				.link {
+				}
+			}
+			.order__btn {
+				order: 2;
+				background: transparent;
+				border: none;
+				margin: 0;
+				padding: 0;
+				width: unset;
+				font-weight: 500;
+				border-bottom: 1px solid $white;
+				border-radius: 0;
+				.zero-up {
+					display: none;
+				}
+				.medium-up {
+					display: inline-block;
+				}
 			}
 		}
 	}

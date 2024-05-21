@@ -110,10 +110,10 @@ img {
 	height: auto;
 }
 h1, h2, h3, h4, h5, h6 {
-	color: $black;
+	color: $white;
 	font-family: "TacticSans", sans-serif;
-	font-weight: 700;
-	margin: 20px 0;
+	margin: 0;
+	font-weight: 500;
 }
 h1 {
 	font-size: 40px;
@@ -204,8 +204,17 @@ pre {
 	margin: 0 auto;
 	padding: 0 16px;
 	@include media-up(medium) {
+		max-width: 752px;
+	}
+	@include media-up(xmedium) {
 		padding: 0;
-		width: 1216px;
+		max-width: 960px;
+	}
+	@include media-up(large) {
+		max-width: 1000px;
+	}
+	@include media-up(xlarge) {
+		max-width: 1216px;
 	}
 }
 .d-none {

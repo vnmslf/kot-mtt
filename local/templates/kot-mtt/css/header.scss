@@ -5,7 +5,17 @@ header {
 	z-index: 2;
 	top: 0;
 	width: 100%;
-	background: rgba($dark_gray, .5);
+	&:before {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba($dark_gray, .5);
+		backdrop-filter: blur(15.3px);
+	}
 	.container {
 		justify-content: space-between;
 		.logo {
@@ -23,6 +33,24 @@ header {
 		.actions {
 			position: relative;
 			z-index: 2;
+		}
+	}
+	& + main {
+		padding-top: 60px;
+	}
+	@include media-up(xsmall) {
+		&:before {
+		}
+		.container {
+			.logo {
+				span {
+				}
+			}
+			.actions {
+			}
+		}
+		& + main {
+			padding-top: 57px;
 		}
 	}
 }

@@ -95,10 +95,10 @@ img {
   height: auto; }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #000;
+  color: #fff;
   font-family: "TacticSans", sans-serif;
-  font-weight: 700;
-  margin: 20px 0; }
+  margin: 0;
+  font-weight: 500; }
 
 h1 {
   font-size: 40px;
@@ -190,8 +190,17 @@ pre {
   padding: 0 16px; }
   @media (min-width: 768px) {
     .container {
+      max-width: 752px; } }
+  @media (min-width: 992px) {
+    .container {
       padding: 0;
-      width: 1216px; } }
+      max-width: 960px; } }
+  @media (min-width: 1024px) {
+    .container {
+      max-width: 1000px; } }
+  @media (min-width: 1280px) {
+    .container {
+      max-width: 1216px; } }
 
 .d-none {
   display: none; }

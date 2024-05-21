@@ -81,3 +81,4 @@ $now_url = ((!empty($_SERVER['HTTPS'])) ? 'https' : 'http').'://'.$_SERVER['HTTP
 			</div>
 		</div>
 	</header>
+	<main>

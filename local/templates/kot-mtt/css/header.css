@@ -5,8 +5,17 @@ header {
   position: fixed;
   z-index: 2;
   top: 0;
-  width: 100%;
-  background: rgba(15, 15, 21, 0.5); }
+  width: 100%; }
+  header:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 15, 21, 0.5);
+    backdrop-filter: blur(15.3px); }
   header .container {
     justify-content: space-between; }
     header .container .logo {
@@ -22,5 +31,10 @@ header {
     header .container .actions {
       position: relative;
       z-index: 2; }
+  header + main {
+    padding-top: 60px; }
+  @media (min-width: 600px) {
+    header + main {
+      padding-top: 57px; } }
 
 /*# sourceMappingURL=header.css.map */
