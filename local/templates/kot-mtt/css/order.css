@@ -26,32 +26,64 @@ form {
         font-weight: 400;
         font-size: 18px;
         line-height: 22px; }
-    form .form-section .form-submit button {
-      background: linear-gradient(90deg, #ff1414, #620606);
-      border: 1px solid #ff1414;
-      border-radius: 4px;
-      padding: 16px 0;
-      cursor: pointer;
-      width: calc(100% - 32px);
-      text-align: center;
-      font-family: inherit;
-      width: 100%;
-      color: #fff;
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 17px; }
-    form .form-section .form-submit .checkbox__block {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      margin-top: 13px; }
-      form .form-section .form-submit .checkbox__block label {
-        font-weight: 400;
+    form .form-section .form-submit {
+      position: relative; }
+      form .form-section .form-submit button {
+        background: linear-gradient(90deg, #ff1414, #620606);
+        border: 1px solid #ff1414;
+        border-radius: 4px;
+        padding: 16px 0;
+        cursor: pointer;
+        width: calc(100% - 32px);
+        text-align: center;
+        font-family: inherit;
+        width: 100%;
+        color: #fff;
+        font-weight: 500;
         font-size: 14px;
-        line-height: 14px; }
-        form .form-section .form-submit .checkbox__block label a {
-          color: #db6868;
-          text-decoration: underline; }
+        line-height: 17px; }
+      form .form-section .form-submit .no-submit {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1; }
+      form .form-section .form-submit .checkbox__block {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 6px;
+        margin-top: 13px;
+        position: relative;
+        z-index: 2; }
+        form .form-section .form-submit .checkbox__block input {
+          margin: 0;
+          opacity: 0; }
+        form .form-section .form-submit .checkbox__block label {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 14px;
+          position: relative;
+          z-index: 1; }
+          form .form-section .form-submit .checkbox__block label .check {
+            content: '';
+            position: absolute;
+            z-index: 2;
+            top: 50%;
+            left: -6px;
+            border-radius: 4px;
+            padding: 3px;
+            background: #fff;
+            transform: translate(-100%, -50%); }
+          form .form-section .form-submit .checkbox__block label a {
+            color: #db6868;
+            text-decoration: underline; }
+  form.active .form-section .form-submit .no-submit {
+    z-index: -1; }
+  form.active .form-section .form-submit .checkbox__block label .check {
+    background: #ff1414; }
 
 ::-webkit-input-placeholder {
   color: #d1d1d1;
