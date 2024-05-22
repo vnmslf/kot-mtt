@@ -55,6 +55,13 @@
       display: flex;
       justify-content: center;
       align-items: center; }
+      .menu__block .header__menu .social__links .link svg path {
+        -webkit-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out; }
+      .menu__block .header__menu .social__links .link:hover {
+        background: #fff; }
+        .menu__block .header__menu .social__links .link:hover svg path {
+          fill: #ff1414; }
   .menu__block .header__menu .order__btn {
     margin-top: 29px;
     background: linear-gradient(90deg, #ff1414, #620606);

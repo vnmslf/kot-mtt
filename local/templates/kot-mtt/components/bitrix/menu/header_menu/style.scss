@@ -23,7 +23,7 @@
 		right: 0;
 		bottom: 0;
 		transform: translateY(-100%);
-		@include default-transition();
+		@include default_transition();
 		.actions {
 			position: absolute;
 			top: 8px;
@@ -56,6 +56,19 @@
 				display: flex;
 				justify-content: center;
 				align-items: center;
+				svg {
+					path {
+						@include default_transition();
+					}
+				}
+				&:hover {
+					background: $white;
+					svg {
+						path {
+							fill: $accent_red;
+						}
+					}
+				}
 			}
 		}
 		.order__btn {
@@ -74,7 +87,7 @@
 		}
 		.header__menu {
 			display: flex;
-			@include default-transition();
+			@include default_transition();
 			transform: translateY(0%);
 			ul {
 				li {
