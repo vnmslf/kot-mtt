@@ -1,0 +1,35 @@
+@import "./../../../../scss/style";
+section.hero {
+	position: relative;
+	top: -64px;
+	padding-top: 348px;
+	overflow: hidden;
+	picture {
+		display: block;
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 50%;
+		width: 713px;
+		transform: translateX(-50%);
+		@include media-up(medium) {
+		}
+	}
+	.container {
+		.info {
+			.caption {
+				font-weight: 400;
+				font-size: 24px;
+				text-transform: uppercase;
+			}
+			h1 {
+			}
+			ul {
+				list-style: none;
+				li {
+					background: green;
+				}
+			}
+		}
+	}
+}

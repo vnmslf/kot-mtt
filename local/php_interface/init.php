@@ -419,6 +419,85 @@ function make_picture_height($input, $height_input) {
 	$output = $input['PP'];
 	return $output;
 }
+function make_picture_width($input, $width_input = false) {
+	$width = [
+		'mobile' => [
+			'start' => '0',
+			'end' => '320',
+		],
+		'md-mobile' => [
+			'start' => '321',
+			'end' => '353',
+		],
+		'lg-mobile' => [
+			'start' => '354',
+			'end' => '414',
+		],
+		'xl-mobile' => [
+			'start' => '415',
+			'end' => '630',
+		],
+		'tablet' => [
+			'start' => '631',
+			'end' => '698',
+		],
+		'md-tablet' => [
+			'start' => '699',
+			'end' => '767',
+		],
+		'lg-tablet' => [
+			'start' => '768',
+			'end' => '779',
+		],
+		'xl-tablet' => [
+			'start' => '780',
+			'end' => '1023',
+		],
+		'desktop' => [
+			'start' => '1024',
+			'end' => '1069',
+		],
+		'md-desktop' => [
+			'start' => '1070',
+			'end' => '1199',
+		],
+		'lg-desktop' => [
+			'start' => '1200',
+			'end' => '1319',
+		],
+		'xl-desktop' => [
+			'start' => '1320',
+			'end' => 'max',
+		],
+	];
+	if($width_input) {
+		$width = $width_input;
+	}
+	$height = [
+		'mobile' => $width['mobile']['end'] * $input['HEIGHT'] / $input['WIDTH'],
+		'md-mobile' => $width['md-mobile']['end'] * $input['HEIGHT'] / $input['WIDTH'],
+		'lg-mobile' => $width['lg-mobile']['end'] * $input['HEIGHT'] / $input['WIDTH'],
+		'xl-mobile' => $width['xl-mobile']['end'] * $input['HEIGHT'] / $input['WIDTH'],
+		'tablet' => $width['tablet']['end'] * $input['HEIGHT'] / $input['WIDTH'],
+		'md-tablet' => $width['md-tablet']['end'] * $input['HEIGHT'] / $input['WIDTH'],
+		'lg-tablet' => $width['lg-tablet']['end'] * $input['HEIGHT'] / $input['WIDTH'],
+		'xl-tablet' => $width['xl-tablet']['end'] * $input['HEIGHT'] / $input['WIDTH'],
+		'desktop' => $width['desktop']['end'] * $input['HEIGHT'] / $input['WIDTH'],
+		'md-desktop' => $width['md-desktop']['end'] * $input['HEIGHT'] / $input['WIDTH'],
+		'lg-desktop' => $width['lg-desktop']['end'] * $input['HEIGHT'] / $input['WIDTH'],
+		'xl-desktop' => ($height_input['xl-desktop'] !== '' ? $height_input['xl-desktop'] : $input['HEIGHT']),
+	];
+	foreach ($width as $key => $value) {
+		if($key == 'xl-desktop') {
+			$input['PP'][$value['start'].'-'.$value['end']] = CFile::ResizeImageGet($input, array('width' => $input['WIDTH'], 'height' => $height[$key]), BX_RESIZE_IMAGE_EXACT, true);
+		} else {
+			$input['PP'][$value['start'].'-'.$value['end']] = CFile::ResizeImageGet($input, array('width' => $width[$key]['end'], 'height' => $height[$key]), BX_RESIZE_IMAGE_EXACT, true);
+		}
+	}
+	$input['PP']['default'] = $input['SRC'];
+	$output = $input['PP'];
+	return $output;
+}
 function calculateReadingTime($text, $wordsPerMinute = 50) {
 	$words = str_word_count(strip_tags($text));
 	$readingTime = ceil($words / $wordsPerMinute);
