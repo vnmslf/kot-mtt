@@ -44,7 +44,8 @@ $APPLICATION->SetTitle('');?>
 		'PROPERTY_CODE' => array(
 			0 => 'HERO_CAPTION',
 			1 => 'HERO_H1',
-			2 => 'HERO_LIST'
+			2 => 'HERO_LIST',
+			3 => 'ADVANTAGES'
 		),
 		'SET_BROWSER_TITLE' => 'N',
 		'SET_CANONICAL_URL' => 'N',
