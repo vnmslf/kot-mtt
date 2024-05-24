@@ -27,14 +27,10 @@ header {
       gap: 14px; }
       header .container .logo span {
         font-weight: 400;
-        max-width: 70px; }
+        max-width: 70px;
+        font-family: "TacticSans", sans-serif; }
     header .container .actions {
       position: relative;
       z-index: 2; }
-  header + main {
-    padding-top: 60px; }
-  @media (min-width: 600px) {
-    header + main {
-      padding-top: 57px; } }
 
 /*# sourceMappingURL=header.css.map */

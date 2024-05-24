@@ -1,7 +1,8 @@
 /* colors*/
 /* breakpoints*/
 footer {
-  position: relative; }
+  position: relative;
+  font-family: "TacticSans", sans-serif; }
   footer .background {
     display: block;
     position: absolute;

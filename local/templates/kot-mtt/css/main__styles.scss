@@ -49,13 +49,13 @@
 }
 @font-face {
 	font-family: "TacticSans";
-	src: url("./../fonts/TacticSans/TacticSans-Bld.ttf") format("truetype");
+	src: url("./../fonts/TacticSans/TacticSans-Med.ttf") format("truetype");
 	font-weight: 500;
 	font-style: normal;
 }
 @font-face {
 	font-family: "TacticSans";
-	src: url("./../fonts/TacticSans/TacticSans-BldIt.ttf") format("truetype");
+	src: url("./../fonts/TacticSans/TacticSans-MedIt.ttf") format("truetype");
 	font-weight: 500;
 	font-style: italic;
 }
@@ -98,7 +98,7 @@
 body {
 	color: $white;
 	background-color: $black;
-	font-family: "TacticSans", sans-serif;
+	font-family: "Inter", sans-serif;
 	font-size: 16px;
 	margin: 0;
 	padding: 0;

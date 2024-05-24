@@ -42,6 +42,7 @@
 				a {
 					font-weight: 500;
 					font-size: 24px;
+					font-family: "TacticSans", sans-serif;
 					color: #fff;
 				}
 			}
@@ -74,6 +75,7 @@
 		.order__btn {
 			margin-top: 29px;
 			@include default_btn($accent_red, $dark_red);
+			font-family: "TacticSans", sans-serif;
 			.zero-up {
 				display: inline-block;
 			}

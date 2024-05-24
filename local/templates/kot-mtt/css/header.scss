@@ -28,15 +28,13 @@ header {
 			span {
 				font-weight: 400;
 				max-width: 70px;
+				font-family: "TacticSans", sans-serif;
 			}
 		}
 		.actions {
 			position: relative;
 			z-index: 2;
 		}
-	}
-	& + main {
-		padding-top: 60px;
 	}
 	@include media-up(xsmall) {
 		&:before {
@@ -48,9 +46,6 @@ header {
 			}
 			.actions {
 			}
-		}
-		& + main {
-			padding-top: 57px;
 		}
 	}
 }
