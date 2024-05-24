@@ -80,6 +80,21 @@ section.hero {
 			transform: none;
 			left: unset;
 			right: 0;
+			&:before {
+				content: '';
+				position: absolute;
+				z-index: 1;
+				top: 0;
+				left: -50%;
+				right: -50%;
+				bottom: 0;
+				background-image: url('../../../../images/hero__plus.svg');
+				background-repeat: repeat;
+			}
+			img {
+				position: relative;
+				z-index: 1;
+			}
 			&:after {
 			}
 		}
@@ -87,17 +102,29 @@ section.hero {
 		}
 		.container {
 			.info {
+				margin-top: 112px;
 				.caption {
 				}
 				h1 {
+					display: inline-block;
+					max-width: 641px;
+					margin-top: 6px;
+					text-indent: -2px;
 				}
 				ul {
+					margin-top: 30px;
 					li {
 						svg {
 						}
 					}
 				}
 				.order__btn {
+					margin-top: 60px;
+					width: unset;
+					padding: 16px 24px;
+					display: inline-block;
+					font-size: 18px;
+					line-height: 21px;
 				}
 			}
 		}

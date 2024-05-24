@@ -73,6 +73,35 @@ section.hero {
         width: unset;
         transform: none;
         left: unset;
-        right: 0; } }
+        right: 0; }
+        section.hero picture:before {
+          content: '';
+          position: absolute;
+          z-index: 1;
+          top: 0;
+          left: -50%;
+          right: -50%;
+          bottom: 0;
+          background-image: url("../../../../images/hero__plus.svg");
+          background-repeat: repeat; }
+        section.hero picture img {
+          position: relative;
+          z-index: 1; }
+      section.hero .container .info {
+        margin-top: 112px; }
+        section.hero .container .info h1 {
+          display: inline-block;
+          max-width: 641px;
+          margin-top: 6px;
+          text-indent: -2px; }
+        section.hero .container .info ul {
+          margin-top: 30px; }
+        section.hero .container .info .order__btn {
+          margin-top: 60px;
+          width: unset;
+          padding: 16px 24px;
+          display: inline-block;
+          font-size: 18px;
+          line-height: 21px; } }
 
 /*# sourceMappingURL=style.css.map */
