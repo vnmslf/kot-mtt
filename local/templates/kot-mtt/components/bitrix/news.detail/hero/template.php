@@ -39,5 +39,13 @@ $this->setFrameMode(true);?>
 			</ul>
 			<div class="order__btn">Оставить заявку в команду</div>
 		</div>
+		<div class="advantages">
+<?foreach ($arResult['ADVANTAGES'] as $key => $value) {?>
+			<div class="advantage__block">
+				<div class="caption"><?=$value['CAPTION']?></div>
+				<div class="text"><?=$value['TEXT']?></div>
+			</div>
+<?}?>
+		</div>
 	</div>
 </section>

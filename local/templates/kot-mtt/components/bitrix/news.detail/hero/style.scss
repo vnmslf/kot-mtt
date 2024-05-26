@@ -29,10 +29,12 @@ section.hero {
 		top: 120px;
 		left: 0;
 		right: 0;
-		bottom: 120px;
+		bottom: calc(100% - 870px);
 		background: linear-gradient(rgba($footer_grad, 0), rgba($footer_grad, .42), rgba($footer_grad, 0));
 	}
 	.container {
+		flex-direction: column;
+		gap: 29px;
 		.info {
 			.caption {
 				font-weight: 400;
@@ -71,25 +73,58 @@ section.hero {
 				margin-top: 26px;
 			}
 		}
+		.advantages {
+			background: $advantages;
+			padding: 22px 20px;
+			display: flex;
+			flex-direction: column;
+			gap: 25px;
+			border-radius: 20px;
+			position: relative;
+			z-index: 1;
+			overflow: hidden;
+			&:before {
+				content: '';
+				position: absolute;
+				z-index: -1;
+				width: 377px;
+				height: 377px;
+				top: 35px;
+				left: 50%;
+				transform: translate(-50%, -100%);
+				border-radius: 100%;
+				background: rgba($footer_grad, .5);
+				filter: blur(120px);
+			}
+			.advantage__block {
+				display: flex;
+				flex-direction: column;
+				gap: 6px;
+				.caption {
+					font-weight: 500;
+					font-size: 16px;
+					font-family: "TacticSans", sans-serif;
+					color: $white;
+				}
+				.text {
+					font-weight: 400;
+					font-size: 14px;
+					line-height: 20px;
+					color: $light_gray;
+				}
+			}
+		}
 	}
 	@include media-up(medium) {
 		top: 0;
 		padding-top: 0;
+		overflow: unset;
 		picture {
 			width: unset;
 			transform: none;
 			left: unset;
 			right: 0;
 			&:before {
-				content: '';
-				position: absolute;
-				z-index: 1;
-				top: 0;
-				left: -50%;
-				right: -50%;
-				bottom: 0;
-				background-image: url('../../../../images/hero__plus.svg');
-				background-repeat: repeat;
 			}
 			img {
 				position: relative;
@@ -98,7 +133,21 @@ section.hero {
 			&:after {
 			}
 		}
+		&:before {
+			content: '';
+			position: absolute;
+			z-index: -2;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-image: url('../../../../images/hero__plus.svg');
+			background-repeat: repeat;
+		}
 		&:after {
+			top: 0;
+			bottom: 0;
+			background: linear-gradient(355deg, rgba($footer_grad, .42), rgba($footer_grad, 0));
 		}
 		.container {
 			.info {
@@ -125,6 +174,29 @@ section.hero {
 					display: inline-block;
 					font-size: 18px;
 					line-height: 21px;
+				}
+			}
+			.advantages {
+				flex-direction: row;
+				flex-wrap: wrap;
+				padding: 48px 72px;
+				transform: translateY(50%);
+				gap: 80px 25px;
+				&:before {
+					width: 583px;
+					height: 583px;
+					top: 130px;
+				}
+				.advantage__block {
+					flex: 0 0 calc(33% - 14px);
+					.caption {
+						font-size: 18px;
+					}
+					.text {
+						font-size: 16px;
+						line-height: 22px;
+						color: $white;
+					}
 				}
 			}
 		}

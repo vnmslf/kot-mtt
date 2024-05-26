@@ -58,5 +58,5 @@ foreach ($arResult['PROPERTIES']['ADVANTAGES']['VALUE'] as $key => $value) {
 		$arResult['ADVANTAGES'][$key]['TEXT'] = $arEl['PREVIEW_TEXT'];
 	}
 }
-pre($arResult['ADVANTAGES']);
+//pre($arResult['ADVANTAGES']);
 ?>
