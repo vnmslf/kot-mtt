@@ -117,8 +117,8 @@ section.hero {
 	}
 	@include media-up(medium) {
 		top: 0;
-		margin-bottom: 180px;
 		padding-top: 0;
+		margin-bottom: 180px;
 		overflow: unset;
 		picture {
 			width: unset;
