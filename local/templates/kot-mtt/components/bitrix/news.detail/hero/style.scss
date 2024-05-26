@@ -117,6 +117,7 @@ section.hero {
 	}
 	@include media-up(medium) {
 		top: 0;
+		margin-bottom: 180px;
 		padding-top: 0;
 		overflow: unset;
 		picture {
@@ -124,6 +125,9 @@ section.hero {
 			transform: none;
 			left: unset;
 			right: 0;
+			max-height: 850px;
+			overflow: hidden;
+			border-radius: 0 0 60px 0;
 			&:before {
 			}
 			img {
@@ -143,11 +147,13 @@ section.hero {
 			bottom: 0;
 			background-image: url('../../../../images/hero__plus.svg');
 			background-repeat: repeat;
+			border-radius: 0 0 60px 60px;
 		}
 		&:after {
 			top: 0;
 			bottom: 0;
 			background: linear-gradient(355deg, rgba($footer_grad, .42), rgba($footer_grad, 0));
+			border-radius: 0 0 60px 60px;
 		}
 		.container {
 			.info {
@@ -186,6 +192,17 @@ section.hero {
 					width: 583px;
 					height: 583px;
 					top: 130px;
+				}
+				&:after {
+					content: '';
+					position: absolute;
+					z-index: 2;
+					height: 1px;
+					width: calc(100% - 144px);
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					background: rgba($white, .2);
 				}
 				.advantage__block {
 					flex: 0 0 calc(33% - 14px);

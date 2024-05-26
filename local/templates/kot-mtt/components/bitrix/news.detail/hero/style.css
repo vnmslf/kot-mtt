@@ -107,13 +107,17 @@ section.hero {
   @media (min-width: 768px) {
     section.hero {
       top: 0;
+      margin-bottom: 180px;
       padding-top: 0;
       overflow: unset; }
       section.hero picture {
         width: unset;
         transform: none;
         left: unset;
-        right: 0; }
+        right: 0;
+        max-height: 850px;
+        overflow: hidden;
+        border-radius: 0 0 60px 0; }
         section.hero picture img {
           position: relative;
           z-index: 1; }
@@ -126,11 +130,13 @@ section.hero {
         right: 0;
         bottom: 0;
         background-image: url("../../../../images/hero__plus.svg");
-        background-repeat: repeat; }
+        background-repeat: repeat;
+        border-radius: 0 0 60px 60px; }
       section.hero:after {
         top: 0;
         bottom: 0;
-        background: linear-gradient(355deg, rgba(181, 0, 0, 0.42), rgba(181, 0, 0, 0)); }
+        background: linear-gradient(355deg, rgba(181, 0, 0, 0.42), rgba(181, 0, 0, 0));
+        border-radius: 0 0 60px 60px; }
       section.hero .container .info {
         margin-top: 112px; }
         section.hero .container .info h1 {
@@ -157,6 +163,16 @@ section.hero {
           width: 583px;
           height: 583px;
           top: 130px; }
+        section.hero .container .advantages:after {
+          content: '';
+          position: absolute;
+          z-index: 2;
+          height: 1px;
+          width: calc(100% - 144px);
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background: rgba(255, 255, 255, 0.2); }
         section.hero .container .advantages .advantage__block {
           flex: 0 0 calc(33% - 14px); }
           section.hero .container .advantages .advantage__block .caption {
