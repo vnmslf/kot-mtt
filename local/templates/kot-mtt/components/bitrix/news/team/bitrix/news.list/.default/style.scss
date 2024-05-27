@@ -1,1 +1,14 @@
 @import "./../../../../../../../scss/style";
+section.team {
+	margin-top: 100px;
+	.container {
+		.founders__block {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			h2 {
+				text-align: center;
+			}
+		}
+	}
+}

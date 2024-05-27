@@ -108,7 +108,7 @@ section.hero {
     section.hero {
       top: 0;
       padding-top: 0;
-      margin-bottom: 180px;
+      margin-bottom: 170px;
       overflow: unset; }
       section.hero picture {
         width: unset;
@@ -121,6 +121,8 @@ section.hero {
         section.hero picture img {
           position: relative;
           z-index: 1; }
+        section.hero picture:after {
+          background: unset; }
       section.hero:before {
         content: '';
         position: absolute;

@@ -118,7 +118,7 @@ section.hero {
 	@include media-up(medium) {
 		top: 0;
 		padding-top: 0;
-		margin-bottom: 180px;
+		margin-bottom: 170px;
 		overflow: unset;
 		picture {
 			width: unset;
@@ -135,6 +135,7 @@ section.hero {
 				z-index: 1;
 			}
 			&:after {
+				background: unset;
 			}
 		}
 		&:before {

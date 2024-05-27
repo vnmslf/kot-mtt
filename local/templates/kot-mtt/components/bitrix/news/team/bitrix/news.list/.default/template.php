@@ -15,6 +15,7 @@ $this->setFrameMode(true);
 <section class="team">
 	<div class="container">
 		<div class="founders__block">
+			<h2>Основатели</h2>
 <?foreach ($arResult['ITEMS'] as $key => $value) {?>
 			<div class="founder">
 				<?=$value['NAME']?>
@@ -23,4 +24,4 @@ $this->setFrameMode(true);
 		</div>
 	</div>
 </section>
-<?pre($arResult['ITEMS'])?>
+<?//pre($arResult['ITEMS'])?>
