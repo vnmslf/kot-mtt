@@ -40,6 +40,28 @@ $this->setFrameMode(true);
 				<p><?=$arItem['PREVIEW_TEXT']?></p>
 			</div>
 <?}?>
+			<svg width="895" height="1031" viewBox="0 0 895 1031" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<g opacity="0.5">
+					<g filter="url(#filter0_f_820_369)">
+						<ellipse cx="447.5" cy="515.5" rx="291.5" ry="359.5" fill="#B50000" fill-opacity="0.5" />
+					</g>
+					<g style="mix-blend-mode:color-dodge" filter="url(#filter1_f_820_369)">
+						<circle cx="468.5" cy="445.5" r="144.5" fill="#B50000" fill-opacity="0.3" />
+					</g>
+				</g>
+				<defs>
+					<filter id="filter0_f_820_369" x="0.800003" y="0.800003" width="893.4" height="1029.4" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+						<feFlood flood-opacity="0" result="BackgroundImageFix" />
+						<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+						<feGaussianBlur stdDeviation="77.6" result="effect1_foregroundBlur_820_369" />
+					</filter>
+					<filter id="filter1_f_820_369" x="209.7" y="186.7" width="517.6" height="517.6" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+						<feFlood flood-opacity="0" result="BackgroundImageFix" />
+						<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+						<feGaussianBlur stdDeviation="57.15" result="effect1_foregroundBlur_820_369" />
+					</filter>
+				</defs>
+			</svg>
 		</div>
 	</div>
 </section>
