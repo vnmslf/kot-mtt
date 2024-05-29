@@ -1,0 +1,152 @@
+@import "./../../../../scss/style";
+section.with {
+	padding-top: 100px;
+	.container {
+		flex-direction: column;
+		h2 {
+			text-align: center;
+			width: 100%;
+		}
+		.picture__block {
+			display: flex;
+			picture {
+				display: block;
+				source {
+				}
+				img {
+				}
+			}
+		}
+		.with__block {
+			display: flex;
+			flex-direction: column;
+			gap: 40px;
+			position: relative;
+			padding: 25px 20px;
+			border-radius: 40px;
+			background: rgba($advantages, .2);
+			transform: translateY(-120px);
+			margin-bottom: -120px;
+			&:before {
+				content: '';
+				position: absolute;
+				inset: 0;
+				border-radius: 40px; 
+				padding: 1px; 
+				background:linear-gradient(28deg, rgba($white, 0), rgba($white, 1), rgba($white, 0), rgba($white, .56), rgba($white, .48), rgba($white, .56)); 
+				-webkit-mask: 
+				linear-gradient(#fff 0 0) content-box, 
+				linear-gradient(#fff 0 0);
+				-webkit-mask-composite: xor;
+				mask-composite: exclude;
+			}
+			.block {
+				display: flex;
+				flex-direction: row;
+				gap: 6px;
+				.point {
+					svg {
+						path {
+						}
+					}
+				}
+				.text {
+					display: flex;
+					flex-direction: column;
+					gap: 6px;
+					h5 {
+						font-size: 16px;
+					}
+					p {
+						margin: 0;
+						font-weight: 400;
+						font-size: 14px;
+						line-height: 21px;
+						color: $light_gray;
+					}
+				}
+			}
+		}
+		.with__mini,
+		.with__maxi {
+			display: none;
+		}
+	}
+	@include media-up(medium) {
+		padding-top: 150px;
+		.container {
+			flex-direction: row;
+			flex-wrap: wrap;
+			gap: 50px 0;
+			position: relative;
+			h2 {
+				text-align: left;
+				width: 100%;
+			}
+			.picture__block {
+				position: absolute;
+				right: 0;
+				top: -10px;
+				z-index: 1;
+				picture {
+					max-width: 656px;
+					source {
+					}
+					img {
+					}
+				}
+			}
+			.with__block {
+				transform: translateY(0);
+				margin-bottom: 0;
+				flex-direction: column;
+				flex: 0 0 652px;
+				position: relative;
+				z-index: 2;
+				height: max-content;
+				order: 1;
+				padding: 40px;
+				gap: 40px;
+				&:before {
+				}
+				.block {
+					.point {
+						svg {
+							path {
+							}
+						}
+					}
+					.text {
+						gap: 16px;
+						h5 {
+							font-size: 24px;
+						}
+						p {
+							font-size: 18px;
+						}
+					}
+				}
+			}
+			.with__mini {
+				display: block;
+				position: absolute;
+				z-index: -1;
+				top: 15%;
+				left: 60%;
+				width: 289px;
+				height: 289px;
+				transform: translateX(-50%);
+			}
+			.with__maxi {
+				display: block;
+				position: absolute;
+				z-index: -2;
+				top: -5%;
+				left: 60%;
+				width: 583px;
+				height: 719px;
+				transform: translateX(-50%);
+			}
+		}
+	}
+}

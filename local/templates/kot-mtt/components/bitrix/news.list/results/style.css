@@ -1,7 +1,8 @@
 /* colors*/
 /* breakpoints*/
 section.results {
-  padding-top: 100px; }
+  padding-top: 100px;
+  overflow: hidden; }
   section.results .container {
     flex-direction: column;
     gap: 37px; }
@@ -74,8 +75,7 @@ section.results {
         height: 527px; }
   @media (min-width: 768px) {
     section.results {
-      padding-top: 150px;
-      overflow: hidden; }
+      padding-top: 150px; }
       section.results .container {
         flex-direction: row;
         flex-wrap: wrap;

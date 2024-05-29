@@ -1,6 +1,7 @@
 @import "./../../../../scss/style";
 section.results {
 	padding-top: 100px;
+	overflow: hidden;
 	.container {
 		flex-direction: column;
 		gap: 37px;
@@ -91,7 +92,6 @@ section.results {
 	}
 	@include media-up(medium) {
 		padding-top: 150px;
-		overflow: hidden;
 		.container {
 			flex-direction: row;
 			flex-wrap: wrap;
