@@ -1,72 +1,96 @@
-@import "./../../../../../../../scss/style";
-section.team {
+@import "./../../../../scss/style";
+section.courses {
 	padding-top: 100px;
 	.container {
-		.founders__block {
+		flex-direction: column;
+		gap: 30px;
+		h2 {
+			text-align: center;
+		}
+		.courses__block {
 			display: flex;
 			flex-direction: column;
-			gap: 50px;
-			width: 100%;
-			h2 {
-				text-align: center;
-			}
-			.founder {
-				display: flex;
-				flex-direction: column;
-				gap: 20px;
-				picture {
+			gap: 20px;
+			.course {
+				position: relative;
+				padding: 0 20px 52px;
+				&:before {
+					content: '';
+					position: absolute;
+					z-index: -1;
+					top: 89px;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					border-radius: 20px;
+					background: rgba($advantages, .3);
+				}
+				&:after {
+					content: '';
+					position: absolute;
+					top: 89px;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					border-radius: 20px;
+					padding: 1px; 
+					background:linear-gradient(28deg, rgba($white, 0), rgba($white, 1), rgba($white, 0), rgba($white, .56), rgba($white, .48), rgba($white, .56)); 
+					-webkit-mask: 
+					linear-gradient(#fff 0 0) content-box, 
+					linear-gradient(#fff 0 0);
+					-webkit-mask-composite: xor;
+					mask-composite: exclude;
+				}
+				.pictures {
+					display: flex;
+					justify-content: center;
+					picture {
+						&.pp {
+							position: absolute;
+							z-index: 2;
+							opacity: 0;
+							top: 0;
+							left: 50%;
+							transform: translateX(-50%);
+							source {
+							}
+							img {
+							}
+						}
+						&.dp {
+							position: relative;
+							z-index: 1;
+							source {
+							}
+							img {
+							}
+						}
+					}
 				}
 				.info {
 					display: flex;
 					flex-direction: column;
-					gap: 25px;
-					max-width: 509px;
+					gap: 12px;
 					h3 {
 					}
-					ul {
-						list-style: none;
-						margin: 0;
-						padding: 0;
-						display: flex;
-						flex-direction: column;
-						gap: 12px;
-						li {
-							display: flex;
-							flex-direction: row;
-							gap: 4px;
-							font-size: 18px;
-							line-height: 25px;
-							font-weight: 400;
-							color: $light_gray;
-							svg {
-								min-width: 19px;
-								margin-top: 3px;
-							}
-						}
+					.text {
+						line-height: 22px;
+						color: $light_gray;
 					}
-					.social {
-						display: flex;
-						flex-direction: row;
-						gap: 12px;
-						.link {
-							@include default_icon($grad_one_red, $grad_two_red);
-							display: flex;
-							justify-content: center;
-							align-items: center;
-							svg {
-								path {
-									@include default_transition();
-								}
-							}
-							&:hover {
-								background: $white;
-								svg {
-									path {
-										fill: $accent_red;
-									}
-								}
-							}
-						}
+				}
+				.more__btn {
+					position: relative;
+					z-index: 1;
+					a {
+						@include default_btn($accent_red, $dark_red);
+						display: block;
+						width: 100%;
+						color: $white;
+						font-weight: 500;
+						font-size: 14px;
+						line-height: 17px;
+						font-family: "TacticSans", sans-serif;
+						margin-top: 19px;
 					}
 				}
 			}
@@ -75,52 +99,50 @@ section.team {
 	@include media-up(medium) {
 		padding-top: 150px;
 		.container {
-			.founders__block {
-				gap: 10px;
-				h2 {
-					text-align: left;
-				}
-				.founder {
-					flex-direction: row;
-					align-items: center;
-					gap: 70px;
-					picture {
-						order: 1;
-						min-width: 430px;
+			h2 {
+				text-align: left;
+			}
+			.courses__block {
+				flex-direction: row;
+				align-items: stretch;
+				gap: 32px;
+				.course {
+					flex: 0 0 calc(33% - 78px);
+					display: flex;
+					flex-direction: column;
+					padding: 0 30px 40px;
+					.pictures {
+						picture {
+							&.pp {
+								opacity: 1;
+								source {
+								}
+								img {
+								}
+							}
+							&.dp {
+								source {
+								}
+								img {
+								}
+							}
+						}
 					}
 					.info {
-						order: 2;
+						margin-top: -20px;
 						h3 {
 						}
-						ul {
-							li {
-								svg {
-								}
-							}
-						}
-						.social {
-							.link {
-								svg {
-									path {
-									}
-								}
-								&:hover {
-									svg {
-										path {
-										}
-									}
-								}
-							}
+						.text {
+							padding-right: 41px;
 						}
 					}
-					&:nth-child(2n + 1) {
-						justify-content: flex-end;
-						picture {
-							order: 2;
+					.more__btn {
+						a {
 						}
-						.info {
-							order: 1;
-						}
+					}
+					&:nth-child(2n) {
+						margin-top: 49px;
+						margin-bottom: -49px;
 					}
 				}
 			}
