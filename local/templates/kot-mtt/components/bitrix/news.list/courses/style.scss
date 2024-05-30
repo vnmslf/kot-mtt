@@ -113,14 +113,18 @@ section.courses {
 					padding: 0 30px 40px;
 					.pictures {
 						picture {
+							@include default_transition();
 							&.pp {
 								opacity: 1;
+								z-index: 2;
 								source {
 								}
 								img {
 								}
 							}
 							&.dp {
+								opacity: 0;
+								z-index: 1;
 								source {
 								}
 								img {
@@ -131,18 +135,63 @@ section.courses {
 					.info {
 						margin-top: -20px;
 						h3 {
+							font-size: 34px;
 						}
 						.text {
-							padding-right: 41px;
+							padding-right: 5px;
+							font-size: 18px;
+							line-height: 25px;
 						}
 					}
 					.more__btn {
+						margin-top: auto;
 						a {
+							@include default_transition();
+							width: max-content;
+							font-size: 18px;
+							line-height: 21px;
+							text-align: center;
+							color: $white;
+							padding: 16px 24px;
+							background: transparent;
 						}
 					}
 					&:nth-child(2n) {
 						margin-top: 49px;
 						margin-bottom: -49px;
+					}
+					&:hover {
+						background: linear-gradient(rgba($footer_grad, 0), rgba($footer_grad, 1));
+						.pictures {
+							picture {
+								&.pp {
+									opacity: 0;
+									source {
+									}
+									img {
+									}
+								}
+								&.dp {
+									opacity: 1;
+									source {
+									}
+									img {
+									}
+								}
+							}
+						}
+						.info {
+							h3 {
+							}
+							.text {
+							}
+						}
+						.more__btn {
+							a {
+								background: $white;
+								color: $accent_red;
+							}
+						}
 					}
 				}
 			}
