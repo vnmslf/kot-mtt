@@ -164,14 +164,14 @@ a {
 	color: $white;
 	outline: 0;
 	text-decoration: none;
-	@include default_transition();
+	@include default_transition(.2s);
 	* {
-		@include default_transition();
+		@include default_transition(.2s);
 	}
 	&:hover {
 		color: $red;
 		text-decoration: none;
-		@include default_transition();
+		@include default_transition(.2s);
 	}
 	&:focus {
 		outline: 0;

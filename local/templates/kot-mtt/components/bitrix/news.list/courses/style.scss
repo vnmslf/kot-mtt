@@ -113,8 +113,10 @@ section.courses {
 					padding: 0 30px 40px;
 					.pictures {
 						picture {
-							@include default_transition();
+							@include default_transition(.5s);
 							&.pp {
+								width: 100%;
+						        text-align: center;
 								opacity: 1;
 								z-index: 2;
 								source {
@@ -123,8 +125,10 @@ section.courses {
 								}
 							}
 							&.dp {
-								opacity: 0;
+								width: 100%;
+						        text-align: center;
 								z-index: 1;
+								opacity: 0;
 								source {
 								}
 								img {
@@ -146,7 +150,7 @@ section.courses {
 					.more__btn {
 						margin-top: auto;
 						a {
-							@include default_transition();
+							@include default_transition(.5s);
 							width: max-content;
 							font-size: 18px;
 							line-height: 21px;
@@ -161,11 +165,13 @@ section.courses {
 						margin-bottom: -49px;
 					}
 					&:hover {
-						background: linear-gradient(rgba($footer_grad, 0), rgba($footer_grad, 1));
+						&:before {
+							background: linear-gradient(rgba($footer_grad, 0), rgba($footer_grad, 1));
+						}
 						.pictures {
 							picture {
 								&.pp {
-									opacity: 0;
+									z-index: 1;
 									source {
 									}
 									img {
@@ -173,6 +179,7 @@ section.courses {
 								}
 								&.dp {
 									opacity: 1;
+									z-index: 2;
 									source {
 									}
 									img {
@@ -190,6 +197,11 @@ section.courses {
 							a {
 								background: $white;
 								color: $accent_red;
+							}
+							&:hover {
+								a {
+									color: $black;
+								}
 							}
 						}
 					}

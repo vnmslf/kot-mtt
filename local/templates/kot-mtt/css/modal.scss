@@ -18,7 +18,7 @@
 	right: 0;
 	transform: translate(-50%, -100%);
 	opacity: 0;
-	@include default_transition();
+	@include default_transition(.2s);
 	.actions {
 		position: absolute;
 		top: 8px;

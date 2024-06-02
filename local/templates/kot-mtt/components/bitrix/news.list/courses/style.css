@@ -91,14 +91,18 @@ section.courses {
           flex-direction: column;
           padding: 0 30px 40px; }
           section.courses .container .courses__block .course .pictures picture {
-            -webkit-transition: all .2s ease-in-out;
-            transition: all .2s ease-in-out; }
+            -webkit-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out; }
             section.courses .container .courses__block .course .pictures picture.pp {
+              width: 100%;
+              text-align: center;
               opacity: 1;
               z-index: 2; }
             section.courses .container .courses__block .course .pictures picture.dp {
-              opacity: 0;
-              z-index: 1; }
+              width: 100%;
+              text-align: center;
+              z-index: 1;
+              opacity: 0; }
           section.courses .container .courses__block .course .info {
             margin-top: -20px; }
             section.courses .container .courses__block .course .info h3 {
@@ -110,8 +114,8 @@ section.courses {
           section.courses .container .courses__block .course .more__btn {
             margin-top: auto; }
             section.courses .container .courses__block .course .more__btn a {
-              -webkit-transition: all .2s ease-in-out;
-              transition: all .2s ease-in-out;
+              -webkit-transition: all 0.5s ease-in-out;
+              transition: all 0.5s ease-in-out;
               width: max-content;
               font-size: 18px;
               line-height: 21px;
@@ -122,14 +126,17 @@ section.courses {
           section.courses .container .courses__block .course:nth-child(2n) {
             margin-top: 49px;
             margin-bottom: -49px; }
-          section.courses .container .courses__block .course:hover {
+          section.courses .container .courses__block .course:hover:before {
             background: linear-gradient(rgba(181, 0, 0, 0), #b50000); }
-            section.courses .container .courses__block .course:hover .pictures picture.pp {
-              opacity: 0; }
-            section.courses .container .courses__block .course:hover .pictures picture.dp {
-              opacity: 1; }
-            section.courses .container .courses__block .course:hover .more__btn a {
-              background: #fff;
-              color: #ff1414; } }
+          section.courses .container .courses__block .course:hover .pictures picture.pp {
+            z-index: 1; }
+          section.courses .container .courses__block .course:hover .pictures picture.dp {
+            opacity: 1;
+            z-index: 2; }
+          section.courses .container .courses__block .course:hover .more__btn a {
+            background: #fff;
+            color: #ff1414; }
+          section.courses .container .courses__block .course:hover .more__btn:hover a {
+            color: #000; } }
 
 /*# sourceMappingURL=style.css.map */

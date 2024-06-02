@@ -1,6 +1,6 @@
-@mixin default_transition() {
-	-webkit-transition: all .2s ease-in-out;
-	transition: all .2s ease-in-out;
+@mixin default_transition($time) {
+	-webkit-transition: all $time ease-in-out;
+	transition: all $time ease-in-out;
 }
 @mixin default_icon($one, $two) {
 	background: radial-gradient($one, $two);

@@ -55,7 +55,7 @@ section.team {
 							align-items: center;
 							svg {
 								path {
-									@include default_transition();
+									@include default_transition(.2s);
 								}
 							}
 							&:hover {

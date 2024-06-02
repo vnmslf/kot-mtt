@@ -2,7 +2,8 @@
 /* breakpoints*/
 footer {
   position: relative;
-  font-family: "TacticSans", sans-serif; }
+  font-family: "TacticSans", sans-serif;
+  padding-top: 100px; }
   footer .background {
     display: block;
     position: absolute;
@@ -72,23 +73,25 @@ footer {
       footer .container .last__block a {
         font-size: 12px;
         text-decoration: none; }
-  @media (min-width: 600px) {
-    footer .container .partners {
-      position: relative;
-      gap: 50px; }
-      footer .container .partners > svg {
-        display: block;
-        position: absolute;
-        z-index: -1;
-        top: 0;
-        left: 0;
-        transform: translate(-35%, -50%); }
-      footer .container .partners h2 {
-        text-align: left; }
-      footer .container .partners .list__partners {
-        justify-content: space-between; }
-        footer .container .partners .list__partners .partner:nth-child(1) img, footer .container .partners .list__partners .partner:nth-child(2) img, footer .container .partners .list__partners .partner:nth-child(3) img, footer .container .partners .list__partners .partner:nth-child(4) img, footer .container .partners .list__partners .partner:nth-child(5) img {
-          width: unset;
-          height: unset; } }
+  @media (min-width: 768px) {
+    footer {
+      padding-top: 150px; }
+      footer .container .partners {
+        position: relative;
+        gap: 50px; }
+        footer .container .partners > svg {
+          display: block;
+          position: absolute;
+          z-index: -1;
+          top: 0;
+          left: 0;
+          transform: translate(-35%, -50%); }
+        footer .container .partners h2 {
+          text-align: left; }
+        footer .container .partners .list__partners {
+          justify-content: space-between; }
+          footer .container .partners .list__partners .partner:nth-child(1) img, footer .container .partners .list__partners .partner:nth-child(2) img, footer .container .partners .list__partners .partner:nth-child(3) img, footer .container .partners .list__partners .partner:nth-child(4) img, footer .container .partners .list__partners .partner:nth-child(5) img {
+            width: unset;
+            height: unset; } }
 
 /*# sourceMappingURL=footer.css.map */

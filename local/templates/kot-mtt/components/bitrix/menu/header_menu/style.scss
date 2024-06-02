@@ -23,7 +23,7 @@
 		right: 0;
 		bottom: 0;
 		transform: translateY(-100%);
-		@include default_transition();
+		@include default_transition(.2s);
 		.actions {
 			position: absolute;
 			top: 8px;
@@ -59,7 +59,7 @@
 				align-items: center;
 				svg {
 					path {
-						@include default_transition();
+						@include default_transition(.2s);
 					}
 				}
 				&:hover {
@@ -89,7 +89,7 @@
 		}
 		.header__menu {
 			display: flex;
-			@include default_transition();
+			@include default_transition(.2s);
 			transform: translateY(0%);
 			ul {
 				li {

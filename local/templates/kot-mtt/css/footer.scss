@@ -2,6 +2,7 @@
 footer {
 	position: relative;
 	font-family: "TacticSans", sans-serif;
+	padding-top: 100px;
 	.background {
 		display: block;
 		position: absolute;
@@ -98,7 +99,8 @@ footer {
 			}
 		}
 	}
-	@include media-up(xsmall) {
+	@include media-up(medium) {
+		padding-top: 150px;
 		&:before {
 		}
 		.container {
