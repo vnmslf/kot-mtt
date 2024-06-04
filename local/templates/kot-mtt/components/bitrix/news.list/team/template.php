@@ -16,7 +16,7 @@ $this->setFrameMode(true);
 	<div class="container">
 		<div class="founders__block">
 			<h2>Основатели</h2>
-<?foreach ($arResult['ITEMS'] as $key => $arItem) {?>
+<?foreach ($arResult['FOUNDERS'] as $key => $arItem) {?>
 			<div class="founder">
 				<picture>
 	<?foreach ($arItem['PP'] as $keyMedia => $valueMedia) {
