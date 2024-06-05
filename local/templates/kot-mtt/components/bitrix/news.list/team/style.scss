@@ -17,8 +17,12 @@ section.team {
 				gap: 20px;
 				picture {
 					background: linear-gradient(rgba($footer_grad, 0), rgba($footer_grad, 0), rgba($footer_grad, 1), rgba($footer_grad, 1));
+					transform: skewY(15deg);
+					overflow: hidden;
+					border-radius: 20px;
 					img {
 						display: block;
+						transform: skewY(-15deg) translateY(10%) scale(1.1);
 					}
 				}
 				.info {
@@ -68,6 +72,38 @@ section.team {
 								svg {
 									path {
 										fill: $accent_red;
+									}
+								}
+							}
+						}
+					}
+				}
+				&:nth-child(2n - 1) {
+					picture {
+						transform: skewY(-15deg);
+						img {
+							transform: skewY(15deg) translateY(10%) scale(1.1);
+						}
+					}
+					.info {
+						h3 {
+						}
+						ul {
+							li {
+								svg {
+								}
+							}
+						}
+						.social {
+							.link {
+								svg {
+									path {
+									}
+								}
+								&:hover {
+									svg {
+										path {
+										}
 									}
 								}
 							}

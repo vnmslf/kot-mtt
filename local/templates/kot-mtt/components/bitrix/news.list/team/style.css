@@ -16,9 +16,13 @@ section.team {
         flex-direction: column;
         gap: 20px; }
         section.team .container .founders__block .founder picture {
-          background: linear-gradient(rgba(181, 0, 0, 0), rgba(181, 0, 0, 0), #b50000, #b50000); }
+          background: linear-gradient(rgba(181, 0, 0, 0), rgba(181, 0, 0, 0), #b50000, #b50000);
+          transform: skewY(15deg);
+          overflow: hidden;
+          border-radius: 20px; }
           section.team .container .founders__block .founder picture img {
-            display: block; }
+            display: block;
+            transform: skewY(-15deg) translateY(10%) scale(1.1); }
         section.team .container .founders__block .founder .info {
           display: flex;
           flex-direction: column;
@@ -60,6 +64,10 @@ section.team {
                 background: #fff; }
                 section.team .container .founders__block .founder .info .social .link:hover svg path {
                   fill: #ff1414; }
+        section.team .container .founders__block .founder:nth-child(2n - 1) picture {
+          transform: skewY(-15deg); }
+          section.team .container .founders__block .founder:nth-child(2n - 1) picture img {
+            transform: skewY(15deg) translateY(10%) scale(1.1); }
   @media (min-width: 768px) {
     section.team {
       padding-top: 150px; }
