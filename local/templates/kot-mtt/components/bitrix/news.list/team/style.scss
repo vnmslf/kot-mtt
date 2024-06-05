@@ -1,7 +1,8 @@
-@import "./../../../../../../../scss/style";
+@import "./../../../../scss/style";
 section.team {
 	padding-top: 100px;
 	.container {
+		flex-direction: column;
 		.founders__block {
 			display: flex;
 			flex-direction: column;
@@ -15,6 +16,10 @@ section.team {
 				flex-direction: column;
 				gap: 20px;
 				picture {
+					background: linear-gradient(rgba($footer_grad, 0), rgba($footer_grad, 0), rgba($footer_grad, 1), rgba($footer_grad, 1));
+					img {
+						display: block;
+					}
 				}
 				.info {
 					display: flex;
