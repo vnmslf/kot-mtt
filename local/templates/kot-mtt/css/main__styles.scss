@@ -1,0 +1,222 @@
+@import "./../scss/style";
+@font-face {
+	font-family: "TacticSans";
+	src: url("./../fonts/TacticSans/TacticSans-Thn.ttf") format("truetype");
+	font-weight: 100;
+	font-style: normal;
+}
+@font-face {
+	font-family: "TacticSans";
+	src: url("./../fonts/TacticSans/TacticSans-ThnIt.ttf") format("truetype");
+	font-weight: 100;
+	font-style: italic;
+}
+@font-face {
+	font-family: "TacticSans";
+	src: url("./../fonts/TacticSans/TacticSans-Thn.ttf") format("truetype");
+	font-weight: 200;
+	font-style: normal;
+}
+@font-face {
+	font-family: "TacticSans";
+	src: url("./../fonts/TacticSans/TacticSans-ThnIt.ttf") format("truetype");
+	font-weight: 200;
+	font-style: italic;
+}
+@font-face {
+	font-family: "TacticSans";
+	src: url("./../fonts/TacticSans/TacticSans-Lgt.ttf") format("truetype");
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: "TacticSans";
+	src: url("./../fonts/TacticSans/TacticSans-LgtIt.ttf") format("truetype");
+	font-weight: 300;
+	font-style: italic;
+}
+@font-face {
+	font-family: "TacticSans";
+	src: url("./../fonts/TacticSans/TacticSans-Reg.ttf") format("truetype");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: "TacticSans";
+	src: url("./../fonts/TacticSans/TacticSans-RegIt.ttf") format("truetype");
+	font-weight: 400;
+	font-style: italic;
+}
+@font-face {
+	font-family: "TacticSans";
+	src: url("./../fonts/TacticSans/TacticSans-Med.ttf") format("truetype");
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: "TacticSans";
+	src: url("./../fonts/TacticSans/TacticSans-MedIt.ttf") format("truetype");
+	font-weight: 500;
+	font-style: italic;
+}
+@font-face {
+	font-family: "TacticSans";
+	src: url("./../fonts/TacticSans/TacticSans-Bld.ttf") format("truetype");
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+	font-family: "TacticSans";
+	src: url("./../fonts/TacticSans/TacticSans-BldIt.ttf") format("truetype");
+	font-weight: 600;
+	font-style: italic;
+}
+@font-face {
+	font-family: "TacticSans";
+	src: url("./../fonts/TacticSans/TacticSans-Blk.ttf") format("truetype");
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: "TacticSans";
+	src: url("./../fonts/TacticSans/TacticSans-BlkIt.ttf") format("truetype");
+	font-weight: 700;
+	font-style: italic;
+}
+@font-face {
+	font-family: "TacticSans";
+	src: url("./../fonts/TacticSans/TacticSans-Ult.ttf") format("truetype");
+	font-weight: 800;
+	font-style: normal;
+}
+@font-face {
+	font-family: "TacticSans";
+	src: url("./../fonts/TacticSans/TacticSans-UltIt.ttf") format("truetype");
+	font-weight: 800;
+	font-style: italic;
+}
+body {
+	color: $white;
+	background-color: $dark_gray;
+	font-family: "Inter", sans-serif;
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+h1, h2, h3, h4, h5, h6 {
+	color: $white;
+	font-family: "TacticSans", sans-serif;
+	margin: 0;
+	font-weight: 500;
+}
+h1 {
+	font-size: 40px;
+	line-height: 40px;
+	@include media-up(medium) {
+		font-size: 58px;
+		line-height: 58px;
+	}
+}
+h2 {
+	font-size: 32px;
+	line-height: 38.4px;
+	@include media-up(medium) {
+		font-size: 50px;
+		line-height: 60px;
+	}
+}
+h3 {
+	font-size: 24px;
+	line-height: 28.8px;
+	@include media-up(medium) {
+		font-size: 40px;
+		line-height: 48px;
+	}
+}
+h4 {
+	font-size: 18px;
+	line-height: 24px;
+	@include media-up(medium) {
+		font-size: 20px;
+	}
+}
+h5 {
+	font-size: 16px;
+	line-height: 20px;
+	@include media-up(medium) {
+		font-size: 18px;
+	}
+}
+h6 {
+	font-size: 14px;
+	line-height: 18px;
+	@include media-up(medium) {
+		font-size: 16px;
+	}
+}
+a {
+	color: $white;
+	outline: 0;
+	text-decoration: none;
+	@include default_transition(.2s);
+	* {
+		@include default_transition(.2s);
+	}
+	&:hover {
+		color: $red;
+		text-decoration: none;
+		@include default_transition(.2s);
+	}
+	&:focus {
+		outline: 0;
+	}
+}
+p {
+	font-size: 14px;
+	line-height: 17px;
+	@include media-up(medium) {
+		font-size: 18px;
+		line-height: 21.78px;
+	}
+}
+pre {
+	display: block;
+	padding: 9.5px;
+	margin: 0 0 10px;
+	font-size: 13px;
+	line-height: 1.42857143;
+	color: #333;
+	word-break: break-all;
+	word-wrap: break-word;
+	background-color: #f5f5f5;
+	border: 1px solid #ccc;
+	border-radius: 0;
+}
+.container {
+	display: flex;
+	flex-direction: row;
+	margin: 0 auto;
+	padding: 0 16px;
+	@include media-up(medium) {
+		max-width: 752px;
+	}
+	@include media-up(xmedium) {
+		padding: 0;
+		max-width: 960px;
+	}
+	@include media-up(large) {
+		max-width: 1000px;
+	}
+	@include media-up(xlarge) {
+		max-width: 1216px;
+	}
+}
+.d-none {
+	display: none;
+}

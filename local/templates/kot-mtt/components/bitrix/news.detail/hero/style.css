@@ -1,0 +1,187 @@
+/* colors*/
+/* breakpoints*/
+section.hero {
+  position: relative;
+  padding-top: 348px;
+  overflow: hidden; }
+  section.hero picture {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 50%;
+    width: 713px;
+    transform: translateX(-53%); }
+    section.hero picture:after {
+      content: '';
+      position: absolute;
+      z-index: 0;
+      left: 0;
+      right: 0;
+      bottom: -100px;
+      height: 250px;
+      background: linear-gradient(rgba(15, 15, 21, 0), #0f0f15, #0f0f15, rgba(15, 15, 21, 0)); }
+  section.hero:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 120px;
+    left: 0;
+    right: 0;
+    bottom: calc(100% - 870px);
+    background: linear-gradient(rgba(181, 0, 0, 0), rgba(181, 0, 0, 0.42), rgba(181, 0, 0, 0)); }
+  section.hero .container {
+    flex-direction: column;
+    gap: 29px; }
+    section.hero .container .info .caption {
+      font-weight: 400;
+      font-size: 24px;
+      font-family: "TacticSans", sans-serif;
+      text-transform: uppercase; }
+    section.hero .container .info ul {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      list-style: none;
+      margin: 34px 0 0 0;
+      padding: 0; }
+      section.hero .container .info ul li {
+        display: flex;
+        flex-direction: row;
+        gap: 4px;
+        font-size: 18px;
+        line-height: 25px; }
+        section.hero .container .info ul li svg {
+          min-width: 19px;
+          margin-top: 3px; }
+    section.hero .container .info .order__btn {
+      background: linear-gradient(90deg, #ff1414, #620606);
+      border: 1px solid #ff1414;
+      border-radius: 4px;
+      padding: 16px 0;
+      cursor: pointer;
+      width: calc(100% - 32px);
+      text-align: center;
+      font-family: "TacticSans", sans-serif;
+      width: 100%;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      margin-top: 26px; }
+    section.hero .container .advantages {
+      background: #330c11;
+      padding: 22px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      border-radius: 20px;
+      position: relative;
+      z-index: 1;
+      overflow: hidden; }
+      section.hero .container .advantages:before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        width: 377px;
+        height: 377px;
+        top: 35px;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        border-radius: 100%;
+        background: rgba(181, 0, 0, 0.5);
+        filter: blur(120px); }
+      section.hero .container .advantages .advantage__block {
+        display: flex;
+        flex-direction: column;
+        gap: 6px; }
+        section.hero .container .advantages .advantage__block .caption {
+          font-weight: 500;
+          font-size: 16px;
+          font-family: "TacticSans", sans-serif;
+          color: #fff; }
+        section.hero .container .advantages .advantage__block .text {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 20px;
+          color: #c6c6c6; }
+  @media (min-width: 768px) {
+    section.hero {
+      top: 0;
+      padding-top: 0;
+      margin-bottom: 170px;
+      overflow: unset; }
+      section.hero picture {
+        width: unset;
+        transform: none;
+        left: unset;
+        right: 0;
+        max-height: 850px;
+        overflow: hidden;
+        border-radius: 0 0 60px 0; }
+        section.hero picture img {
+          position: relative;
+          z-index: 1; }
+        section.hero picture:after {
+          background: unset; }
+      section.hero:before {
+        content: '';
+        position: absolute;
+        z-index: -2;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url("../../../../images/hero__plus.svg");
+        background-repeat: repeat;
+        border-radius: 0 0 60px 60px; }
+      section.hero:after {
+        top: 0;
+        bottom: 0;
+        background: linear-gradient(355deg, rgba(181, 0, 0, 0.42), rgba(181, 0, 0, 0));
+        border-radius: 0 0 60px 60px; }
+      section.hero .container .info {
+        margin-top: 112px; }
+        section.hero .container .info h1 {
+          display: inline-block;
+          max-width: 641px;
+          margin-top: 6px;
+          text-indent: -2px; }
+        section.hero .container .info ul {
+          margin-top: 30px; }
+        section.hero .container .info .order__btn {
+          margin-top: 60px;
+          width: unset;
+          padding: 16px 24px;
+          display: inline-block;
+          font-size: 18px;
+          line-height: 21px; }
+      section.hero .container .advantages {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 48px 72px;
+        transform: translateY(50%);
+        gap: 80px 25px; }
+        section.hero .container .advantages:before {
+          width: 583px;
+          height: 583px;
+          top: 130px; }
+        section.hero .container .advantages:after {
+          content: '';
+          position: absolute;
+          z-index: 2;
+          height: 1px;
+          width: calc(100% - 144px);
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background: rgba(255, 255, 255, 0.2); }
+        section.hero .container .advantages .advantage__block {
+          flex: 0 0 calc(33% - 14px); }
+          section.hero .container .advantages .advantage__block .caption {
+            font-size: 18px; }
+          section.hero .container .advantages .advantage__block .text {
+            font-size: 16px;
+            line-height: 22px;
+            color: #fff; } }
+
+/*# sourceMappingURL=style.css.map */

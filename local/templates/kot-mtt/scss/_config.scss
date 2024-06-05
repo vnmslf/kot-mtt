@@ -1,0 +1,31 @@
+/* colors*/
+$accent_red: #ff1414;
+$light_red: #f5222d;
+$red: #ce0d0d;
+$dark_red: #620606;
+$grad_one_red: #360508;
+$grad_two_red: #810507;
+$white: #fff;
+$black: #000;
+$light_gray: #c6c6c6;
+$gray: #282834;
+$dark_gray: #0f0f15;
+$rose: #db6868;
+$dark_white: #d1d1d1;
+$footer_grad: #b50000;
+$advantages: #330c11;
+
+/* breakpoints*/
+$breakpoints: (
+	zero: 0,
+	smallest: 424px,
+	small: 480px,
+	xsmall: 600px,
+	medium: 768px,
+	xmedium: 992px,
+	large: 1024px,
+	xlarge: 1280px,
+	xxlarge: 1440px,
+	prewide: 1880px,
+	wide: 1920px,
+);

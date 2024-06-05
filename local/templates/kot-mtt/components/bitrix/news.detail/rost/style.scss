@@ -1,0 +1,98 @@
+@import "./../../../../scss/style";
+section.rost {
+	padding-top: 100px;
+	.container {
+		.rost__block {
+			padding: 25px 20px;
+			position: relative;
+			background: rgba($advantages, .3);
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			&:after {
+				content: '';
+				position: absolute;
+				z-index: -1;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				border-radius: 20px;
+				padding: 1px; 
+				background:linear-gradient(28deg, rgba($white, 0), rgba($white, 1), rgba($white, 0), rgba($white, .56), rgba($white, .48), rgba($white, .56)); 
+				-webkit-mask: 
+				linear-gradient(#fff 0 0) content-box, 
+				linear-gradient(#fff 0 0);
+				-webkit-mask-composite: xor;
+				mask-composite: exclude;
+			}
+			.info {
+				display: flex;
+				flex-direction: column;
+				h2 {
+					text-align: center;
+					margin-bottom: 12px;
+				}
+				p {
+					font-size: 16px;
+					line-height: 21px;
+					color: $light_gray;
+					margin: 0;
+				}
+				.btn {
+					@include default_btn($accent_red, $dark_red);
+					font-family: "TacticSans", sans-serif;
+					width: 100%;
+					font-weight: 500;
+					font-size: 14px;
+					line-height: 17px;
+					margin-top: 34px;
+				}
+			}
+			.graphic {
+				img {
+				}
+			}
+		}
+	}
+	@include media-up(medium) {
+		padding-top: 150px;
+		.container {
+			.rost__block {
+				width: 100%;
+				padding: 50px 60px;
+				flex-direction: row;
+				align-items: center;
+				&:after {
+				}
+				.info {
+					h2 {
+						text-align: left;
+					}
+					p {
+						font-size: 18px;
+						line-height: 23px;
+						padding-right: 10px;
+					}
+					.btn {
+						width: max-content;
+						padding: 16px 24px;
+						display: inline-block;
+						font-size: 18px;
+						line-height: 21px;
+						&:hover {
+							color: $black;
+						}
+					}
+				}
+				.graphic {
+					flex: 0 0 calc(50% + 94px);
+					text-align: right;
+					margin-left: -94px;
+					img {
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,129 @@
+@import "./../../../../../../../scss/style";
+section.team {
+	padding-top: 100px;
+	.container {
+		.founders__block {
+			display: flex;
+			flex-direction: column;
+			gap: 50px;
+			width: 100%;
+			h2 {
+				text-align: center;
+			}
+			.founder {
+				display: flex;
+				flex-direction: column;
+				gap: 20px;
+				picture {
+				}
+				.info {
+					display: flex;
+					flex-direction: column;
+					gap: 25px;
+					max-width: 509px;
+					h3 {
+					}
+					ul {
+						list-style: none;
+						margin: 0;
+						padding: 0;
+						display: flex;
+						flex-direction: column;
+						gap: 12px;
+						li {
+							display: flex;
+							flex-direction: row;
+							gap: 4px;
+							font-size: 18px;
+							line-height: 25px;
+							font-weight: 400;
+							color: $light_gray;
+							svg {
+								min-width: 19px;
+								margin-top: 3px;
+							}
+						}
+					}
+					.social {
+						display: flex;
+						flex-direction: row;
+						gap: 12px;
+						.link {
+							@include default_icon($grad_one_red, $grad_two_red);
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							svg {
+								path {
+									@include default_transition(.2s);
+								}
+							}
+							&:hover {
+								background: $white;
+								svg {
+									path {
+										fill: $accent_red;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	@include media-up(medium) {
+		padding-top: 150px;
+		.container {
+			.founders__block {
+				gap: 10px;
+				h2 {
+					text-align: left;
+				}
+				.founder {
+					flex-direction: row;
+					align-items: center;
+					gap: 70px;
+					picture {
+						order: 1;
+						min-width: 430px;
+					}
+					.info {
+						order: 2;
+						h3 {
+						}
+						ul {
+							li {
+								svg {
+								}
+							}
+						}
+						.social {
+							.link {
+								svg {
+									path {
+									}
+								}
+								&:hover {
+									svg {
+										path {
+										}
+									}
+								}
+							}
+						}
+					}
+					&:nth-child(2n + 1) {
+						justify-content: flex-end;
+						picture {
+							order: 2;
+						}
+						.info {
+							order: 1;
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,145 @@
+@import "./../scss/style";
+footer {
+	position: relative;
+	font-family: "TacticSans", sans-serif;
+	padding-top: 100px;
+	.background {
+		display: block;
+		position: absolute;
+		z-index: -1;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: 312px;
+		overflow: hidden;
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			z-index: -1;
+			left: 0;
+			right: 0;
+			bottom: -150px;
+			height: 312px;
+			background: linear-gradient(179deg, rgba($footer_grad, 0), $footer_grad);
+		}
+	}
+	.container {
+		flex-direction: column;
+		gap: 60px;
+		.partners {
+			display: flex;
+			flex-direction: column;
+			gap: 30px;
+			& > svg {
+				display: none;
+			}
+			h2 {
+				text-align: center;
+			}
+			.list__partners {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				justify-content: center;
+				gap: 33px;
+				.partner {
+					display: flex;
+					flex-direction: column;
+					gap: 3.28px;
+					justify-content: center;
+					align-items: center;
+					img {
+					}
+					&:nth-child(1) {
+						img {
+							width: 52.53px;
+							height: 72.81px;
+						}
+					}
+					&:nth-child(2) {
+						img {
+							width: 116.95px;
+							height: 26.26px;
+						}
+					}
+					&:nth-child(3) {
+						img {
+							width: 78.38px;
+							height: 58.68px;
+						}
+					}
+					&:nth-child(4) {
+						img {
+							width: 155.12px;
+							height: 49.24px;
+						}
+					}
+					&:nth-child(5) {
+						img {
+							width: 72.81px;
+							height: 63.4px;
+						}
+					}
+				}
+			}
+		}
+		.last__block {
+			display: flex;
+			flex-direction: column;
+			gap: 14px;
+			font-weight: 400;
+			font-size: 20px;
+			text-align: center;
+			padding: 55px 0;
+			width: 100%;
+			a {
+				font-size: 12px;
+				text-decoration: none;
+			}
+		}
+	}
+	@include media-up(medium) {
+		padding-top: 150px;
+		&:before {
+		}
+		.container {
+			.partners {
+				position: relative;
+				gap: 50px;
+				& > svg {
+					display: block;
+					position: absolute;
+					z-index: -1;
+					top: 0;
+					left: 0;
+					transform: translate(-35%, -50%);
+				}
+				h2 {
+					text-align: left;
+				}
+				.list__partners {
+					justify-content: space-between;
+					.partner {
+						img {
+						}
+						&:nth-child(1),
+						&:nth-child(2),
+						&:nth-child(3),
+						&:nth-child(4),
+						&:nth-child(5) {
+							img {
+								width: unset;
+								height: unset;
+							}
+						}
+					}
+				}
+			}
+			.last__block {
+				a {
+				}
+			}
+		}
+	}
+}

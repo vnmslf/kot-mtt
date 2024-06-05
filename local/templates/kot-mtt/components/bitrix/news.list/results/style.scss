@@ -1,0 +1,146 @@
+@import "./../../../../scss/style";
+section.results {
+	padding-top: 100px;
+	overflow: hidden;
+	.container {
+		flex-direction: column;
+		gap: 37px;
+		h2 {
+			text-align: center;
+			width: 100%;
+		}
+		.results__block {
+			display: flex;
+			flex-direction: column;
+			gap: 30px;
+			.info {
+				border-radius: 20px;
+				padding: 25px 20px;
+				backdrop-filter: blur(12px);
+				background: $advantages;
+				position: relative;
+				z-index: 1;
+				overflow: hidden;
+				picture {
+					position: relative;
+					left: -32px;
+					width: calc(100% + 64px);
+					display: block;
+					source {
+					}
+					img {
+					}
+				}
+				.caption {
+					margin: 30px 0 16px;
+					font-weight: 500;
+					font-size: 36px;
+					color: $white;
+					font-family: "TacticSans", sans-serif;
+				}
+				.text {
+					font-weight: 400;
+					font-size: 18px;
+					line-height: 27px;
+					color: $light_gray;
+				}
+				.circle {
+					position: absolute;
+					z-index: -1;
+					left: -2px;
+					top: 50px;
+					width: 583px;
+					height: 583px;
+					border-radius: 100%;
+					background: rgba($footer_grad, 0.5);
+					filter: blur(120px);
+				}
+			}
+		}
+		.texts__block {
+			display: flex;
+			flex-direction: column;
+			gap: 12px;
+			position: relative;
+			.block {
+				background: $advantages;
+				padding: 25px 20px;
+				border-radius: 20px;
+				border: 1px solid $light_gray;
+				display: flex;
+				flex-direction: column;
+				gap: 16px;
+				h5 {
+				}
+				p {
+					margin: 0;
+					font-weight: 400;
+					font-size: 14px;
+					line-height: 21px;
+					color: $light_gray;
+				}
+			}
+			svg {
+				position: absolute;
+				z-index: 0;
+				top: -90px;
+				left: 80px;
+				width: 427px;
+				height: 527px;
+			}
+		}
+	}
+	@include media-up(medium) {
+		padding-top: 150px;
+		.container {
+			flex-direction: row;
+			flex-wrap: wrap;
+			gap: 50px 32px;
+			h2 {
+				text-align: left;
+			}
+			.results__block {
+				flex: 0 0 calc(50% - 16px);
+				.info {
+					picture {
+						source {
+						}
+						img {
+						}
+					}
+					.caption {
+						font-size: 24px;
+						margin-top: 70px;
+					}
+					.text {
+					}
+					.circle {
+						top: 0;
+						left: 0;
+						transform: translateY(50%);
+					}
+				}
+			}
+			.texts__block {
+				flex: 0 0 calc(50% - 16px);
+				.block {
+					padding: 28px 40px;
+					h5 {
+						font-size: 24px;
+						line-height: 28px;
+					}
+					p {
+						font-size: 18px;
+					}
+				}
+				svg {
+					width: unset;
+					height: unset;
+					top: 110px;
+					left: 200px;
+					transform: translateY(-50%);
+				}
+			}
+		}
+	}
+}

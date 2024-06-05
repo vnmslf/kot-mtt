@@ -1,0 +1,222 @@
+@import "./../../../../scss/style";
+section.hero {
+	position: relative;
+	padding-top: 348px;
+	overflow: hidden;
+	picture {
+		display: block;
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 50%;
+		width: 713px;
+		transform: translateX(-53%);
+		&:after {
+			content: '';
+			position: absolute;
+			z-index: 0;
+			left: 0;
+			right: 0;
+			bottom: -100px;
+			height: 250px;
+			background: linear-gradient(rgba($dark_gray, 0), $dark_gray, $dark_gray, rgba($dark_gray, 0));
+		}
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		top: 120px;
+		left: 0;
+		right: 0;
+		bottom: calc(100% - 870px);
+		background: linear-gradient(rgba($footer_grad, 0), rgba($footer_grad, .42), rgba($footer_grad, 0));
+	}
+	.container {
+		flex-direction: column;
+		gap: 29px;
+		.info {
+			.caption {
+				font-weight: 400;
+				font-size: 24px;
+				font-family: "TacticSans", sans-serif;
+				text-transform: uppercase;
+			}
+			h1 {
+			}
+			ul {
+				display: flex;
+				flex-direction: column;
+				gap: 20px;
+				list-style: none;
+				margin: 34px 0 0 0;
+				padding: 0;
+				li {
+					display: flex;
+					flex-direction: row;
+					gap: 4px;
+					font-size: 18px;
+					line-height: 25px;
+					svg {
+						min-width: 19px;
+						margin-top: 3px;
+					}
+				}
+			}
+			.order__btn {
+				@include default_btn($accent_red, $dark_red);
+				font-family: "TacticSans", sans-serif;
+				width: 100%;
+				font-weight: 500;
+				font-size: 14px;
+				line-height: 17px;
+				margin-top: 26px;
+			}
+		}
+		.advantages {
+			background: $advantages;
+			padding: 22px 20px;
+			display: flex;
+			flex-direction: column;
+			gap: 25px;
+			border-radius: 20px;
+			position: relative;
+			z-index: 1;
+			overflow: hidden;
+			&:before {
+				content: '';
+				position: absolute;
+				z-index: -1;
+				width: 377px;
+				height: 377px;
+				top: 35px;
+				left: 50%;
+				transform: translate(-50%, -100%);
+				border-radius: 100%;
+				background: rgba($footer_grad, .5);
+				filter: blur(120px);
+			}
+			.advantage__block {
+				display: flex;
+				flex-direction: column;
+				gap: 6px;
+				.caption {
+					font-weight: 500;
+					font-size: 16px;
+					font-family: "TacticSans", sans-serif;
+					color: $white;
+				}
+				.text {
+					font-weight: 400;
+					font-size: 14px;
+					line-height: 20px;
+					color: $light_gray;
+				}
+			}
+		}
+	}
+	@include media-up(medium) {
+		top: 0;
+		padding-top: 0;
+		margin-bottom: 170px;
+		overflow: unset;
+		picture {
+			width: unset;
+			transform: none;
+			left: unset;
+			right: 0;
+			max-height: 850px;
+			overflow: hidden;
+			border-radius: 0 0 60px 0;
+			&:before {
+			}
+			img {
+				position: relative;
+				z-index: 1;
+			}
+			&:after {
+				background: unset;
+			}
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			z-index: -2;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-image: url('../../../../images/hero__plus.svg');
+			background-repeat: repeat;
+			border-radius: 0 0 60px 60px;
+		}
+		&:after {
+			top: 0;
+			bottom: 0;
+			background: linear-gradient(355deg, rgba($footer_grad, .42), rgba($footer_grad, 0));
+			border-radius: 0 0 60px 60px;
+		}
+		.container {
+			.info {
+				margin-top: 112px;
+				.caption {
+				}
+				h1 {
+					display: inline-block;
+					max-width: 641px;
+					margin-top: 6px;
+					text-indent: -2px;
+				}
+				ul {
+					margin-top: 30px;
+					li {
+						svg {
+						}
+					}
+				}
+				.order__btn {
+					margin-top: 60px;
+					width: unset;
+					padding: 16px 24px;
+					display: inline-block;
+					font-size: 18px;
+					line-height: 21px;
+				}
+			}
+			.advantages {
+				flex-direction: row;
+				flex-wrap: wrap;
+				padding: 48px 72px;
+				transform: translateY(50%);
+				gap: 80px 25px;
+				&:before {
+					width: 583px;
+					height: 583px;
+					top: 130px;
+				}
+				&:after {
+					content: '';
+					position: absolute;
+					z-index: 2;
+					height: 1px;
+					width: calc(100% - 144px);
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					background: rgba($white, .2);
+				}
+				.advantage__block {
+					flex: 0 0 calc(33% - 14px);
+					.caption {
+						font-size: 18px;
+					}
+					.text {
+						font-size: 16px;
+						line-height: 22px;
+						color: $white;
+					}
+				}
+			}
+		}
+	}
+}
