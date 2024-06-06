@@ -2,7 +2,7 @@
 
 namespace Sprint\Migration;
 
-class JUN6_320240606141928 extends Version
+class JUN6_520240606142305 extends Version
 {
     protected $description   = "";
     protected $moduleVersion = "4.8.2";
