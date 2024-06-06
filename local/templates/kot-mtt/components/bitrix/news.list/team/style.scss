@@ -30,6 +30,7 @@ section.team {
 					flex-direction: column;
 					gap: 25px;
 					max-width: 509px;
+					margin-top: 30px;
 					h3 {
 					}
 					ul {
@@ -112,9 +113,13 @@ section.team {
 				}
 			}
 		}
+		.team__block {
+			display: none;
+		}
 	}
 	@include media-up(medium) {
 		padding-top: 150px;
+		overflow: hidden;
 		.container {
 			.founders__block {
 				gap: 10px;
@@ -131,6 +136,7 @@ section.team {
 					}
 					.info {
 						order: 2;
+						margin-top: 0;
 						h3 {
 						}
 						ul {
@@ -161,6 +167,61 @@ section.team {
 						}
 						.info {
 							order: 1;
+						}
+					}
+				}
+			}
+			.team__block {
+				padding-top: 80px;
+				display: flex;
+				flex-direction: column;
+				gap: 50px;
+				.caption {
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+					align-items: center;
+					h2 {
+					}
+					.nav {
+						display: flex;
+						flex-direction: row;
+						gap: 50px;
+						button {
+							border-radius: 4px;
+							padding: 10px;
+							width: 46px;
+							height: 46px;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							background: radial-gradient($grad_one_red, $grad_two_red);
+							border: none;
+							&.owl-next {
+								transform: rotate(180deg);
+							}
+							&.disabled {
+								background: $gray;
+								svg {
+									path {
+										fill: #969696;
+									}
+								}
+							}
+						}
+					}
+				}
+				.team-carousel {
+					width: 130%;
+					.member {
+						picture {
+							width: 488px;
+							display: block;
+							source {
+							}
+							img {
+								width: 488px;
+							}
 						}
 					}
 				}
