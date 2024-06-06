@@ -4,6 +4,45 @@ section.video {
 	.container {
 		flex-direction: column;
 		.video__block {
+			padding-top: 80px;
+			display: flex;
+			flex-direction: column;
+			gap: 50px;
+			.caption {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+				h2 {
+				}
+				.nav {
+					display: flex;
+					flex-direction: row;
+					gap: 50px;
+					button {
+						border-radius: 4px;
+						padding: 10px;
+						width: 46px;
+						height: 46px;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						background: radial-gradient($grad_one_red, $grad_two_red);
+						border: none;
+						&.owl-next {
+							transform: rotate(180deg);
+						}
+						&.disabled {
+							background: $gray;
+							svg {
+								path {
+									fill: #969696;
+								}
+							}
+						}
+					}
+				}
+			}
 			.video-carousel {
 				.member {
 					picture {
@@ -22,39 +61,16 @@ section.video {
 		overflow: hidden;
 		.container {
 			.video__block {
-				padding-top: 80px;
-				display: flex;
-				flex-direction: column;
-				gap: 50px;
 				.caption {
-					display: flex;
-					flex-direction: row;
-					justify-content: space-between;
-					align-items: center;
 					h2 {
 					}
 					.nav {
-						display: flex;
-						flex-direction: row;
-						gap: 50px;
 						button {
-							border-radius: 4px;
-							padding: 10px;
-							width: 46px;
-							height: 46px;
-							display: flex;
-							justify-content: center;
-							align-items: center;
-							background: radial-gradient($grad_one_red, $grad_two_red);
-							border: none;
 							&.owl-next {
-								transform: rotate(180deg);
 							}
 							&.disabled {
-								background: $gray;
 								svg {
 									path {
-										fill: #969696;
 									}
 								}
 							}
