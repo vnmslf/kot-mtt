@@ -54,6 +54,8 @@ foreach ($arResult['ITEMS'] as $key => $arItem) {
 	$arResult['ITEMS'][$key]['PP'] = $arPicture;
 
 	$arYOUTUBE_VIDEO = array_pop(explode('/',$arItem['PROPERTIES']['YOUTUBE_VIDEO']['VALUE']));
+	$arYOUTUBE_VIDEO = explode('=', $arYOUTUBE_VIDEO);
+	$arYOUTUBE_VIDEO = $arYOUTUBE_VIDEO[1];
 	$arResult['ITEMS'][$key]['PROPERTIES']['YOUTUBE_VIDEO']['YOUCODE'] = $arYOUTUBE_VIDEO;
 	$decode = file_get_contents('https://gdata.YOUTUBE_VIDEO.com/feeds/api/videos/'.$arYOUTUBE_VIDEO.'?v=2&alt=json');
 	$videodata = json_decode($decode);

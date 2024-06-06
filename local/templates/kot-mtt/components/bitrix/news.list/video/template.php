@@ -26,7 +26,7 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH.'/libraries/owl.carousel/owl.caro
 			<div class="video-carousel owl-carousel">
 <?foreach ($arResult['ITEMS'] as $key => $arItem) {?>
 				<div class="video">
-					<iframe width="560" height="315" src="//www.youtube.com/embed/<?=$arItem['PROPERTIES']['YOUTUBE_VIDEO']['YOUCODE']?>" frameborder="0" allowfullscreen></iframe>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/<?=$arItem['PROPERTIES']['YOUTUBE_VIDEO']['YOUCODE']?>?si=YicwEvmHUMv-7ydV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 				</div>
 <?}?>
 			</div>
