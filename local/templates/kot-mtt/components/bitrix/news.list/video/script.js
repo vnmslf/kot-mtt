@@ -3,6 +3,14 @@ $(document).ready(function(){
 		loop: false,
 		margin: 32,
 		responsiveClass: true,
+		responsive: {
+			0: {
+				items: 1,
+			},
+			768: {
+				items: 3,
+			}
+		},
 		items: 3,
 		nav: true,
 		navContainer: $('.video__block').find('.nav'),
