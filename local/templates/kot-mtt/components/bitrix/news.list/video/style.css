@@ -4,8 +4,8 @@ section.video {
   padding-top: 100px; }
   section.video .container {
     flex-direction: column; }
-    section.video .container .video__block {
-      display: none; }
+    section.video .container .video__block .video-carousel .member picture {
+      display: block; }
   @media (min-width: 768px) {
     section.video {
       padding-top: 150px;
@@ -41,8 +41,6 @@ section.video {
                 section.video .container .video__block .caption .nav button.disabled svg path {
                   fill: #969696; }
         section.video .container .video__block .video-carousel {
-          width: 130%; }
-          section.video .container .video__block .video-carousel .member picture {
-            display: block; } }
+          width: 130%; } }
 
 /*# sourceMappingURL=style.css.map */
