@@ -14,32 +14,38 @@ section.video {
         flex-direction: row;
         justify-content: space-between;
         align-items: center; }
+        section.video .container .video__block .caption h2 {
+          text-align: center; }
         section.video .container .video__block .caption .nav {
-          display: flex;
-          flex-direction: row;
-          gap: 50px; }
-          section.video .container .video__block .caption .nav button {
-            border-radius: 4px;
-            padding: 10px;
-            width: 46px;
-            height: 46px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: radial-gradient(#360508, #810507);
-            border: none; }
-            section.video .container .video__block .caption .nav button.owl-next {
-              transform: rotate(180deg); }
-            section.video .container .video__block .caption .nav button.disabled {
-              background: #282834; }
-              section.video .container .video__block .caption .nav button.disabled svg path {
-                fill: #969696; }
+          display: none; }
       section.video .container .video__block .video-carousel .member picture {
         display: block; }
   @media (min-width: 768px) {
     section.video {
       padding-top: 150px;
       overflow: hidden; }
+      section.video .container .video__block .caption h2 {
+        text-align: left; }
+      section.video .container .video__block .caption .nav {
+        display: flex;
+        flex-direction: row;
+        gap: 50px; }
+        section.video .container .video__block .caption .nav button {
+          border-radius: 4px;
+          padding: 10px;
+          width: 46px;
+          height: 46px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: radial-gradient(#360508, #810507);
+          border: none; }
+          section.video .container .video__block .caption .nav button.owl-next {
+            transform: rotate(180deg); }
+          section.video .container .video__block .caption .nav button.disabled {
+            background: #282834; }
+            section.video .container .video__block .caption .nav button.disabled svg path {
+              fill: #969696; }
       section.video .container .video__block .video-carousel {
         width: 130%; } }
 
