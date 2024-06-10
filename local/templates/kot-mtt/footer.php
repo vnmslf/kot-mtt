@@ -49,7 +49,7 @@ Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/footer.min.css');?>
 			</div>
 			<div class="last__block">
 				ООО “КОТ-МТТ”
-				<a href="/privacy-policy/">Политика конфиденциальности</a>
+				<a href="/privacy/">Политика конфиденциальности</a>
 			</div>
 		</div>
 	</footer>
