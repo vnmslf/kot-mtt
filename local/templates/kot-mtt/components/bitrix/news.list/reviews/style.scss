@@ -146,11 +146,24 @@ section.reviews {
 					.review {
 						max-height: 398px;
 						overflow: hidden;
-						picture {
-							source {
+						.top {
+							picture {
+								source {
+								}
+								img {
+								}
 							}
-							img {
+							h5 {
 							}
+							p {
+							}
+						}
+						.bottom {
+							margin: 0;
+							-webkit-line-clamp: 9;
+							display: -webkit-box;
+							-webkit-box-orient: vertical;
+							overflow: hidden;
 						}
 					}
 					.owl-dots {

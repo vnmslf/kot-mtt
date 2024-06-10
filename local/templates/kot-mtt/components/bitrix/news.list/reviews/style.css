@@ -98,6 +98,12 @@ section.reviews {
       section.reviews .container .reviews__block .reviews-carousel .review {
         max-height: 398px;
         overflow: hidden; }
+        section.reviews .container .reviews__block .reviews-carousel .review .bottom {
+          margin: 0;
+          -webkit-line-clamp: 9;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          overflow: hidden; }
       section.reviews .container .reviews__block .reviews-carousel .owl-dots {
         display: none; } }
 
