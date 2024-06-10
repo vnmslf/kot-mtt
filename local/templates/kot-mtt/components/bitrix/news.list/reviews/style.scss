@@ -18,27 +18,13 @@ section.reviews {
 					width: 100%;
 				}
 				.nav {
-					display: flex;
-					flex-direction: row;
-					gap: 50px;
+					display: none;
 					button {
-						border-radius: 4px;
-						padding: 10px;
-						width: 46px;
-						height: 46px;
-						display: flex;
-						justify-content: center;
-						align-items: center;
-						background: radial-gradient($grad_one_red, $grad_two_red);
-						border: none;
 						&.owl-next {
-							transform: rotate(180deg);
 						}
 						&.disabled {
-							background: $gray;
 							svg {
 								path {
-									fill: #969696;
 								}
 							}
 						}
@@ -87,6 +73,36 @@ section.reviews {
 					.bottom {
 					}
 				}
+				.owl-dots {
+					background: $gray;
+					border-radius: 1000px;
+					height: 8px;
+					margin-top: 18px;
+					display: flex;
+					justify-content: space-between;
+					button {
+						display: inline-flex;
+						height: 8px;
+						border: 0;
+						position: relative;
+						top: 0;
+						flex: 1 0 max-content;
+						span {
+							display: inline-block;
+							height: 100%;
+							width: 100%;
+							position: absolute;
+							top: 0;
+							left: 0;
+						}
+						&.active {
+							span {
+								background: $accent_red;
+								border-radius: 1000px;
+							}
+						}
+					}
+				}
 			}
 		}
 	}
@@ -99,12 +115,27 @@ section.reviews {
 						text-align: left;
 					}
 					.nav {
+						display: flex;
+						flex-direction: row;
+						gap: 50px;
 						button {
+							border-radius: 4px;
+							padding: 10px;
+							width: 46px;
+							height: 46px;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							background: radial-gradient($grad_one_red, $grad_two_red);
+							border: none;
 							&.owl-next {
+								transform: rotate(180deg);
 							}
 							&.disabled {
+								background: $gray;
 								svg {
 									path {
+										fill: #969696;
 									}
 								}
 							}
@@ -113,12 +144,17 @@ section.reviews {
 				}
 				.reviews-carousel {
 					.review {
+						max-height: 398px;
+						overflow: hidden;
 						picture {
 							source {
 							}
 							img {
 							}
 						}
+					}
+					.owl-dots {
+						display: none;
 					}
 				}
 			}
