@@ -446,7 +446,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 		if( $autores && !empty( $replyto_e ) ) {
 			$send_arEmail = $autoresponder->Send();
 		}
-		header('Location: https://dev.kot-mtt.com/thank-you/');
+		header('Location: http://dev.kot-mtt.com/thank-you/');
 	} else {
 		echo '{ "alert": "error", "message": "' . $message['error'] . '<br><br><strong>Reason:</strong><br>' . $mail->ErrorInfo . '" }';
 	}
