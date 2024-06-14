@@ -29,7 +29,7 @@ $toemails = array();
 $toemails[] = array(
 				'email' => 'admin@professional161.ru', // Your Email Address
 				//'email' => 'a.kolesnik@vector-tepla.ru', // Your Email Address
-				'name' => 'Заявка с сайта vector-tepla.ru' // Your Name
+				'name' => 'Заявка с сайта kot-mtt.com' // Your Name
 			);
 
 
@@ -38,7 +38,7 @@ $toemails[] = array(
 ---------------------------------------------------*/
 
 $fromemail = array(
-				'email' => 'a.kolesnik@vector-tepla.ru', // Company's Email Address (preferably currently used Domain Name)
+				'email' => 'admin@professional161.ru', // Company's Email Address (preferably currently used Domain Name)
 				'name' => 'Администратор' // Company Name
 			);
 
