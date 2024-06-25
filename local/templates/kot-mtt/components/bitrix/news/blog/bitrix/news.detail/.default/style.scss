@@ -1,0 +1,53 @@
+@import "./../../../../../../../scss/style";
+section.blog__detail {
+	padding-top: 120px;
+	.container {
+		flex-direction: column;
+		.article {
+			display: flex;
+			flex-direction: column;
+			gap: 16px;
+			h1 {
+				font-size: 24px;
+				line-height: 28.8px;
+			}
+			picture {
+				border-radius: 20px;
+				overflow: hidden;
+				img {
+				}
+				& + h2 {
+					margin-top: 0;
+				}
+			}
+			h2 {
+				font-size: 16px;
+				line-height: 21px;
+				margin-top: 14px;
+			}
+			p {
+				font-size: 14px;
+				line-height: 21px;
+				color: $light_gray;
+				margin: 0;
+				font-weight: 700;
+			}
+		}
+	}
+	@include media-up(medium) {
+		.container {
+			.article {
+				h1 {
+				}
+				picture {
+					img {
+					}
+				}
+				h2 {
+				}
+				p {
+				}
+			}
+		}
+	}
+}

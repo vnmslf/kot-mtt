@@ -1,0 +1,66 @@
+/* colors*/
+/* breakpoints*/
+section.blog__list {
+  padding-top: 120px; }
+  section.blog__list .container {
+    flex-direction: column;
+    gap: 32px; }
+    section.blog__list .container .article {
+      background: rgba(51, 12, 17, 0.3);
+      border-radius: 20px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 20px; }
+      section.blog__list .container .article:after {
+        content: '';
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 20px;
+        padding: 1px;
+        background: linear-gradient(53deg, rgba(255, 255, 255, 0), white, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.56), rgba(255, 255, 255, 0.48), rgba(255, 255, 255, 0.56));
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude; }
+      section.blog__list .container .article .bottom {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 0 16px 25px;
+        flex: 1 0 auto; }
+        section.blog__list .container .article .bottom h2 {
+          font-size: 16px;
+          line-height: 21px; }
+        section.blog__list .container .article .bottom p {
+          margin: 0 0 10px;
+          -webkit-line-clamp: 3;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          font-size: 14px;
+          line-height: 18px;
+          color: #c6c6c6; }
+        section.blog__list .container .article .bottom span.date {
+          margin-top: auto;
+          font-size: 16px;
+          line-height: 21px;
+          color: #c6c6c6; }
+  @media (min-width: 768px) {
+    section.blog__list .container {
+      flex-direction: row;
+      flex-wrap: wrap; }
+      section.blog__list .container .article {
+        flex: 0 0 calc(33% - 18px); }
+        section.blog__list .container .article .bottom h2 {
+          font-size: 18px;
+          line-height: 24px; }
+        section.blog__list .container .article .bottom p {
+          font-size: 16px;
+          line-height: 21px; } }
+
+/*# sourceMappingURL=style.css.map */

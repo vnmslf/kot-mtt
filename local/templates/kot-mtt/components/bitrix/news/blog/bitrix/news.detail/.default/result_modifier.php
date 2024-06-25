@@ -50,12 +50,4 @@ $width = [
 	],
 ];
 $arResult['PP'] = make_picture_width($arResult['PREVIEW_PICTURE'], $width);
-$arResult['ADVANTAGES'] = [];
-foreach ($arResult['PROPERTIES']['ADVANTAGES']['VALUE'] as $key => $value) {
-	$obElement = CIBlockElement::GetByID($value);
-	if($arEl = $obElement->GetNext()) {
-		$arResult['ADVANTAGES'][$key]['CAPTION'] = $arEl['NAME'];
-		$arResult['ADVANTAGES'][$key]['TEXT'] = $arEl['PREVIEW_TEXT'];
-	}
-}
 ?>
