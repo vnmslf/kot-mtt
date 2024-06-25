@@ -26,5 +26,24 @@ section.blog__detail {
         color: #c6c6c6;
         margin: 0;
         font-weight: 700; }
+  @media (min-width: 768px) {
+    section.blog__detail .container {
+      max-width: 800px; }
+      section.blog__detail .container .article {
+        gap: 15px; }
+        section.blog__detail .container .article h1 {
+          font-size: 36px;
+          line-height: 44px;
+          margin-bottom: 11px; }
+        section.blog__detail .container .article picture {
+          margin-bottom: 15px; }
+        section.blog__detail .container .article h2 {
+          font-size: 24px;
+          line-height: 28.8px;
+          margin-top: 15px; }
+        section.blog__detail .container .article p {
+          font-size: 18px;
+          line-height: 27px;
+          font-weight: 400; } }
 
 /*# sourceMappingURL=style.css.map */
