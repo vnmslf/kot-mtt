@@ -1,0 +1,146 @@
+@import "./../../../../scss/style";
+section.faq {
+	padding-top: 100px;
+	.container {
+		flex-direction: column;
+		gap: 30px;
+		h1 {
+		}
+		.faq__block {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			.faq__element {
+				position: relative;
+				border-radius: 8px;
+				padding: 20px;
+				background: rgba($advantages, .3);
+				display: flex;
+				flex-direction: column;
+				gap: 24px;
+				&:after {
+					content: '';
+					position: absolute;
+					z-index: 0;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					border-radius: 20px;
+					padding: 1px; 
+					background:linear-gradient(28deg, rgba($white, 0), rgba($white, 1), rgba($white, 0), rgba($white, .56), rgba($white, .48), rgba($white, .56)); 
+					-webkit-mask: 
+					linear-gradient(#fff 0 0) content-box, 
+					linear-gradient(#fff 0 0);
+					-webkit-mask-composite: xor;
+					mask-composite: exclude;
+				}
+				h2 {
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+					align-items: center;
+					span {
+						font-size: 16px;
+						line-height: 21px;
+					}
+					svg {
+						min-width: 24px;
+						min-height: 25px;
+						transform: rotate(180deg);
+						@include default_transition(.2s);
+					}
+				}
+				.info {
+					position: absolute;
+					height: 0;
+					opacity: 0;
+					ul {
+						margin: 0;
+						padding: 0;
+						list-style: none;
+						li {
+							font-size: 14px;
+							line-height: 21px;
+							color: $light_gray;
+							text-indent: 5px;
+							&:before {
+								content: "—";
+								position: relative;
+								left: -5px;
+							}
+						}
+					}
+					p {
+						font-size: 14px;
+						line-height: 21px;
+						color: $light_gray;
+						margin: 0;
+						padding: 0;
+					}
+				}
+				&.open {
+					&:after {
+					}
+					h2 {
+						span {
+						}
+						svg {
+							transform: rotate(0);
+						}
+					}
+					.info {
+						position: relative;
+						height: unset;
+						opacity: 1;
+						ul {
+							li {
+								&:before {
+								}
+							}
+						}
+						p {
+						}
+					}
+				}
+			}
+		}
+	}
+	@include media-up(medium) {
+		padding-top: 120px;
+		.container {
+			h1 {
+				font-size: 50px;
+			}
+			.faq__block {
+				max-width: 797px;
+				.faq__element {
+					&:after {
+					}
+					h2 {
+						span {
+							font-size: 18px;
+							line-height: 24px;
+						}
+						svg {
+						}
+					}
+					.info {
+						ul {
+							li {
+								font-size: 18px;
+								line-height: 27px;
+								&:before {
+								}
+							}
+						}
+						p {
+							font-size: 18px;
+							line-height: 27px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

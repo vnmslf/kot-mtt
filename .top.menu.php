@@ -10,7 +10,7 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"FAQ", 
-		"news/", 
+		"faq/", 
 		Array(), 
 		Array(), 
 		"" 
