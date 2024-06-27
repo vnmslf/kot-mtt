@@ -26,7 +26,7 @@ $APPLICATION->SetTitle('FAQ');?>
 		'FIELD_CODE' => array('CODE','NAME','PREVIEW_TEXT',''),
 		'FILTER_NAME' => '',
 		'HIDE_LINK_WHEN_NO_DETAIL' => 'N',
-		'IBLOCK_ID' => '15',
+		'IBLOCK_ID' => \Dao\App::ib('faq')->id(),
 		'IBLOCK_TYPE' => 'Static',
 		'INCLUDE_IBLOCK_INTO_CHAIN' => 'Y',
 		'INCLUDE_SUBSECTIONS' => 'N',
