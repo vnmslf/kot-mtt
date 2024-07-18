@@ -47,7 +47,7 @@ $this->setFrameMode(true);
 					<div class="text"><?=$arItem['PREVIEW_TEXT']?></div>
 				</div>
 				<div class="more__btn">
-					<a href="#">Подробнее</a>
+					<a href="<?=$arItem['DETAIL_PAGE_URL']?>">Подробнее</a>
 				</div>
 			</div>
 <?}?>

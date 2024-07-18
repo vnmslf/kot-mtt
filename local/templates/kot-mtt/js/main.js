@@ -7,7 +7,7 @@ $(document).on('click', '.menu__button', function() {
 	}
 })
 $(document).on('click', '.order__btn', function() {
-	var modal = $('.modal-' + $(this).attr('data-modal')) || $('.modal');
+	var modal = $('.modal-' + $(this).attr('data-modal'));
 	modal.addClass('open');
 })
 $(document).on('click', '.modal__close', function() {

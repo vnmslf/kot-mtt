@@ -1,5 +1,5 @@
 <?if(!defined('B_PROLOG_INCLUDED')||B_PROLOG_INCLUDED!==true)die();
-$width = [
+$width_mobile = [
 	'mobile' => [
 		'start' => '0',
 		'end' => '713',
@@ -12,6 +12,8 @@ $width = [
 		'start' => '354',
 		'end' => '414',
 	],
+];
+$width = [
 	'xl-mobile' => [
 		'start' => '415',
 		'end' => '630',
@@ -49,21 +51,11 @@ $width = [
 		'end' => 'max',
 	],
 ];
-foreach ($arResult['ITEMS'] as $key => $arItem) {
-	if($arItem['PREVIEW_PICTURE']) {
-		$arPicture = make_picture_width($arItem['PREVIEW_PICTURE'], $width);
-		$arResult['ITEMS'][$key]['PP'] = $arPicture;
-	}
-	if($arItem['DETAIL_PICTURE']) {
-		$arPicture = make_picture_width($arItem['DETAIL_PICTURE'], $width);
-		$arResult['ITEMS'][$key]['DP'] = $arPicture;
-	}
+if($arResult['PREVIEW_PICTURE']) {
+	$arResult['PP'] = make_picture_width($arResult['PREVIEW_PICTURE'], $width);
 }
-foreach ($arResult['ITEMS'] as $key => $arItem) {
-	if($arItem['PROPERTIES']['FOUNDER']['VALUE_XML_ID'] == 'yes') {
-		$arResult['FOUNDERS'][] = $arItem;
-	} else {
-		$arResult['MEMBERS'][] = $arItem;
-	}
-}
+$fs_m = make_picture_width(CFile::GetFileArray($arResult['PROPERTIES']['FIRST_SECTION_MOBILE']['VALUE']), $width_mobile);
+$fs = make_picture_width(CFile::GetFileArray($arResult['PROPERTIES']['FIRST_SECTION']['VALUE']), $width);
+unset($fs_m['default']);
+$arResult['FS'] = array_merge($fs_m, $fs);
 ?>

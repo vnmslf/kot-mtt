@@ -78,15 +78,15 @@ if(count($arResult['MEMBERS']) > 0) {
 <?foreach ($arResult['MEMBERS'] as $key => $arItem) {?>
 				<div class="member">
 					<picture>
-	<?foreach ($arItem['PP'] as $keyMedia => $valueMedia) {
+	<?foreach ($arItem['DP'] as $keyMedia => $valueMedia) {
 		if($keyMedia !== 'default') {
 			$explode = explode('-', $keyMedia);
 			$start = $explode[0];
 			$end = $explode[1];?>
-						<source srcset="<?=$arItem['PP'][$keyMedia]['src']?>" media="(min-width: <?=$start?>px)<?if($end !== 'max') {?> and (max-width: <?=$end?>px)<?}?>" type="image/webp" />
+						<source srcset="<?=$arItem['DP'][$keyMedia]['src']?>" media="(min-width: <?=$start?>px)<?if($end !== 'max') {?> and (max-width: <?=$end?>px)<?}?>" type="image/webp" />
 		<?}
 	}?>
-						<img srcset="<?=$arItem['PP']['default']?>" alt="<?=$arItem['NAME']?>" />
+						<img srcset="<?=$arItem['DP']['default']?>" alt="<?=$arItem['NAME']?>" />
 					</picture>
 				</div>
 <?}?>

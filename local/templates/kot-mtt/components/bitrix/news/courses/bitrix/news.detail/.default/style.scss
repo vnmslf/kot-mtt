@@ -1,0 +1,15 @@
+@import "./../../../../../../../scss/style";
+section.course {
+	padding-top: 120px;
+	.container {
+		flex-direction: column;
+		h1 {
+		}
+	}
+	@include media-up(medium) {
+		.container {
+			h1 {
+			}
+		}
+	}
+}
