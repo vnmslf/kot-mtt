@@ -44,5 +44,25 @@ if($url_without_question == '/') {?>
 	)
 );?>
 	</div>
+	<div class="modal modal-team">
+		<div class="actions">
+			<div class="modal__close">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M18 6L6 18M18 18L6 6" stroke="white" stroke-width="2" stroke-linecap="round" />
+				</svg>
+			</div>
+		</div>
+		<div class="caption">Вступай к котам</div>
+<?$APPLICATION->IncludeComponent(
+	'bitrix:main.include',
+	'',
+	Array(
+		'AREA_FILE_SHOW' => 'file',
+		'PATH' => SITE_TEMPLATE_PATH.'/inc/order-team.php',
+		'PREFIX' => 'header',
+		'MODAL_BUTTON_TEXT' => 'Отправить заявку'
+	)
+);?>
+	</div>
 </body>
 </html>

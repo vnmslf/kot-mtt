@@ -81,7 +81,7 @@ if (!empty($arResult)) {?>
 				</svg>
 			</a>
 		</div>
-		<div class="order__btn">
+		<div class="order__btn" data-modal="team">
 			<span class="zero-up">Оставить заявку в команду</span>
 			<span class="medium-up">Подать заявку</span>
 		</div>
