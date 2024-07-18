@@ -63,21 +63,6 @@ $now_url = ((!empty($_SERVER['HTTPS'])) ? 'https' : 'http').'://'.$_SERVER['HTTP
 	),
 	false
 );?>
-<?/*$APPLICATION->IncludeComponent(
-	'bitrix:main.include',
-	'',
-	Array(
-		'AREA_FILE_SHOW' => 'file',
-		'PATH' => SITE_TEMPLATE_PATH.'/inc/order.php',
-		'PREFIX' => 'header__cta',
-		'BG_COLOR' => '',
-		'BUTTON_COLOR' => 'red',
-		'TYPE_CONTENT' => 'div',
-		'BUTTON_COLOR' => 'red',
-		'BUTTON_TEXT' => 'Задать вопрос',
-		'MODAL_BUTTON_TEXT' => 'Задать вопрос',
-	)
-);*/?>
 			</div>
 		</div>
 	</header>
