@@ -11,9 +11,10 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
+$templateName = $arResult['VARIABLES']['ELEMENT_CODE'];
 $ElementID = $APPLICATION->IncludeComponent(
 	'bitrix:news.detail',
-	'',
+	$templateName,
 	[
 		'DISPLAY_DATE' => $arParams['DISPLAY_DATE'],
 		'DISPLAY_NAME' => $arParams['DISPLAY_NAME'],

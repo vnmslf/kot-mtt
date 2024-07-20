@@ -1,0 +1,36 @@
+@import "./../../../../../../../scss/style";
+section.course {
+	padding-top: 120px;
+	.container {
+		flex-direction: column;
+		.first__section {
+			display: flex;
+			flex-direction: column;
+			gap: 34px;
+			h1 {
+			}
+			.first__actions {
+				font-weight: 600;
+				font-size: 18px;
+				line-height: 25px;
+				display: flex;
+				flex-direction: column;
+				gap: 26px;
+				.order__btn {
+					@include default_btn($accent_red, $dark_red);
+					font-family: "TacticSans", sans-serif;
+					width: 100%;
+					font-weight: 500;
+					font-size: 14px;
+					line-height: 17px;
+				}
+			}
+		}
+	}
+	@include media-up(medium) {
+		.container {
+			h1 {
+			}
+		}
+	}
+}
