@@ -1,9 +1,11 @@
 /* colors*/
 /* breakpoints*/
 section.course {
-  padding-top: 120px; }
+  padding-top: 120px;
+  overflow: hidden; }
   section.course .container {
-    flex-direction: column; }
+    flex-direction: column;
+    gap: 100px; }
     section.course .container .first__section {
       display: flex;
       flex-direction: column;
@@ -28,5 +30,49 @@ section.course {
           font-weight: 500;
           font-size: 14px;
           line-height: 17px; }
+    section.course .container .second__section {
+      display: flex;
+      flex-direction: column;
+      gap: 20px; }
+      section.course .container .second__section h2 {
+        text-align: center; }
+      section.course .container .second__section .after__course {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 1200px;
+        transform: translateX(-60%);
+        gap: 6px; }
+        section.course .container .second__section .after__course .after__course-row {
+          display: flex;
+          flex-direction: row;
+          gap: 6px;
+          width: 1200px; }
+          section.course .container .second__section .after__course .after__course-row:nth-child(2) {
+            transform: translateX(40%); }
+          section.course .container .second__section .after__course .after__course-row .after__course-block {
+            background: rgba(51, 12, 17, 0.3);
+            padding: 20px;
+            border-radius: 20px;
+            flex: 0 0 30%;
+            height: 90px;
+            position: relative;
+            font-weight: 600;
+            font-size: 16px;
+            font-family: "TacticSans", sans-serif; }
+            section.course .container .second__section .after__course .after__course-row .after__course-block:after {
+              content: '';
+              position: absolute;
+              z-index: 0;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              border-radius: 20px;
+              padding: 1px;
+              background: linear-gradient(53deg, rgba(255, 255, 255, 0), white, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.56), rgba(255, 255, 255, 0.48), rgba(255, 255, 255, 0.56));
+              -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+              -webkit-mask-composite: xor;
+              mask-composite: exclude; }
 
 /*# sourceMappingURL=style.css.map */

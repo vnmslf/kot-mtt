@@ -17,14 +17,14 @@ $this->setFrameMode(true);
 		<div class="first__section">
 			<h1><?=$arResult['NAME']?></h1>
 			<picture>
-	<?foreach ($arResult['FS'] as $keyMedia => $valueMedia) {
-		if($keyMedia !== 'default') {
-			$explode = explode('-', $keyMedia);
-			$start = $explode[0];
-			$end = $explode[1];?>
+<?foreach ($arResult['FS'] as $keyMedia => $valueMedia) {
+	if($keyMedia !== 'default') {
+		$explode = explode('-', $keyMedia);
+		$start = $explode[0];
+		$end = $explode[1];?>
 				<source srcset="<?=$arResult['FS'][$keyMedia]['src']?>" media="(min-width: <?=$start?>px)<?if($end !== 'max') {?> and (max-width: <?=$end?>px)<?}?>" type="image/webp" />
-		<?}
-	}?>
+	<?}
+}?>
 				<img srcset="<?=$arResult['FS']['default']?>" alt="<?=$arResult['NAME']?>" />
 			</picture>
 			<div class="first__actions">
@@ -34,6 +34,28 @@ $this->setFrameMode(true);
 		</div>
 		<div class="second__section">
 			<h2>После прохождения курса ты</h2>
+			<div class="after__course">
+				<div class="after__course-row">
+<?$counter = 0;
+foreach ($arResult['PROPERTIES']['AFTER_COURSE']['VALUE'] as $key => $value) {
+	if($counter <= 3) {?>
+					<div class="after__course-block"><?=$value?></div>
+		<?unset($arResult['PROPERTIES']['AFTER_COURSE']['VALUE'][$key]);
+	} else {
+		break;
+	}
+	$counter++;
+}?>
+				</div>
+				<div class="after__course-row">
+<?foreach ($arResult['PROPERTIES']['AFTER_COURSE']['VALUE'] as $key => $value) {?>
+					<div class="after__course-block"><?=$value?></div>
+<?}?>
+				</div>
+			</div>
+		</div>
+		<div class="third__section">
+			<h2>На курсе будет</h2>
 		</div>
 	</div>
 </section>
