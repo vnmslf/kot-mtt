@@ -58,4 +58,7 @@ $fs_m = make_picture_width(CFile::GetFileArray($arResult['PROPERTIES']['FIRST_SE
 $fs = make_picture_width(CFile::GetFileArray($arResult['PROPERTIES']['FIRST_SECTION']['VALUE']), $width);
 unset($fs_m['default']);
 $arResult['FS'] = array_merge($fs_m, $fs);
+if($arResult['PROPERTIES']['ON_THIS_COURSE']['VALUE']) {
+	$arResult['ON_THIS_COURSE'] = make_picture_width(CFile::GetFileArray($arResult['PROPERTIES']['ON_THIS_COURSE']['VALUE']), $width);
+}
 ?>

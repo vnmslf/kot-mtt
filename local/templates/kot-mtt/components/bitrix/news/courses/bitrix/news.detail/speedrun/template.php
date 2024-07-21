@@ -55,7 +55,39 @@ foreach ($arResult['PROPERTIES']['AFTER_COURSE']['VALUE'] as $key => $value) {
 			</div>
 		</div>
 		<div class="third__section">
-			<h2>На курсе будет</h2>
+			<div class="start">
+				<h2>На курсе будет</h2>
+				<picture>
+<?foreach ($arResult['ON_THIS_COURSE'] as $keyMedia => $valueMedia) {
+	if($keyMedia !== 'default') {
+		$explode = explode('-', $keyMedia);
+		$start = $explode[0];
+		$end = $explode[1];?>
+					<source srcset="<?=$arResult['ON_THIS_COURSE'][$keyMedia]['src']?>" media="(min-width: <?=$start?>px)<?if($end !== 'max') {?> and (max-width: <?=$end?>px)<?}?>" type="image/webp" />
+	<?}
+}?>
+					<img srcset="<?=$arResult['ON_THIS_COURSE']['default']?>" alt="<?=$arResult['NAME']?>" />
+				</picture>
+			</div>
+			<div class="second">
+				<ul>
+<?foreach ($arResult['PROPERTIES']['LIST_COURSE']['VALUE'] as $key => $value) {?>
+					<li><?=$value?></li>
+<?}?>
+				</ul>
+				<div class="text__course"><?=$arResult['PROPERTIES']['TEXT_COURSE']['~VALUE']['TEXT']?></div>
+			</div>
+		</div>
+		<div class="fourth__section">
+			<h2>Особые наставники групповых занятиях</h2>
+			<div class="mentors">
+<?foreach ($arResult['PROPERTIES']['MENTORS']['VALUE'] as $key => $value) {
+	$res = CIBlockElement::GetByID($value);
+	if($ar_res = $res->GetNext()) {?>
+				<?=$ar_res['NAME']?>
+	<?}
+}?>
+			</div>
 		</div>
 	</div>
 </section>

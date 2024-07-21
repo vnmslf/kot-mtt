@@ -81,6 +81,48 @@ section.course {
 				}
 			}
 		}
+		.third__section {
+			display: flex;
+			flex-direction: column;
+			gap: 25px;
+			.start {
+				display: flex;
+				flex-direction: column;
+				gap: 20px;
+				h2 {
+					text-align: center;
+				}
+				picture {
+					source {
+					}
+					img {
+					}
+				}
+			}
+			.second {
+				display: flex;
+				flex-direction: column;
+				gap: 29px;
+				ul {
+					display: flex;
+					flex-direction: column;
+					gap: 16px;
+					margin: 0;
+					padding: 0 0 0 20px;
+					li {
+						font-family: "TacticSans", sans-serif;
+						font-weight: 600;
+						font-size: 16px;
+					}
+				}
+				.text__course {
+					font-weight: 400;
+					font-size: 18px;
+					line-height: 25px;
+					color: $light_gray;
+				}
+			}
+		}
 	}
 	@include media-up(medium) {
 		.container {
