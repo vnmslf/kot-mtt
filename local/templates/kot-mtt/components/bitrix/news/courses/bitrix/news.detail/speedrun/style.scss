@@ -123,6 +123,68 @@ section.course {
 				}
 			}
 		}
+		.fourth__section {
+			background: rgba($advantages, .3);
+			border-radius: 20px;
+			padding: 25px 20px;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			gap: 40px;
+			&:after {
+				content: '';
+				position: absolute;
+				z-index: 0;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				border-radius: 20px;
+				padding: 1px; 
+				background:linear-gradient(53deg, rgba($white, 0), rgba($white, 1), rgba($white, 0), rgba($white, .56), rgba($white, .48), rgba($white, .56)); 
+				-webkit-mask: 
+				linear-gradient(#fff 0 0) content-box, 
+				linear-gradient(#fff 0 0);
+				-webkit-mask-composite: xor;
+				mask-composite: exclude;
+			}
+			h2 {
+				text-align: center;
+				font-size: 24px;
+			}
+			.mentors {
+				display: flex;
+				flex-direction: column;
+				gap: 25px;
+				.mentor {
+					display: flex;
+					flex-direction: column;
+					gap: 20px;
+					picture {
+						max-width: 80px;
+						max-height: 80px;
+						source {
+						}
+						img {
+							border-radius: 80px;
+						}
+					}
+					.mentor__info {
+						display: flex;
+						flex-direction: column;
+						gap: 7px;
+						h3 {
+							font-size: 16px;
+						}
+						.mentor__text {
+							font-size: 14px;
+							line-height: 20px;
+							color: $light_gray;
+						}
+					}
+				}
+			}
+		}
 	}
 	@include media-up(medium) {
 		.container {

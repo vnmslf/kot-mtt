@@ -81,13 +81,29 @@ foreach ($arResult['PROPERTIES']['AFTER_COURSE']['VALUE'] as $key => $value) {
 		<div class="fourth__section">
 			<h2>Особые наставники групповых занятиях</h2>
 			<div class="mentors">
-<?foreach ($arResult['PROPERTIES']['MENTORS']['VALUE'] as $key => $value) {
-	$res = CIBlockElement::GetByID($value);
-	if($ar_res = $res->GetNext()) {?>
-				<?=$ar_res['NAME']?>
+<?foreach ($arResult['MENTORS'] as $key => $value) {?>
+				<div class="mentor">
+					<picture>
+<?foreach ($value['PICTURE'] as $keyMedia => $valueMedia) {
+	if($keyMedia !== 'default') {
+		$explode = explode('-', $keyMedia);
+		$start = $explode[0];
+		$end = $explode[1];?>
+						<source srcset="<?=$value['PICTURE'][$keyMedia]['src']?>" media="(min-width: <?=$start?>px)<?if($end !== 'max') {?> and (max-width: <?=$end?>px)<?}?>" type="image/webp" />
 	<?}
 }?>
+						<img srcset="<?=$value['PICTURE']['default']?>" alt="<?=$arResult['NAME']?>" />
+					</picture>
+					<div class="mentor__info">
+						<h3><?=$value['NAME']?></h3>
+						<div class="mentor__text"><?=$value['PREVIEW_TEXT']?></div>
+					</div>
+				</div>
+<?}?>
 			</div>
+		</div>
+		<div class="fifth__section">
+			<h2>Во время курса ты изучишь</h2>
 		</div>
 	</div>
 </section>
