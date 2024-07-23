@@ -2,7 +2,7 @@
 $width_mobile = [
 	'mobile' => [
 		'start' => '0',
-		'end' => '713',
+		'end' => '320',
 	],
 	'md-mobile' => [
 		'start' => '321',
@@ -51,6 +51,7 @@ $width = [
 		'end' => 'max',
 	],
 ];
+$width_all = array_merge($width_mobile, $width);
 $width_mentors = [
 	'mobile' => [
 		'start' => '0',
@@ -120,5 +121,64 @@ foreach ($arResult['PROPERTIES']['MENTORS']['VALUE'] as $key => $value) {
 		$arResult['MENTORS'][$i]['PREVIEW_TEXT'] = $ar_res['PREVIEW_TEXT'];
 		$i++;
 	}
+}
+$arSelect = Array(
+	'ID',
+	'PROPERTY_NAME',
+	'PROPERTY_CAPTION',
+	'PREVIEW_TEXT'
+);
+$arFilter = Array(
+	'IBLOCK_ID' => \Dao\App::ib('Intime')->id(),
+	'ACTIVE_DATE' => 'Y',
+	'ACTIVE' => 'Y'
+);
+$res = CIBlockElement::GetList(
+	Array(),
+	$arFilter,
+	false,
+	Array(
+		'nPageSize' => 50
+	),
+	$arSelect
+);
+$j = 0;
+while($ob = $res->GetNextElement()) {
+	$arFields = $ob->GetFields();
+	$arResult['INTIME'][$j]['NAME'] = $arFields['PROPERTY_NAME_VALUE'];
+	$arResult['INTIME'][$j]['CAPTION'] = $arFields['PROPERTY_CAPTION_VALUE'];
+	$arResult['INTIME'][$j]['PREVIEW_TEXT'] = $arFields['PREVIEW_TEXT'];
+	$j++;
+}
+if($arResult['PROPERTIES']['YOUR_CHANCE']['VALUE']) {
+	$arResult['YOUR_CHANCE'] = make_picture_width(CFile::GetFileArray($arResult['PROPERTIES']['YOUR_CHANCE']['VALUE']), $width);
+}
+$arSelect = Array(
+	'ID',
+	'NAME',
+	'DETAIL_PICTURE',
+	'PROPERTY_SPEEDRUN'
+);
+$arFilter = Array(
+	'IBLOCK_ID' => \Dao\App::ib('Team')->id(),
+	'ACTIVE_DATE' => 'Y',
+	'ACTIVE' => 'Y'
+);
+$res = CIBlockElement::GetList(
+	Array(),
+	$arFilter,
+	false,
+	Array(
+		'nPageSize' => 50
+	),
+	$arSelect
+);
+$k = 0;
+while($ob = $res->GetNextElement()) {
+	$arFields = $ob->GetFields();
+	$arResult['TEAM'][$k]['NAME'] = $arFields['NAME'];
+	$arResult['TEAM'][$k]['PICTURE'] = make_picture_width(CFile::GetFileArray($arFields['DETAIL_PICTURE']), $width_all);
+	$arResult['TEAM'][$k]['SPEEDRUN'] = $arFields['PROPERTY_SPEEDRUN_VALUE']['TEXT'];
+	$k++;
 }
 ?>

@@ -185,6 +185,105 @@ section.course {
 				}
 			}
 		}
+		.fifth__section {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			h2 {
+				text-align: center;
+			}
+			.intime__blocks {
+				display: flex;
+				flex-direction: column;
+				gap: 12px;
+				.intime {
+					background: rgba($advantages, .3);
+					border-radius: 20px;
+					padding: 25px 20px;
+					position: relative;
+					display: flex;
+					flex-direction: column;
+					gap: 12px;
+					&:after {
+						content: '';
+						position: absolute;
+						z-index: 0;
+						top: 0;
+						left: 0;
+						right: 0;
+						bottom: 0;
+						border-radius: 20px;
+						padding: 1px; 
+						background:linear-gradient(53deg, rgba($white, 0), rgba($white, 1), rgba($white, 0), rgba($white, .56), rgba($white, .48), rgba($white, .56)); 
+						-webkit-mask: 
+						linear-gradient(#fff 0 0) content-box, 
+						linear-gradient(#fff 0 0);
+						-webkit-mask-composite: xor;
+						mask-composite: exclude;
+					}
+					.name {
+						font-family: "TacticSans", sans-serif;
+						font-weight: 600;
+						font-size: 16px;
+					}
+					.caption {
+						font-size: 14px;
+						line-height: 17px;
+						color: rgba($light_gray, .5);
+					}
+					.text {
+						font-size: 14px;
+						line-height: 21px;
+						color: $light_gray;
+					}
+				}
+			}
+		}
+		.sixth__section {
+			display: flex;
+			flex-direction: column;
+			gap: 24px;
+			.top {
+				h2 {
+					text-align: left;
+					padding-right: 3px;
+				}
+				picture {
+					display: block;
+					margin-top: -25px;
+					source {
+					}
+					img {
+					}
+				}
+			}
+			.middle {
+				font-size: 18px;
+				line-height: 25px;
+				color: $light_gray;
+				span {
+					font-family: "TacticSans", sans-serif;
+					font-weight: 600;
+					font-size: 24px;
+					color: $white;
+				}
+			}
+			.bottom {
+				border-top: 1px solid rgba($white, .2);
+				padding: 24px 36px 0 0;
+				color: $light_gray;
+				font-size: 18px;
+				line-height: 25px;
+			}
+			.order__btn {
+				@include default_btn($accent_red, $dark_red);
+				font-family: "TacticSans", sans-serif;
+				width: 100%;
+				font-weight: 500;
+				font-size: 14px;
+				line-height: 17px;
+			}
+		}
 	}
 	@include media-up(medium) {
 		.container {
