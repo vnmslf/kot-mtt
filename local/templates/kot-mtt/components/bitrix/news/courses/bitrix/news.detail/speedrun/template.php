@@ -161,6 +161,10 @@ foreach ($arResult['PROPERTIES']['AFTER_COURSE']['VALUE'] as $key => $value) {
 	}?>
 							<img srcset="<?=$member['PICTURE']['default']?>" alt="<?=$member['NAME']?>" />
 						</picture>
+						<div class="info">
+							<div class="name"><?=$member['NAME']?></div>
+							<div class="text"><?=$member['SPEEDRUN']?></div>
+						</div>
 					</div>
 <?}?>
 				</div>

@@ -233,5 +233,62 @@ section.course {
         font-weight: 500;
         font-size: 14px;
         line-height: 17px; }
+    section.course .container .seventh__section {
+      display: flex;
+      flex-direction: column;
+      gap: 20px; }
+      section.course .container .seventh__section .top {
+        display: flex;
+        flex-direction: column;
+        gap: 20px; }
+        section.course .container .seventh__section .top p {
+          font-size: 18px;
+          line-height: 25px;
+          color: #c6c6c6;
+          margin: 0;
+          padding: 0; }
+      section.course .container .seventh__section .middle .team-carousel.owl-carousel .member picture {
+        position: relative;
+        z-index: 1; }
+      section.course .container .seventh__section .middle .team-carousel.owl-carousel .member .info {
+        position: relative;
+        z-index: 2;
+        border-radius: 20px;
+        padding: 20px;
+        background: #330c11;
+        margin-top: -20px;
+        font-family: "TacticSans", sans-serif; }
+        section.course .container .seventh__section .middle .team-carousel.owl-carousel .member .info .name {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 21px; }
+        section.course .container .seventh__section .middle .team-carousel.owl-carousel .member .info .text {
+          font-size: 14px;
+          line-height: 21px;
+          color: #c6c6c6; }
+      section.course .container .seventh__section .middle .team-carousel.owl-carousel .owl-dots {
+        background: #282834;
+        border-radius: 1000px;
+        height: 8px;
+        margin-top: 18px;
+        display: flex;
+        justify-content: space-between; }
+        section.course .container .seventh__section .middle .team-carousel.owl-carousel .owl-dots button {
+          display: inline-flex;
+          height: 8px;
+          border: 0;
+          position: relative;
+          top: 0;
+          flex: 1 0 max-content; }
+          section.course .container .seventh__section .middle .team-carousel.owl-carousel .owl-dots button span {
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0; }
+          section.course .container .seventh__section .middle .team-carousel.owl-carousel .owl-dots button.active span {
+            background: #ff1414;
+            border-radius: 1000px; }
 
 /*# sourceMappingURL=style.css.map */

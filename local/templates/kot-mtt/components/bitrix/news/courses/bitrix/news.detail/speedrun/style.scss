@@ -284,6 +284,90 @@ section.course {
 				line-height: 17px;
 			}
 		}
+		.seventh__section {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			.top {
+				display: flex;
+				flex-direction: column;
+				gap: 20px;
+				h2 {
+				}
+				p {
+					font-size: 18px;
+					line-height: 25px;
+					color: $light_gray;
+					margin: 0;
+					padding: 0;
+				}
+			}
+			.middle {
+				.team-carousel {
+					&.owl-carousel {
+						.member {
+							picture {
+								position: relative;
+								z-index: 1;
+								source {
+								}
+								img {
+								}
+							}
+							.info {
+								position: relative;
+								z-index: 2;
+								border-radius: 20px;
+								padding: 20px;
+								background: $advantages;
+								margin-top: -20px;
+								font-family: "TacticSans", sans-serif;
+								.name {
+									font-weight: 600;
+									font-size: 16px;
+									line-height: 21px;
+								}
+								.text {
+									font-size: 14px;
+									line-height: 21px;
+									color: $light_gray;
+								}
+							}
+						}
+						.owl-dots {
+							background: $gray;
+							border-radius: 1000px;
+							height: 8px;
+							margin-top: 18px;
+							display: flex;
+							justify-content: space-between;
+							button {
+								display: inline-flex;
+								height: 8px;
+								border: 0;
+								position: relative;
+								top: 0;
+								flex: 1 0 max-content;
+								span {
+									display: inline-block;
+									height: 100%;
+									width: 100%;
+									position: absolute;
+									top: 0;
+									left: 0;
+								}
+								&.active {
+									span {
+										background: $accent_red;
+										border-radius: 1000px;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 	@include media-up(medium) {
 		.container {
