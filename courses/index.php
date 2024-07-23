@@ -34,7 +34,7 @@ $APPLICATION->SetTitle('Курсы');
 		'DISPLAY_PREVIEW_TEXT' => 'N',
 		'DISPLAY_TOP_PAGER' => 'N',
 		'HIDE_LINK_WHEN_NO_DETAIL' => 'N',
-		'IBLOCK_ID' => '9',
+		'IBLOCK_ID' => \Dao\App::ib('Courses')->id(),
 		'IBLOCK_TYPE' => 'Static',
 		'INCLUDE_IBLOCK_INTO_CHAIN' => 'N',
 		'LIST_ACTIVE_DATE_FORMAT' => 'd.m.Y',
