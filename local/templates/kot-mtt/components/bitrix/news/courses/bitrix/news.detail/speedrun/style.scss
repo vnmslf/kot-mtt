@@ -195,7 +195,6 @@ section.course {
 			.intime__blocks {
 				display: flex;
 				flex-direction: column;
-				gap: 12px;
 				.intime {
 					background: rgba($advantages, .3);
 					border-radius: 20px;
@@ -204,6 +203,8 @@ section.course {
 					display: flex;
 					flex-direction: column;
 					gap: 12px;
+					margin-bottom: 12px;
+					@include default_transition(.2s);
 					&:after {
 						content: '';
 						position: absolute;
@@ -221,6 +222,15 @@ section.course {
 						-webkit-mask-composite: xor;
 						mask-composite: exclude;
 					}
+					&.not-active {
+						opacity: 0;
+						transform: scaleY(0);
+						margin-top: -23.5%;
+						margin-bottom: 0;
+					}
+					&:last-child {
+						margin-bottom: 0;
+					}
 					.name {
 						font-family: "TacticSans", sans-serif;
 						font-weight: 600;
@@ -237,6 +247,16 @@ section.course {
 						color: $light_gray;
 					}
 				}
+			}
+			.see-all {
+				border: 1px solid $accent_red;
+				border-radius: 4px;
+				padding: 16px 24px;
+				font-family: "TacticSans", sans-serif;
+				font-size: 14px;
+				line-height: 17px;
+				font-weight: 600;
+				text-align: center;
 			}
 		}
 		.sixth__section {

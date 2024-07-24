@@ -32,8 +32,13 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH.'/libraries/owl.carousel/owl.caro
 				<img srcset="<?=$arResult['FS']['default']?>" alt="<?=$arResult['NAME']?>" />
 			</picture>
 			<div class="first__actions">
+<?if($arResult['PREVIEW_TEXT']) {?>
 				<?=$arResult['PREVIEW_TEXT']?>
+<?}?>
 				<div class="order__btn" data-modal="team">Записаться на курс</div>
+<?if($arResult['DETAIL_TEXT']) {?>
+				<?=$arResult['DETAIL_TEXT']?>
+<?}?>
 			</div>
 		</div>
 		<div class="second__section">
@@ -109,20 +114,25 @@ foreach ($arResult['PROPERTIES']['AFTER_COURSE']['VALUE'] as $key => $value) {
 		<div class="fifth__section">
 			<h2>Во время курса ты изучишь</h2>
 			<div class="intime__blocks">
-<?foreach ($arResult['INTIME'] as $key => $value) {?>
-				<div class="intime">
-					<div class="name"><?=$value['NAME']?></div>
+<?$i = 0;
+foreach ($arResult['INTIME'] as $key => $value) {?>
+				<div class="intime<?=($i >= 5 ? ' not-active' : '')?>">
+					<div class="name"><?=($value['NAME'] ? $value['NAME'] : $value['ELEMENT_NAME'])?></div>
 	<?if($value['CAPTION']) {?>
 					<div class="caption"><?=$value['CAPTION']?></div>
 	<?}?>
+	<?if($value['PREVIEW_TEXT']) {?>
 					<div class="text"><?=$value['PREVIEW_TEXT']?></div>
+	<?}?>
 				</div>
-<?}?>
+	<?$i++;
+}?>
 			</div>
+			<div class="see-all">Показать еще {{numbers}} тем</div>
 		</div>
 		<div class="sixth__section">
 			<div class="top">
-				<h2>Не упусти свой шанс —&nbsp;успей записаться на&nbsp;июньский набор</h2>
+				<h2>Успей записаться на&nbsp;июньский набор</h2>
 				<picture>
 <?foreach ($arResult['YOUR_CHANCE'] as $keyMedia => $valueMedia) {
 	if($keyMedia !== 'default') {
@@ -135,16 +145,13 @@ foreach ($arResult['PROPERTIES']['AFTER_COURSE']['VALUE'] as $key => $value) {
 					<img srcset="<?=$arResult['YOUR_CHANCE']['default']?>" alt="<?=$arResult['NAME']?>" />
 				</picture>
 			</div>
-			<div class="middle">Всего <span>50 мест</span></div>
-			<div class="bottom">
-				Повышай свой уровень игры, узнавай секреты профессионалов и&nbsp;побеждай!
-			</div>
-			<div class="order__btn">Записаться на курс</div>
+			<div class="middle">Только для <span>24 человек</span></div>
+			<div class="order__btn" data-modal="team">Записаться на курс</div>
 		</div>
 		<div class="seventh__section">
 			<div class="top">
 				<h2>Кто мы такие?</h2>
-				<p>Школу КОТ-МТТ основали именитые профи покера: чемпион WPT-2020 Андрей Kot_Spartac Котельников и&nbsp;обладатель кубка EPT, финалист Triton 2024 Саня AlexZAЗ Зубов. В&nbsp;нашей команде только топовые профессионалы из мира покера, которые постоянно развиваются и&nbsp;прокачивают свои знания и&nbsp;навыки.</p>
+				<p>Школу КОТ-МТТ основали именитые профи покера: чемпион WPT-2020 Андрей Kot_Spartac Котельников и обладатель кубка EPT, финалист Triton 2024 Саня AlexZAЗ Зубов. В нашей команде только топовые профессионалы из мира покера, которые постоянно развиваются и прокачивают свои знания и навыки.</p>
 			</div>
 			<div class="middle">
 				<div class="team-carousel owl-carousel">
@@ -168,6 +175,12 @@ foreach ($arResult['PROPERTIES']['AFTER_COURSE']['VALUE'] as $key => $value) {
 					</div>
 <?}?>
 				</div>
+			</div>
+		</div>
+		<div class="eighth__section">
+			<div class="top">
+				<h2>Команда КОТ-МТТ</h2>
+				<p>Уроки и курсы от&nbsp;действующих профессионалов покера</p>
 			</div>
 		</div>
 	</div>

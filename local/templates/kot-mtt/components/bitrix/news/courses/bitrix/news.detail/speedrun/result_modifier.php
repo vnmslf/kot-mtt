@@ -124,9 +124,11 @@ foreach ($arResult['PROPERTIES']['MENTORS']['VALUE'] as $key => $value) {
 }
 $arSelect = Array(
 	'ID',
+	'NAME',
 	'PROPERTY_NAME',
 	'PROPERTY_CAPTION',
-	'PREVIEW_TEXT'
+	'PREVIEW_TEXT',
+	'SORT'
 );
 $arFilter = Array(
 	'IBLOCK_ID' => \Dao\App::ib('Intime')->id(),
@@ -142,13 +144,18 @@ $res = CIBlockElement::GetList(
 	),
 	$arSelect
 );
-$j = 0;
 while($ob = $res->GetNextElement()) {
 	$arFields = $ob->GetFields();
-	$arResult['INTIME'][$j]['NAME'] = $arFields['PROPERTY_NAME_VALUE'];
-	$arResult['INTIME'][$j]['CAPTION'] = $arFields['PROPERTY_CAPTION_VALUE'];
-	$arResult['INTIME'][$j]['PREVIEW_TEXT'] = $arFields['PREVIEW_TEXT'];
-	$j++;
+	if($arFields['PROPERTY_NAME_VALUE']) {
+		$arResult['INTIME'][$arFields['SORT']]['NAME'] = $arFields['PROPERTY_NAME_VALUE'];
+	}
+	if($arFields['PROPERTY_CAPTION_VALUE']) {
+		$arResult['INTIME'][$arFields['SORT']]['CAPTION'] = $arFields['PROPERTY_CAPTION_VALUE'];
+	}
+	if($arFields['PREVIEW_TEXT']) {
+		$arResult['INTIME'][$arFields['SORT']]['PREVIEW_TEXT'] = $arFields['PREVIEW_TEXT'];
+	}
+	$arResult['INTIME'][$arFields['SORT']]['ELEMENT_NAME'] = $arFields['NAME'];
 }
 if($arResult['PROPERTIES']['YOUR_CHANCE']['VALUE']) {
 	$arResult['YOUR_CHANCE'] = make_picture_width(CFile::GetFileArray($arResult['PROPERTIES']['YOUR_CHANCE']['VALUE']), $width);
@@ -176,9 +183,11 @@ $res = CIBlockElement::GetList(
 $k = 0;
 while($ob = $res->GetNextElement()) {
 	$arFields = $ob->GetFields();
-	$arResult['TEAM'][$k]['NAME'] = $arFields['NAME'];
-	$arResult['TEAM'][$k]['PICTURE'] = make_picture_width(CFile::GetFileArray($arFields['DETAIL_PICTURE']), $width_all);
-	$arResult['TEAM'][$k]['SPEEDRUN'] = $arFields['PROPERTY_SPEEDRUN_VALUE']['TEXT'];
-	$k++;
+	if($arFields['~PROPERTY_SPEEDRUN_VALUE']['TEXT']) {
+		$arResult['TEAM'][$k]['NAME'] = $arFields['NAME'];
+		$arResult['TEAM'][$k]['PICTURE'] = make_picture_width(CFile::GetFileArray($arFields['DETAIL_PICTURE']), $width_all);
+		$arResult['TEAM'][$k]['SPEEDRUN'] = $arFields['~PROPERTY_SPEEDRUN_VALUE']['TEXT'];
+		$k++;
+	}
 }
 ?>
