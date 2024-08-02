@@ -190,8 +190,6 @@ while($ob = $res->GetNextElement()) {
 		$k++;
 	}
 }
-
-
 $arSelect = Array(
 	'ID',
 	'PREVIEW_PICTURE',
@@ -215,5 +213,68 @@ $res = CIBlockElement::GetList(
 if($ob = $res->GetNextElement()) {
 	$arFields = $ob->GetFields();
 	$arResult['SPEEDRUN_TEAM'] = make_picture_width(CFile::GetFileArray($arFields['PREVIEW_PICTURE']), $width_all);
+}
+$arSelect = Array(
+	'ID',
+	'PREVIEW_TEXT',
+	'PREVIEW_PICTURE',
+);
+$arFilter = Array(
+	'IBLOCK_ID' => \Dao\App::ib('Static')->id(),
+	'ACTIVE_DATE' => 'Y',
+	'ACTIVE' => 'Y',
+	'CODE' => [
+		'speedrun-join-1',
+		'speedrun-join-2',
+		'speedrun-join-3',
+		'speedrun-join-4',
+		'speedrun-join-5',
+		'speedrun-join-6',
+		'speedrun-join-order',
+	]
+);
+$res = CIBlockElement::GetList(
+	Array(),
+	$arFilter,
+	false,
+	Array(
+		'nPageSize' => 50
+	),
+	$arSelect
+);
+$k = 0;
+while($ob = $res->GetNextElement()) {
+	$arFields = $ob->GetFields();
+	$arResult['JOINUS'][$k]['TEXT'] = $arFields['PREVIEW_TEXT'];
+	$arResult['JOINUS'][$k]['PICTURE'] = make_picture_width(CFile::GetFileArray($arFields['PREVIEW_PICTURE']), $width_all);
+	$k++;
+}
+
+
+$arSelect = Array(
+	'ID',
+	'PREVIEW_PICTURE',
+	'DETAIL_PICTURE',
+	'CODE'
+);
+$arFilter = Array(
+	'IBLOCK_ID' => \Dao\App::ib('Static')->id(),
+	'ACTIVE_DATE' => 'Y',
+	'ACTIVE' => 'Y',
+	'CODE' => 'our-test'
+);
+$res = CIBlockElement::GetList(
+	Array(),
+	$arFilter,
+	false,
+	Array(
+		'nPageSize' => 1
+	),
+	$arSelect
+);
+if($ob = $res->GetNextElement()) {
+	$arFields = $ob->GetFields();
+	$arResult['OURTEST']['PP'] = make_picture_width(CFile::GetFileArray($arFields['PREVIEW_PICTURE']), $width_all);
+	$arResult['OURTEST']['DP'] = make_picture_width(CFile::GetFileArray($arFields['DETAIL_PICTURE']), $width_all);
 }
 ?>

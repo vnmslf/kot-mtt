@@ -389,8 +389,13 @@ section.course {
 			}
 		}
 		.eighth__section {
-			padding: 25px 20px;
+			padding: 25px 20px 0 20px;
 			position: relative;
+			background: rgba($advantages, .4);
+			overflow: hidden;
+			display: flex;
+			flex-direction: column;
+			gap: 60px;
 			&:after {
 				content: '';
 				position: absolute;
@@ -411,9 +416,11 @@ section.course {
 			.top {
 				display: flex;
 				flex-direction: column;
-				gap: 32px;
+				gap: 12px;
 				position: relative;
 				overflow: hidden;
+				position: relative;
+				z-index: 2;
 				h2 {
 					font-weight: 600;
 					font-size: 32px;
@@ -423,8 +430,17 @@ section.course {
 					font-size: 16px;
 					line-height: 150%;
 					color: $light_gray;
+					margin: 0;
 				}
+			}
+			.middle {
+				position: relative;
+				z-index: 1;
 				picture {
+					display: block;
+					transform: scale(1.2);
+					position: relative;
+					z-index: 1;
 					source {
 					}
 					img {
@@ -432,10 +448,88 @@ section.course {
 				}
 				svg {
 					position: absolute;
-					bottom: 10%;
-					left: 50%;
-					width: 328px;
+					z-index: 0;
+					bottom: -10%;
+					left: 0;
 					g {
+					}
+				}
+			}
+		}
+		.ninth__section {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			.top {
+				h2 {
+					text-align: center;
+				}
+			}
+			.middle {
+				display: flex;
+				flex-direction: column;
+				gap: 6px;
+				.joinus__item {
+					display: flex;
+					flex-direction: row;
+					gap: 12px;
+					align-items: center;
+					border-radius: 20px;
+					padding: 20px;
+					position: relative;
+					background: rgba($advantages, .3);
+					&:after {
+						content: '';
+						position: absolute;
+						z-index: 0;
+						top: 0;
+						left: 0;
+						right: 0;
+						bottom: 0;
+						border-radius: 20px;
+						padding: 1px; 
+						background:linear-gradient(53deg, rgba($white, 0), rgba($white, 1), rgba($white, 0), rgba($white, .56), rgba($white, .48), rgba($white, .56)); 
+						-webkit-mask: 
+						linear-gradient(#fff 0 0) content-box, 
+						linear-gradient(#fff 0 0);
+						-webkit-mask-composite: xor;
+						mask-composite: exclude;
+					}
+					picture {
+						display: inline-flex;
+						flex: 0 0 80px;
+						source {
+						}
+						img {
+						}
+					}
+					.text {
+					}
+					&.order__btn {
+						position: relative;
+						overflow: hidden;
+						height: 200px;
+						align-items: end;
+						picture {
+							position: absolute;
+							top: 0;
+							right: 0;
+							bottom: 0;
+							z-index: 0;
+							width: max-content;
+							display: inline-flex;
+							flex: 0 0 100%;
+							source {
+							}
+							img {
+							}
+						}
+						.text {
+							position: relative;
+							z-index: 1;
+							font-family: "TacticSans", sans-serif;
+							font-weight: 600;
+						}
 					}
 				}
 			}

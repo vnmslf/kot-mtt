@@ -184,6 +184,8 @@ foreach ($arResult['INTIME'] as $key => $value) {?>
 				<p>Средний ROI выпускников курса - 27%.</p>
 				<p>Уроки и курсы от действующих профессионалов покера.</p>
 				<p>Обучение самым современным тенденциям игры.</p>
+			</div>
+			<div class="middle">
 				<picture>
 	<?foreach ($arResult['SPEEDRUN_TEAM'] as $keyMedia => $valueMedia) {
 		if($keyMedia !== 'default') {
@@ -207,6 +209,60 @@ foreach ($arResult['INTIME'] as $key => $value) {?>
 						</filter>
 					</defs>
 				</svg>
+			</div>
+		</div>
+		<div class="ninth__section">
+			<div class="top">
+				<h2>Для кого подходит курс</h2>
+			</div>
+			<div class="middle">
+<?$i = 0;
+$count__join = count($arResult['JOINUS']);
+foreach ($arResult['JOINUS'] as $key => $item) {
+	$i++;?>
+				<div class="joinus__item<?=($i == $count__join ? ' order__btn' : '')?>" <?=($i == $count__join ? ' data-modal="team"' : '')?>>
+					<picture>
+	<?foreach ($item['PICTURE'] as $keyMedia => $valueMedia) {
+		if($keyMedia !== 'default') {
+			$explode = explode('-', $keyMedia);
+			$start = $explode[0];
+			$end = $explode[1];?>
+						<source srcset="<?=$item['PICTURE'][$keyMedia]['src']?>" media="(min-width: <?=$start?>px)<?if($end !== 'max') {?> and (max-width: <?=$end?>px)<?}?>" type="image/webp" />
+		<?}
+	}?>
+						<img srcset="<?=$item['PICTURE']['default']?>" alt="<?=$member['NAME']?>" />
+					</picture>
+					<div class="text"><?=$item['TEXT']?></div>
+				</div>
+<?}?>
+			</div>
+		</div>
+		<div class="tenth__section">
+			<div class="left">
+				<picture>
+	<?foreach ($arResult['OURTEST']['PP'] as $keyMedia => $valueMedia) {
+		if($keyMedia !== 'default') {
+			$explode = explode('-', $keyMedia);
+			$start = $explode[0];
+			$end = $explode[1];?>
+					<source srcset="<?=$arResult['OURTEST']['PP'][$keyMedia]['src']?>" media="(min-width: <?=$start?>px)<?if($end !== 'max') {?> and (max-width: <?=$end?>px)<?}?>" type="image/webp" />
+		<?}
+	}?>
+					<img srcset="<?=$arResult['OURTEST']['PP']['default']?>" alt="<?=$member['NAME']?>" />
+				</picture>
+			</div>
+			<div class="right">
+				<picture>
+	<?foreach ($arResult['OURTEST']['DP'] as $keyMedia => $valueMedia) {
+		if($keyMedia !== 'default') {
+			$explode = explode('-', $keyMedia);
+			$start = $explode[0];
+			$end = $explode[1];?>
+					<source srcset="<?=$arResult['OURTEST']['DP'][$keyMedia]['src']?>" media="(min-width: <?=$start?>px)<?if($end !== 'max') {?> and (max-width: <?=$end?>px)<?}?>" type="image/webp" />
+		<?}
+	}?>
+					<img srcset="<?=$arResult['OURTEST']['DP']['default']?>" alt="<?=$member['NAME']?>" />
+				</picture>
 			</div>
 		</div>
 	</div>
