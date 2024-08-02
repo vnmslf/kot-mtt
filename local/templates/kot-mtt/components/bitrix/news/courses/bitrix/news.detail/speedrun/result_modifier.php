@@ -253,6 +253,7 @@ while($ob = $res->GetNextElement()) {
 
 $arSelect = Array(
 	'ID',
+	'PREVIEW_TEXT',
 	'PREVIEW_PICTURE',
 	'DETAIL_PICTURE',
 	'CODE'
@@ -274,6 +275,7 @@ $res = CIBlockElement::GetList(
 );
 if($ob = $res->GetNextElement()) {
 	$arFields = $ob->GetFields();
+	$arResult['OURTEST']['TEXT'] = $arFields['PREVIEW_TEXT'];
 	$arResult['OURTEST']['PP'] = make_picture_width(CFile::GetFileArray($arFields['PREVIEW_PICTURE']), $width_all);
 	$arResult['OURTEST']['DP'] = make_picture_width(CFile::GetFileArray($arFields['DETAIL_PICTURE']), $width_all);
 }
