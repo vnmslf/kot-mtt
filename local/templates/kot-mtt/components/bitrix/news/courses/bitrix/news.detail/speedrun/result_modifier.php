@@ -190,4 +190,30 @@ while($ob = $res->GetNextElement()) {
 		$k++;
 	}
 }
+
+
+$arSelect = Array(
+	'ID',
+	'PREVIEW_PICTURE',
+	'CODE'
+);
+$arFilter = Array(
+	'IBLOCK_ID' => \Dao\App::ib('Static')->id(),
+	'ACTIVE_DATE' => 'Y',
+	'ACTIVE' => 'Y',
+	'CODE' => 'speedrun-team'
+);
+$res = CIBlockElement::GetList(
+	Array(),
+	$arFilter,
+	false,
+	Array(
+		'nPageSize' => 1
+	),
+	$arSelect
+);
+if($ob = $res->GetNextElement()) {
+	$arFields = $ob->GetFields();
+	$arResult['SPEEDRUN_TEAM'] = make_picture_width(CFile::GetFileArray($arFields['PREVIEW_PICTURE']), $width_all);
+}
 ?>

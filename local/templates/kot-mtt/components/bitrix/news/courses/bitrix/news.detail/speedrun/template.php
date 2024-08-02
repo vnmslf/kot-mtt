@@ -180,7 +180,33 @@ foreach ($arResult['INTIME'] as $key => $value) {?>
 		<div class="eighth__section">
 			<div class="top">
 				<h2>Команда КОТ-МТТ</h2>
-				<p>Уроки и курсы от&nbsp;действующих профессионалов покера</p>
+				<p>Обучили игре в покер более 500 человек.</p>
+				<p>Средний ROI выпускников курса - 27%.</p>
+				<p>Уроки и курсы от действующих профессионалов покера.</p>
+				<p>Обучение самым современным тенденциям игры.</p>
+				<picture>
+	<?foreach ($arResult['SPEEDRUN_TEAM'] as $keyMedia => $valueMedia) {
+		if($keyMedia !== 'default') {
+			$explode = explode('-', $keyMedia);
+			$start = $explode[0];
+			$end = $explode[1];?>
+					<source srcset="<?=$arResult['SPEEDRUN_TEAM'][$keyMedia]['src']?>" media="(min-width: <?=$start?>px)<?if($end !== 'max') {?> and (max-width: <?=$end?>px)<?}?>" type="image/webp" />
+		<?}
+	}?>
+					<img srcset="<?=$arResult['SPEEDRUN_TEAM']['default']?>" alt="<?=$member['NAME']?>" />
+				</picture>
+				<svg width="760" height="869" viewBox="0 0 760 869" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<g filter="url(#filter0_f_1054_1823)">
+						<ellipse cx="334.5" cy="434.5" rx="225.5" ry="234.5" fill="#B50000" fill-opacity="0.5" />
+					</g>
+					<defs>
+						<filter id="filter0_f_1054_1823" x="-91" y="0" width="851" height="869" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+							<feFlood flood-opacity="0" result="BackgroundImageFix" />
+							<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+							<feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_1054_1823" />
+						</filter>
+					</defs>
+				</svg>
 			</div>
 		</div>
 	</div>
