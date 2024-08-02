@@ -50,8 +50,14 @@ $width = [
 	],
 ];
 foreach ($arResult['ITEMS'] as $key => $arItem) {
-	$arPicture = make_picture_width($arItem['PREVIEW_PICTURE'], $width);
-	$arResult['ITEMS'][$key]['PP'] = $arPicture;
+	if($arItem['PREVIEW_PICTURE']) {
+		$arPicture = make_picture_width($arItem['PREVIEW_PICTURE'], $width);
+		$arResult['ITEMS'][$key]['PP'] = $arPicture;
+	}
+	if($arItem['DETAIL_PICTURE']) {
+		$arPicture = make_picture_width($arItem['DETAIL_PICTURE'], $width);
+		$arResult['ITEMS'][$key]['DP'] = $arPicture;
+	}
 }
 foreach ($arResult['ITEMS'] as $key => $arItem) {
 	if($arItem['PROPERTIES']['FOUNDER']['VALUE_XML_ID'] == 'yes') {

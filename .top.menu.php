@@ -3,7 +3,7 @@
 $aMenuLinks = Array(
 	Array(
 		"Курсы", 
-		"company/", 
+		"courses/", 
 		Array(), 
 		Array(), 
 		"" 

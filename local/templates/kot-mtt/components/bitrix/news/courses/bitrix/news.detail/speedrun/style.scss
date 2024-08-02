@@ -1,0 +1,544 @@
+@import "./../../../../../../../scss/style";
+section.course {
+	padding-top: 120px;
+	overflow: hidden;
+	.container {
+		flex-direction: column;
+		gap: 100px;
+		.first__section {
+			display: flex;
+			flex-direction: column;
+			gap: 34px;
+			h1 {
+			}
+			.first__actions {
+				font-weight: 600;
+				font-size: 18px;
+				line-height: 25px;
+				display: flex;
+				flex-direction: column;
+				gap: 26px;
+				.order__btn {
+					@include default_btn($accent_red, $dark_red);
+					font-family: "TacticSans", sans-serif;
+					width: 100%;
+					font-weight: 500;
+					font-size: 14px;
+					line-height: 17px;
+				}
+			}
+		}
+		.second__section {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			h2 {
+				text-align: center;
+			}
+			.after__course {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				width: 1200px;
+				transform: translateX(-60%);
+				gap: 6px;
+				.after__course-row {
+					display: flex;
+					flex-direction: row;
+					gap: 6px;
+					width: 1200px;
+					&:nth-child(2) {
+						transform: translateX(40%);
+					}
+					.after__course-block {
+						background: rgba($advantages, .3);
+						padding: 20px;
+						border-radius: 20px;
+						flex: 0 0 30%;
+						height: 90px;
+						position: relative;
+						font-weight: 600;
+						font-size: 16px;
+						font-family: "TacticSans", sans-serif;
+						&:after {
+							content: '';
+							position: absolute;
+							z-index: 0;
+							top: 0;
+							left: 0;
+							right: 0;
+							bottom: 0;
+							border-radius: 20px;
+							padding: 1px; 
+							background:linear-gradient(53deg, rgba($white, 0), rgba($white, 1), rgba($white, 0), rgba($white, .56), rgba($white, .48), rgba($white, .56)); 
+							-webkit-mask: 
+							linear-gradient(#fff 0 0) content-box, 
+							linear-gradient(#fff 0 0);
+							-webkit-mask-composite: xor;
+							mask-composite: exclude;
+						}
+					}
+				}
+			}
+		}
+		.third__section {
+			display: flex;
+			flex-direction: column;
+			gap: 25px;
+			.start {
+				display: flex;
+				flex-direction: column;
+				gap: 20px;
+				h2 {
+					text-align: center;
+				}
+				picture {
+					source {
+					}
+					img {
+					}
+				}
+			}
+			.second {
+				display: flex;
+				flex-direction: column;
+				gap: 29px;
+				ul {
+					display: flex;
+					flex-direction: column;
+					gap: 16px;
+					margin: 0;
+					padding: 0 0 0 20px;
+					li {
+						font-family: "TacticSans", sans-serif;
+						font-weight: 600;
+						font-size: 16px;
+					}
+				}
+				.text__course {
+					font-weight: 400;
+					font-size: 18px;
+					line-height: 25px;
+					color: $light_gray;
+				}
+			}
+		}
+		.fourth__section {
+			background: rgba($advantages, .3);
+			border-radius: 20px;
+			padding: 25px 20px;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			gap: 40px;
+			&:after {
+				content: '';
+				position: absolute;
+				z-index: 0;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				border-radius: 20px;
+				padding: 1px; 
+				background:linear-gradient(53deg, rgba($white, 0), rgba($white, 1), rgba($white, 0), rgba($white, .56), rgba($white, .48), rgba($white, .56)); 
+				-webkit-mask: 
+				linear-gradient(#fff 0 0) content-box, 
+				linear-gradient(#fff 0 0);
+				-webkit-mask-composite: xor;
+				mask-composite: exclude;
+			}
+			h2 {
+				text-align: center;
+				font-size: 24px;
+			}
+			.mentors {
+				display: flex;
+				flex-direction: column;
+				gap: 25px;
+				.mentor {
+					display: flex;
+					flex-direction: column;
+					gap: 20px;
+					picture {
+						max-width: 80px;
+						max-height: 80px;
+						source {
+						}
+						img {
+							border-radius: 80px;
+						}
+					}
+					.mentor__info {
+						display: flex;
+						flex-direction: column;
+						gap: 7px;
+						h3 {
+							font-size: 16px;
+						}
+						.mentor__text {
+							font-size: 14px;
+							line-height: 20px;
+							color: $light_gray;
+						}
+					}
+				}
+			}
+		}
+		.fifth__section {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			h2 {
+				text-align: center;
+			}
+			.intime__blocks {
+				display: flex;
+				flex-direction: column;
+				.intime {
+					background: rgba($advantages, .3);
+					border-radius: 20px;
+					padding: 25px 20px;
+					position: relative;
+					display: flex;
+					flex-direction: column;
+					gap: 12px;
+					margin-bottom: 12px;
+					@include default_transition(.2s);
+					&:after {
+						content: '';
+						position: absolute;
+						z-index: 0;
+						top: 0;
+						left: 0;
+						right: 0;
+						bottom: 0;
+						border-radius: 20px;
+						padding: 1px; 
+						background:linear-gradient(53deg, rgba($white, 0), rgba($white, 1), rgba($white, 0), rgba($white, .56), rgba($white, .48), rgba($white, .56)); 
+						-webkit-mask: 
+						linear-gradient(#fff 0 0) content-box, 
+						linear-gradient(#fff 0 0);
+						-webkit-mask-composite: xor;
+						mask-composite: exclude;
+					}
+					&.not-active {
+						opacity: 0;
+						transform: scaleY(0);
+						margin-top: -23.5%;
+						margin-bottom: 0;
+					}
+					&:last-child {
+						margin-bottom: 0;
+					}
+					.name {
+						font-family: "TacticSans", sans-serif;
+						font-weight: 600;
+						font-size: 16px;
+					}
+					.caption {
+						font-size: 14px;
+						line-height: 17px;
+						color: rgba($light_gray, .5);
+					}
+					.text {
+						font-size: 14px;
+						line-height: 21px;
+						color: $light_gray;
+					}
+				}
+			}
+			.see-all {
+				border: 1px solid $accent_red;
+				border-radius: 4px;
+				padding: 16px 24px;
+				font-family: "TacticSans", sans-serif;
+				font-size: 14px;
+				line-height: 17px;
+				font-weight: 600;
+				text-align: center;
+			}
+		}
+		.sixth__section {
+			display: flex;
+			flex-direction: column;
+			gap: 24px;
+			.top {
+				h2 {
+					text-align: left;
+					padding-right: 3px;
+				}
+				picture {
+					display: block;
+					margin-top: -25px;
+					source {
+					}
+					img {
+					}
+				}
+			}
+			.middle {
+				font-size: 18px;
+				line-height: 25px;
+				color: $light_gray;
+				span {
+					font-family: "TacticSans", sans-serif;
+					font-weight: 600;
+					font-size: 24px;
+					color: $white;
+				}
+			}
+			.bottom {
+				border-top: 1px solid rgba($white, .2);
+				padding: 24px 36px 0 0;
+				color: $light_gray;
+				font-size: 18px;
+				line-height: 25px;
+			}
+			.order__btn {
+				@include default_btn($accent_red, $dark_red);
+				font-family: "TacticSans", sans-serif;
+				width: 100%;
+				font-weight: 500;
+				font-size: 14px;
+				line-height: 17px;
+			}
+		}
+		.seventh__section {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			.top {
+				display: flex;
+				flex-direction: column;
+				gap: 20px;
+				h2 {
+				}
+				p {
+					font-size: 18px;
+					line-height: 25px;
+					color: $light_gray;
+					margin: 0;
+					padding: 0;
+				}
+			}
+			.middle {
+				.team-carousel {
+					&.owl-carousel {
+						.member {
+							picture {
+								position: relative;
+								z-index: 1;
+								source {
+								}
+								img {
+								}
+							}
+							.info {
+								position: relative;
+								z-index: 2;
+								border-radius: 20px;
+								padding: 20px;
+								background: $advantages;
+								margin-top: -20px;
+								font-family: "TacticSans", sans-serif;
+								.name {
+									font-weight: 600;
+									font-size: 16px;
+									line-height: 21px;
+								}
+								.text {
+									font-size: 14px;
+									line-height: 21px;
+									color: $light_gray;
+								}
+							}
+						}
+						.owl-dots {
+							background: $gray;
+							border-radius: 1000px;
+							height: 8px;
+							margin-top: 18px;
+							display: flex;
+							justify-content: space-between;
+							button {
+								display: inline-flex;
+								height: 8px;
+								border: 0;
+								position: relative;
+								top: 0;
+								flex: 1 0 max-content;
+								span {
+									display: inline-block;
+									height: 100%;
+									width: 100%;
+									position: absolute;
+									top: 0;
+									left: 0;
+								}
+								&.active {
+									span {
+										background: $accent_red;
+										border-radius: 1000px;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.eighth__section {
+			padding: 25px 20px 0 20px;
+			position: relative;
+			background: rgba($advantages, .4);
+			overflow: hidden;
+			display: flex;
+			flex-direction: column;
+			gap: 60px;
+			&:after {
+				content: '';
+				position: absolute;
+				z-index: 0;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				border-radius: 20px;
+				padding: 1px; 
+				background:linear-gradient(53deg, rgba($white, 0), rgba($white, 1), rgba($white, 0), rgba($white, .56), rgba($white, .48), rgba($white, .56)); 
+				-webkit-mask: 
+				linear-gradient(#fff 0 0) content-box, 
+				linear-gradient(#fff 0 0);
+				-webkit-mask-composite: xor;
+				mask-composite: exclude;
+			}
+			.top {
+				display: flex;
+				flex-direction: column;
+				gap: 12px;
+				position: relative;
+				overflow: hidden;
+				position: relative;
+				z-index: 2;
+				h2 {
+					font-weight: 600;
+					font-size: 32px;
+					text-align: center;
+				}
+				p {
+					font-size: 16px;
+					line-height: 150%;
+					color: $light_gray;
+					margin: 0;
+				}
+			}
+			.middle {
+				position: relative;
+				z-index: 1;
+				picture {
+					display: block;
+					transform: scale(1.2);
+					position: relative;
+					z-index: 1;
+					source {
+					}
+					img {
+					}
+				}
+				svg {
+					position: absolute;
+					z-index: 0;
+					bottom: -10%;
+					left: 0;
+					g {
+					}
+				}
+			}
+		}
+		.ninth__section {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			.top {
+				h2 {
+					text-align: center;
+				}
+			}
+			.middle {
+				display: flex;
+				flex-direction: column;
+				gap: 6px;
+				.joinus__item {
+					display: flex;
+					flex-direction: row;
+					gap: 12px;
+					align-items: center;
+					border-radius: 20px;
+					padding: 20px;
+					position: relative;
+					background: rgba($advantages, .3);
+					&:after {
+						content: '';
+						position: absolute;
+						z-index: 0;
+						top: 0;
+						left: 0;
+						right: 0;
+						bottom: 0;
+						border-radius: 20px;
+						padding: 1px; 
+						background:linear-gradient(53deg, rgba($white, 0), rgba($white, 1), rgba($white, 0), rgba($white, .56), rgba($white, .48), rgba($white, .56)); 
+						-webkit-mask: 
+						linear-gradient(#fff 0 0) content-box, 
+						linear-gradient(#fff 0 0);
+						-webkit-mask-composite: xor;
+						mask-composite: exclude;
+					}
+					picture {
+						display: inline-flex;
+						flex: 0 0 80px;
+						source {
+						}
+						img {
+						}
+					}
+					.text {
+					}
+					&.order__btn {
+						position: relative;
+						overflow: hidden;
+						height: 200px;
+						align-items: end;
+						picture {
+							position: absolute;
+							top: 0;
+							right: 0;
+							bottom: 0;
+							z-index: 0;
+							width: max-content;
+							display: inline-flex;
+							flex: 0 0 100%;
+							source {
+							}
+							img {
+							}
+						}
+						.text {
+							position: relative;
+							z-index: 1;
+							font-family: "TacticSans", sans-serif;
+							font-weight: 600;
+						}
+					}
+				}
+			}
+		}
+	}
+	@include media-up(medium) {
+		.container {
+			h1 {
+			}
+		}
+	}
+}
