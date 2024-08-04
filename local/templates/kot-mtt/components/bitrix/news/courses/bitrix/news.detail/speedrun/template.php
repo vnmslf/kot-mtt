@@ -281,5 +281,32 @@ foreach ($arResult['JOINUS'] as $key => $item) {
 				</defs>
 			</svg>
 		</div>
+		<div class="elleventh__section">
+			<h2>Программа курса</h2>
+			<div class="items">
+<?$i = 0;
+foreach ($arResult['PROGRAMM'] as $key => $item) {?>
+				<div class="item<?=($i >= 7 ? ' not-active' : '')?>">
+	<?if(!empty($item['COLOUR'])) {?>
+					<div class="top">
+						<div class="name"><?=$item['NAME']?></div>
+					</div>
+	<?} else {?>
+					<div class="top">
+						<div class="name"><?=$item['NAME']?></div>
+		<?if(!empty($item['PREVIEW_TEXT'])) {?>
+						<div class="anons"><?=$item['PREVIEW_TEXT']?></div>
+		<?}?>
+					</div>
+		<?if(!empty($item['DETAIL_TEXT'])) {?>
+					<div class="full"><?=$item['DETAIL_TEXT']?></div>
+		<?}?>
+	<?}?>
+				</div>
+	<?$i++;
+}?>
+				<div class="see-all">Показать еще {{numbers}} <?=inclination('этапа', array('этап', 'этапа', 'этапов'))?></div>
+			</div>
+		</div>
 	</div>
 </section>

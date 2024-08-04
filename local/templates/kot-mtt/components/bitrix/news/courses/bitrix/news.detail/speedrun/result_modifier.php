@@ -249,8 +249,6 @@ while($ob = $res->GetNextElement()) {
 	$arResult['JOINUS'][$k]['PICTURE'] = make_picture_width(CFile::GetFileArray($arFields['PREVIEW_PICTURE']), $width_all);
 	$k++;
 }
-
-
 $arSelect = Array(
 	'ID',
 	'PREVIEW_TEXT',
@@ -278,5 +276,40 @@ if($ob = $res->GetNextElement()) {
 	$arResult['OURTEST']['TEXT'] = $arFields['PREVIEW_TEXT'];
 	$arResult['OURTEST']['PP'] = make_picture_width(CFile::GetFileArray($arFields['PREVIEW_PICTURE']), $width_all);
 	$arResult['OURTEST']['DP'] = make_picture_width(CFile::GetFileArray($arFields['DETAIL_PICTURE']), $width_all);
+}
+$res = CIBlockSection::GetList(array(), array('IBLOCK_ID' => \Dao\App::ib('Programm')->id(), 'CODE' => 'speedrun', 'SITE_ID' => 's1'));
+$section = $res->Fetch();
+$arSelect = Array(
+	'ID',
+	'NAME',
+	'PREVIEW_TEXT',
+	'DETAIL_TEXT',
+	'PROPERTY_COLOUR'
+);
+$arFilter = Array(
+	'IBLOCK_ID' => \Dao\App::ib('Programm')->id(),
+	'IBLOCK_SECTION_ID' => $section['ID'],
+	'ACTIVE_DATE' => 'Y',
+	'ACTIVE' => 'Y',
+);
+$res = CIBlockElement::GetList(
+	Array(),
+	$arFilter,
+	false,
+	Array(
+		'nPageSize' => 50
+	),
+	$arSelect
+);
+$k = 0;
+while($ob = $res->GetNextElement()) {
+	$arFields = $ob->GetFields();
+	$arResult['PROGRAMM'][$k]['NAME'] = $arFields['NAME'];
+	$arResult['PROGRAMM'][$k]['PREVIEW_TEXT'] = $arFields['PREVIEW_TEXT'];
+	$arResult['PROGRAMM'][$k]['DETAIL_TEXT'] = $arFields['DETAIL_TEXT'];
+	if($arFields['PROPERTY_COLOUR_VALUE']) {
+		$arResult['PROGRAMM'][$k]['COLOUR'] = $arFields['PROPERTY_COLOUR_VALUE'];
+	}
+	$k++;
 }
 ?>
