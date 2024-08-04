@@ -50,7 +50,16 @@ $width = [
 	],
 ];
 foreach ($arResult['ITEMS'] as $key => $arItem) {
-	$arPicture = make_picture_width($arItem['PREVIEW_PICTURE'], $width);
-	$arResult['ITEMS'][$key]['PP'] = $arPicture;
+	if($arItem['PREVIEW_PICTURE']) {
+		$arPicture = make_picture_width($arItem['PREVIEW_PICTURE'], $width);
+		$arResult['ITEMS'][$key]['PP'] = $arPicture;
+	}
+	if(!empty($arItem['PROPERTIES']['MORE_PHOTO']['VALUE'])) {
+		$i = 0;
+		foreach ($arItem['PROPERTIES']['MORE_PHOTO']['VALUE'] as $ley => $value) {
+			$arResult['ITEMS'][$key]['MORE_PHOTO'][$i] = make_picture_width(CFile::GetFileArray($value));
+			$i++;
+		}
+	}
 }
 ?>

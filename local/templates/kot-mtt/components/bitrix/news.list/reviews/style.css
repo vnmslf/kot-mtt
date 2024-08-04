@@ -46,6 +46,16 @@ section.reviews {
           margin-bottom: 20px; }
         section.reviews .container .reviews__block .reviews-carousel .review .top h2 {
           color: #fff; }
+        section.reviews .container .reviews__block .reviews-carousel .review .top > img {
+          max-width: 80px;
+          max-height: 80px;
+          margin-bottom: 12px; }
+        section.reviews .container .reviews__block .reviews-carousel .review .bottom {
+          display: flex;
+          flex-direction: column;
+          gap: 12px; }
+          section.reviews .container .reviews__block .reviews-carousel .review .bottom p {
+            margin: 0; }
       section.reviews .container .reviews__block .reviews-carousel .owl-dots {
         background: #282834;
         border-radius: 1000px;
