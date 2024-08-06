@@ -10,6 +10,20 @@ section.course {
       display: flex;
       flex-direction: column;
       gap: 34px; }
+      section.course .container .first__section h1 {
+        position: relative;
+        z-index: 2; }
+        section.course .container .first__section h1 span {
+          display: inline-block;
+          max-width: 100%;
+          position: relative;
+          z-index: 1; }
+        section.course .container .first__section h1 img {
+          position: absolute;
+          z-index: 0;
+          right: 0;
+          bottom: 0;
+          transform: translateY(75%); }
       section.course .container .first__section .first__actions {
         font-weight: 600;
         font-size: 18px;
@@ -217,9 +231,15 @@ section.course {
       display: flex;
       flex-direction: column;
       gap: 24px; }
-      section.course .container .sixth__section .top h2 {
+      section.course .container .sixth__section .top .start h2 {
         text-align: left;
         padding-right: 3px; }
+      section.course .container .sixth__section .top .start .middle {
+        display: none; }
+      section.course .container .sixth__section .top .start .bottom {
+        display: none; }
+      section.course .container .sixth__section .top .start .order__btn {
+        display: none; }
       section.course .container .sixth__section .top picture {
         display: block;
         margin-top: -25px; }
@@ -542,5 +562,114 @@ section.course {
           line-height: 17px;
           font-weight: 600;
           text-align: center; }
+  @media (min-width: 768px) {
+    section.course .container {
+      gap: 150px; }
+      section.course .container .first__section .first__actions .order__btn {
+        max-width: 251px;
+        order: 1;
+        margin-left: auto; }
+      section.course .container .second__section h2 {
+        text-align: left;
+        max-width: 50%; }
+      section.course .container .second__section .after__course {
+        width: 100%;
+        transform: translateX(-30%); }
+        section.course .container .second__section .after__course .after__course-row {
+          gap: 12px; }
+          section.course .container .second__section .after__course .after__course-row:nth-child(2) {
+            transform: translateX(15%); }
+          section.course .container .second__section .after__course .after__course-row .after__course-block {
+            padding: 28px;
+            font-size: 24px;
+            flex: 0 0 40%;
+            height: 190px; }
+      section.course .container .third__section {
+        flex-direction: row;
+        align-items: end;
+        gap: 32px; }
+        section.course .container .third__section .start {
+          flex: 0 0 50%;
+          gap: 47px; }
+          section.course .container .third__section .start h2 {
+            text-align: left; }
+        section.course .container .third__section .second ul li {
+          font-size: 20px; }
+      section.course .container .fourth__section {
+        padding: 40px; }
+        section.course .container .fourth__section h2 {
+          font-size: 32px;
+          text-align: left; }
+        section.course .container .fourth__section .mentors {
+          gap: 40px; }
+          section.course .container .fourth__section .mentors .mentor {
+            flex-direction: row;
+            gap: 32px; }
+            section.course .container .fourth__section .mentors .mentor picture {
+              max-width: 120px;
+              max-height: 120px; }
+            section.course .container .fourth__section .mentors .mentor .mentor__info {
+              justify-content: center; }
+              section.course .container .fourth__section .mentors .mentor .mentor__info h3 {
+                font-size: 18px;
+                line-height: 25px; }
+              section.course .container .fourth__section .mentors .mentor .mentor__info .mentor__text {
+                font-size: 18px;
+                line-height: 25px; }
+      section.course .container .fifth__section {
+        gap: 54px; }
+        section.course .container .fifth__section h2 {
+          text-align: left;
+          max-width: 50%; }
+        section.course .container .fifth__section .intime__blocks {
+          flex-direction: row;
+          flex-wrap: wrap;
+          gap: 12px; }
+          section.course .container .fifth__section .intime__blocks .intime {
+            flex: 0 0 calc(50% - 86px);
+            margin-bottom: 0;
+            padding: 28px 40px; }
+            section.course .container .fifth__section .intime__blocks .intime .name {
+              font-weight: 600;
+              font-size: 24px; }
+      section.course .container .sixth__section .top {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        gap: 40px; }
+        section.course .container .sixth__section .top .start {
+          display: flex;
+          flex-direction: column;
+          gap: 20px; }
+          section.course .container .sixth__section .top .start h2 {
+            padding-right: 0; }
+          section.course .container .sixth__section .top .start .middle {
+            display: flex;
+            align-items: end;
+            gap: 24px;
+            margin-top: 60px;
+            line-height: unset; }
+            section.course .container .sixth__section .top .start .middle span {
+              font-size: 40px;
+              margin-bottom: -6px; }
+          section.course .container .sixth__section .top .start .bottom {
+            display: flex;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 24px 36px 0 0;
+            color: #c6c6c6;
+            font-size: 18px;
+            line-height: 25px; }
+          section.course .container .sixth__section .top .start .order__btn {
+            display: inline-flex;
+            width: max-content;
+            padding: 16px 24px; }
+        section.course .container .sixth__section .top picture {
+          flex: 0 0 calc(50% - 80px); }
+      section.course .container .sixth__section .middle {
+        display: none; }
+      section.course .container .sixth__section .bottom {
+        display: none; }
+      section.course .container .sixth__section .order__btn {
+        display: none; } }
 
 /*# sourceMappingURL=style.css.map */

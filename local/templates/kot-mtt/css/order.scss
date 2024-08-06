@@ -236,6 +236,11 @@ form {
 		}
 	}
 }
+section.course__bottom {
+	overflow: hidden;
+	padding-bottom: 120px;
+	margin-bottom: -120px;
+}
 ::-webkit-input-placeholder {
 	color: $dark_white;
 	opacity: 1;

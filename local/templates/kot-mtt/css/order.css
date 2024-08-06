@@ -142,6 +142,11 @@ form {
         form.course-main .form-section + .background__data img.pc {
           display: none; }
 
+section.course__bottom {
+  overflow: hidden;
+  padding-bottom: 120px;
+  margin-bottom: -120px; }
+
 ::-webkit-input-placeholder {
   color: #d1d1d1;
   opacity: 1; }

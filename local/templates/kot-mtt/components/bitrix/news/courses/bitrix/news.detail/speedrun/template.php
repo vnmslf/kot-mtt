@@ -18,8 +18,11 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH.'/libraries/owl.carousel/owl.caro
 ?>
 <section class="course">
 	<div class="container">
-		<div class="first__section">
-			<h1><?=$arResult['NAME']?></h1>
+		<div class="section first__section">
+			<h1>
+				<span><?=$arResult['NAME']?></span>
+				<img src="<?=SITE_TEMPLATE_PATH?>/images/speedrun.svg" alt="<?=$arResult['NAME']?>" />
+			</h1>
 			<picture>
 <?foreach ($arResult['FS'] as $keyMedia => $valueMedia) {
 	if($keyMedia !== 'default') {
@@ -41,7 +44,7 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH.'/libraries/owl.carousel/owl.caro
 <?}?>
 			</div>
 		</div>
-		<div class="second__section">
+		<div class="section second__section">
 			<h2>После прохождения курса ты</h2>
 			<div class="after__course">
 				<div class="after__course-row">
@@ -63,7 +66,7 @@ foreach ($arResult['PROPERTIES']['AFTER_COURSE']['VALUE'] as $key => $value) {
 				</div>
 			</div>
 		</div>
-		<div class="third__section">
+		<div class="section third__section">
 			<div class="start">
 				<h2>На курсе будет</h2>
 				<picture>
@@ -87,7 +90,7 @@ foreach ($arResult['PROPERTIES']['AFTER_COURSE']['VALUE'] as $key => $value) {
 				<div class="text__course"><?=$arResult['PROPERTIES']['TEXT_COURSE']['~VALUE']['TEXT']?></div>
 			</div>
 		</div>
-		<div class="fourth__section">
+		<div class="section fourth__section">
 			<h2>Особые наставники групповых занятиях</h2>
 			<div class="mentors">
 <?foreach ($arResult['MENTORS'] as $key => $value) {?>
@@ -111,7 +114,7 @@ foreach ($arResult['PROPERTIES']['AFTER_COURSE']['VALUE'] as $key => $value) {
 <?}?>
 			</div>
 		</div>
-		<div class="fifth__section">
+		<div class="section fifth__section">
 			<h2>Во время курса ты изучишь</h2>
 			<div class="intime__blocks">
 <?$i = 0;
@@ -130,9 +133,14 @@ foreach ($arResult['INTIME'] as $key => $value) {?>
 			</div>
 			<div class="see-all">Показать еще {{numbers}} тем</div>
 		</div>
-		<div class="sixth__section">
+		<div class="section sixth__section">
 			<div class="top">
-				<h2>Успей записаться на&nbsp;июньский набор</h2>
+				<div class="start">
+					<h2>Успей записаться на&nbsp;июньский набор</h2>
+					<div class="middle">Только для <span>24 человек</span></div>
+					<div class="bottom"></div>
+					<div class="order__btn" data-modal="team">Записаться на курс</div>
+				</div>
 				<picture>
 <?foreach ($arResult['YOUR_CHANCE'] as $keyMedia => $valueMedia) {
 	if($keyMedia !== 'default') {
@@ -148,7 +156,7 @@ foreach ($arResult['INTIME'] as $key => $value) {?>
 			<div class="middle">Только для <span>24 человек</span></div>
 			<div class="order__btn" data-modal="team">Записаться на курс</div>
 		</div>
-		<div class="seventh__section">
+		<div class="section seventh__section">
 			<div class="top">
 				<h2>Кто мы такие?</h2>
 				<p>Школу КОТ-МТТ основали именитые профи покера: чемпион WPT-2020 Андрей Kot_Spartac Котельников и обладатель кубка EPT, финалист Triton 2024 Саня AlexZAЗ Зубов. В нашей команде только топовые профессионалы из мира покера, которые постоянно развиваются и прокачивают свои знания и навыки.</p>
@@ -177,7 +185,7 @@ foreach ($arResult['INTIME'] as $key => $value) {?>
 				</div>
 			</div>
 		</div>
-		<div class="eighth__section">
+		<div class="section eighth__section">
 			<div class="top">
 				<h2>Команда КОТ-МТТ</h2>
 				<p>Обучили игре в покер более 500 человек.</p>
@@ -211,7 +219,7 @@ foreach ($arResult['INTIME'] as $key => $value) {?>
 				</svg>
 			</div>
 		</div>
-		<div class="ninth__section">
+		<div class="section ninth__section">
 			<div class="top">
 				<h2>Для кого подходит курс</h2>
 			</div>
@@ -237,7 +245,7 @@ foreach ($arResult['JOINUS'] as $key => $item) {
 <?}?>
 			</div>
 		</div>
-		<div class="tenth__section">
+		<div class="section tenth__section">
 			<div class="left">
 				<picture>
 	<?foreach ($arResult['OURTEST']['PP'] as $keyMedia => $valueMedia) {
@@ -281,7 +289,7 @@ foreach ($arResult['JOINUS'] as $key => $item) {
 				</defs>
 			</svg>
 		</div>
-		<div class="elleventh__section">
+		<div class="section elleventh__section">
 			<h2>Программа курса</h2>
 			<div class="items">
 <?$i = 0;
