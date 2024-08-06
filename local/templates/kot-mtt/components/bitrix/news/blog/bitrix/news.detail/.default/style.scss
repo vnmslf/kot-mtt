@@ -13,6 +13,7 @@ section.blog__detail {
 			}
 			picture {
 				border-radius: 20px;
+				font-size: 0;
 				overflow: hidden;
 				img {
 				}
@@ -31,6 +32,18 @@ section.blog__detail {
 				color: $light_gray;
 				margin: 0;
 				font-weight: 700;
+				a {
+					border-bottom: 1px solid $accent_red;
+					@include default-transition(.2s);
+					&:hover {
+						border-color: $white;
+					}
+				}
+			}
+			.pictures {
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
 			}
 		}
 	}
@@ -58,6 +71,10 @@ section.blog__detail {
 					font-size: 18px;
 					line-height: 27px;
 					font-weight: 400;
+				}
+				.pictures {
+					flex-direction: row;
+					gap: 20px;
 				}
 			}
 		}
