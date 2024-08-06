@@ -275,16 +275,18 @@ section.course {
       display: flex;
       flex-direction: column;
       gap: 20px; }
-      section.course .container .seventh__section .top {
+      section.course .container .seventh__section .top .top__left {
         display: flex;
         flex-direction: column;
         gap: 20px; }
-        section.course .container .seventh__section .top p {
+        section.course .container .seventh__section .top .top__left p {
           font-size: 18px;
           line-height: 25px;
           color: #c6c6c6;
           margin: 0;
           padding: 0; }
+      section.course .container .seventh__section .top .top__right {
+        display: none; }
       section.course .container .seventh__section .middle .team-carousel.owl-carousel .member picture {
         position: relative;
         z-index: 1; }
@@ -632,6 +634,10 @@ section.course {
             section.course .container .fifth__section .intime__blocks .intime .name {
               font-weight: 600;
               font-size: 24px; }
+        section.course .container .fifth__section .see-all {
+          padding: 25px;
+          font-size: 18px;
+          line-height: 21px; }
       section.course .container .sixth__section .top {
         display: flex;
         flex-direction: row;
@@ -670,6 +676,83 @@ section.course {
       section.course .container .sixth__section .bottom {
         display: none; }
       section.course .container .sixth__section .order__btn {
-        display: none; } }
+        display: none; }
+      section.course .container .seventh__section {
+        gap: 50px; }
+        section.course .container .seventh__section .top {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: end; }
+          section.course .container .seventh__section .top .top__left {
+            max-width: 60%; }
+          section.course .container .seventh__section .top .top__right {
+            display: flex; }
+            section.course .container .seventh__section .top .top__right .nav {
+              display: flex;
+              flex-direction: row;
+              gap: 50px; }
+              section.course .container .seventh__section .top .top__right .nav button {
+                border-radius: 4px;
+                padding: 10px;
+                width: 46px;
+                height: 46px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: radial-gradient(#360508, #810507);
+                border: none; }
+                section.course .container .seventh__section .top .top__right .nav button.owl-next {
+                  transform: rotate(180deg); }
+                section.course .container .seventh__section .top .top__right .nav button.disabled {
+                  background: #282834; }
+                  section.course .container .seventh__section .top .top__right .nav button.disabled svg path {
+                    fill: #969696; }
+        section.course .container .seventh__section .middle .team-carousel.owl-carousel .member .info {
+          display: flex;
+          flex-direction: column;
+          gap: 4px; }
+          section.course .container .seventh__section .middle .team-carousel.owl-carousel .member .info .name {
+            font-size: 24px; }
+          section.course .container .seventh__section .middle .team-carousel.owl-carousel .member .info .text {
+            font-size: 16px;
+            line-height: 24px; }
+      section.course .container .eighth__section {
+        border-radius: 40px;
+        padding: 40px;
+        flex-direction: row; }
+        section.course .container .eighth__section:after {
+          border-radius: 40px; }
+        section.course .container .eighth__section .top {
+          gap: 20px;
+          flex: 0 0 50%; }
+          section.course .container .eighth__section .top h2 {
+            font-size: 50px;
+            text-align: left; }
+          section.course .container .eighth__section .top p {
+            font-size: 18px; }
+        section.course .container .eighth__section .middle picture {
+          transform: scale(1) translateY(42px); }
+      section.course .container .ninth__section {
+        gap: 50px; }
+        section.course .container .ninth__section .top h2 {
+          font-size: 50px;
+          text-align: left; }
+        section.course .container .ninth__section .middle {
+          flex-direction: row;
+          flex-wrap: wrap;
+          gap: 12px 32px; }
+          section.course .container .ninth__section .middle .joinus__item {
+            flex: 0 0 calc(50% - 96px);
+            padding: 28px 40px;
+            gap: 30px; }
+            section.course .container .ninth__section .middle .joinus__item picture {
+              flex: 0 0 120px; }
+            section.course .container .ninth__section .middle .joinus__item .text {
+              font-size: 18px; }
+            section.course .container .ninth__section .middle .joinus__item.order__btn {
+              height: 120px; }
+              section.course .container .ninth__section .middle .joinus__item.order__btn .text {
+                font-size: 24px; } }
 
 /*# sourceMappingURL=style.css.map */
