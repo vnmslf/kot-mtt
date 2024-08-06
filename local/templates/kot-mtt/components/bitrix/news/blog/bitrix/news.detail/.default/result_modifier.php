@@ -50,4 +50,34 @@ $width = [
 	],
 ];
 $arResult['PP'] = make_picture_width($arResult['PREVIEW_PICTURE'], $width);
+$i = 0;
+foreach ($arResult['PROPERTIES']['MORE_PHOTO']['VALUE'] as $key => $value) {
+	$i++;
+	$more__photo[$i] = make_picture_width(CFile::GetFileArray($value), $width);
+}
+$old__text = $arResult['DETAIL_TEXT'];
+$detail__text = explode('{{', $old__text);
+$counter = count($detail__text) - 1;
+for ($i = 0; $i < $counter; $i++) {
+	$parts = explode('{{', $old__text);
+	$exp = explode('}}', $parts[$i + 1]);
+	$numbers = explode(',', $exp[0]);
+
+	$picture[$i] = '<div class="pictures">';
+	foreach ($numbers as $key => $value) {
+		$picture[$i] .= '<picture>';
+		foreach ($more__photo[$value] as $keyMedia => $valueMedia) {
+			if($keyMedia !== 'default') {
+				$explode = explode('-', $keyMedia);
+				$start = $explode[0];
+				$end = $explode[1];
+				$picture[$i] .= '<source srcset="'.$more__photo[$value][$keyMedia]['src'].'" media="(min-width: '.$start.'px)'.($end !== 'max' ? ' and (max-width: '.$end.'px)' : '').'" type="image/webp" />';
+			}
+		}
+		$picture[$i] .= '<img srcset="'.$more__photo[$value]['default'].'" alt="'.$arResult['NAME'].'" />
+		</picture>';
+	}
+	$picture[$i] .= '</div>';
+	$arResult['DETAIL_TEXT'] = str_replace('{{'.implode(',', $numbers).'}}', $picture[$i], $arResult['DETAIL_TEXT']);
+}
 ?>

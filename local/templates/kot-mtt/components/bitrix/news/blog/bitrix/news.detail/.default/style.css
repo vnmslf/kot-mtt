@@ -13,6 +13,7 @@ section.blog__detail {
         line-height: 28.8px; }
       section.blog__detail .container .article picture {
         border-radius: 20px;
+        font-size: 0;
         overflow: hidden; }
         section.blog__detail .container .article picture + h2 {
           margin-top: 0; }
@@ -26,6 +27,16 @@ section.blog__detail {
         color: #c6c6c6;
         margin: 0;
         font-weight: 700; }
+        section.blog__detail .container .article p a {
+          border-bottom: 1px solid #ff1414;
+          -webkit-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out; }
+          section.blog__detail .container .article p a:hover {
+            border-color: #fff; }
+      section.blog__detail .container .article .pictures {
+        display: flex;
+        flex-direction: column;
+        gap: 10px; }
   @media (min-width: 768px) {
     section.blog__detail .container {
       max-width: 800px; }
@@ -44,6 +55,9 @@ section.blog__detail {
         section.blog__detail .container .article p {
           font-size: 18px;
           line-height: 27px;
-          font-weight: 400; } }
+          font-weight: 400; }
+        section.blog__detail .container .article .pictures {
+          flex-direction: row;
+          gap: 20px; } }
 
 /*# sourceMappingURL=style.css.map */
