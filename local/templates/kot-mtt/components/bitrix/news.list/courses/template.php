@@ -43,7 +43,7 @@ $this->setFrameMode(true);
 					</picture>
 				</div>
 				<div class="info">
-					<h3><?=$arItem['NAME']?></h3>
+					<h3><?=(!empty($arItem['PROPERTIES']['MAIN_NAME']['VALUE']) ? $arItem['PROPERTIES']['MAIN_NAME']['VALUE'] : $arItem['NAME'])?></h3>
 					<div class="text"><?=$arItem['PREVIEW_TEXT']?></div>
 				</div>
 				<div class="more__btn">
