@@ -116,6 +116,130 @@ form {
 			}
 		}
 	}
+	&.course-main {
+		margin: 100px auto 0;
+		position: relative;
+		h2 {
+			position: relative;
+			z-index: 2;
+			span {
+				display: inline-block;
+				max-width: 100%;
+				position: relative;
+				z-index: 1;
+			}
+			img {
+				position: absolute;
+				z-index: 0;
+				right: 0;
+				bottom: 0;
+				transform: translateY(75%);
+			}
+		}
+		.form-section {
+			position: relative;
+			z-index: 1;
+			padding: 40px 20px;
+			border-radius: 10px;
+			background: $dark_gray;
+			&:after {
+				content: '';
+				position: absolute;
+				z-index: 0;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				border-radius: 20px;
+				padding: 1px; 
+				background:linear-gradient(53deg, rgba($white, 0), rgba($white, 1), rgba($white, 0), rgba($white, .56), rgba($white, .48), rgba($white, .56)); 
+				-webkit-mask: 
+				linear-gradient(#fff 0 0) content-box, 
+				linear-gradient(#fff 0 0);
+				-webkit-mask-composite: xor;
+				mask-composite: exclude;
+			}
+			.form-group {
+				position: relative;
+				z-index: 1;
+				label {
+					font-family: "TacticSans", sans-serif;
+					span {
+					}
+				}
+				input {
+				}
+			}
+			.form-submit {
+				position: relative;
+				z-index: 1;
+				button {
+				}
+				.no-submit {
+				}
+				.checkbox__block {
+					margin-top: 0;
+					margin-bottom: 13px;
+					input {
+					}
+					label {
+						.check {
+						}
+						a {
+						}	
+					}
+				}
+			}
+			& + .background__data {
+				position: absolute;
+				z-index: 0;
+				left: 70%;
+				bottom: -19%;
+				width: max-content;
+				transform: translateX(-50%);
+				img {
+					&.mob {
+					}
+					&.pc {
+						display: none;
+					}
+				}
+			}
+		}
+		&.active {
+			.form-section {
+				.form-group {
+					label {
+						span {
+						}
+					}
+					input {
+					}
+				}
+				.form-submit {
+					button {
+					}
+					.no-submit {
+					}
+					.checkbox__block {
+						input {
+						}
+						label {
+							.check {
+							}
+							a {
+							}	
+						}
+					}
+				}
+			}
+		}
+	}
+}
+section.course__bottom {
+	overflow: hidden;
+	padding-bottom: 120px;
+	margin-bottom: -120px;
 }
 ::-webkit-input-placeholder {
 	color: $dark_white;

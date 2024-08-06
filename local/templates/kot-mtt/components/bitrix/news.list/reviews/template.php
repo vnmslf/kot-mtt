@@ -27,22 +27,41 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH.'/libraries/owl.carousel/owl.caro
 <?foreach ($arResult['ITEMS'] as $key => $arItem) {?>
 				<div class="review">
 					<div class="top">
+	<?if($arItem['PP']) {?>
 						<picture>
-	<?foreach ($arItem['PP'] as $keyMedia => $valueMedia) {
-		if($keyMedia !== 'default') {
-			$explode = explode('-', $keyMedia);
-			$start = $explode[0];
-			$end = $explode[1];?>
+		<?foreach ($arItem['PP'] as $keyMedia => $valueMedia) {
+			if($keyMedia !== 'default') {
+				$explode = explode('-', $keyMedia);
+				$start = $explode[0];
+				$end = $explode[1];?>
 							<source srcset="<?=$arItem['PP'][$keyMedia]['src']?>" media="(min-width: <?=$start?>px)<?if($end !== 'max') {?> and (max-width: <?=$end?>px)<?}?>" type="image/webp" />
-		<?}
-	}?>
+			<?}
+		}?>
 							<img srcset="<?=$arItem['PP']['default']?>" alt="<?=$arItem['NAME']?>" />
 						</picture>
+	<?} else {?>
+						<img src="<?=SITE_TEMPLATE_PATH?>/images/logo.svg" alt="<?=$arItem['NAME']?>" />
+	<?}?>
 						<h5><?=$arItem['NAME']?></h5>
 						<p><?=$arItem['PROPERTIES']['CAPTION']['VALUE']?></p>
 					</div>
 					<div class="bottom">
 						<?=$arItem['PREVIEW_TEXT']?>
+	<?if($arItem['MORE_PHOTO']) {
+		foreach ($arItem['MORE_PHOTO'] as $key => $value) {?>
+						<picture>
+			<?foreach ($value as $keyMedia => $valueMedia) {
+				if($keyMedia !== 'default') {
+					$explode = explode('-', $keyMedia);
+					$start = $explode[0];
+					$end = $explode[1];?>
+							<source srcset="<?=$value[$keyMedia]['src']?>" media="(min-width: <?=$start?>px)<?if($end !== 'max') {?> and (max-width: <?=$end?>px)<?}?>" type="image/webp" />
+				<?}
+			}?>
+							<img srcset="<?=$value['default']?>" alt="<?=$arItem['NAME']?>" />
+						</picture>
+		<?}?>
+	<?}?>
 					</div>
 				</div>
 <?}?>

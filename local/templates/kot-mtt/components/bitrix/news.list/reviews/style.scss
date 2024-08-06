@@ -69,8 +69,19 @@ section.reviews {
 						h2 {
 							color: $white;
 						}
+						& > img {
+							max-width: 80px;
+							max-height: 80px;
+							margin-bottom: 12px;
+						}
 					}
 					.bottom {
+						display: flex;
+						flex-direction: column;
+						gap: 12px;
+						p {
+							margin: 0;
+						}
 					}
 				}
 				.owl-dots {
