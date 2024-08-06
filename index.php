@@ -265,7 +265,7 @@ $APPLICATION->SetTitle('');?>
 		'PARENT_SECTION' => '',
 		'PARENT_SECTION_CODE' => '',
 		'PREVIEW_TRUNCATE_LEN' => '',
-		'PROPERTY_CODE' => array(''),
+		'PROPERTY_CODE' => array('MAIN_NAME'),
 		'SET_BROWSER_TITLE' => 'N',
 		'SET_LAST_MODIFIED' => 'Y',
 		'SET_META_DESCRIPTION' => 'N',
