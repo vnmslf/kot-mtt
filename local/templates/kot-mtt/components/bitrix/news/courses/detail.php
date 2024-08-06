@@ -124,3 +124,13 @@ $ElementID = $APPLICATION->IncludeComponent(
 		'STRICT_SECTION_CHECK' => 'N'
 	)
 );?>
+<?$APPLICATION->IncludeComponent(
+	'bitrix:main.include',
+	'',
+	Array(
+		'AREA_FILE_SHOW' => 'file',
+		'PATH' => SITE_TEMPLATE_PATH.'/inc/order-course.php',
+		'PREFIX' => 'course',
+		'MODAL_BUTTON_TEXT' => 'Отправить заявку'
+	)
+);?>
