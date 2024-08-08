@@ -299,7 +299,7 @@ foreach ($arResult['JOINUS'] as $key => $item) {
 			<div class="items">
 <?$i = 0;
 foreach ($arResult['PROGRAMM'] as $key => $item) {?>
-				<div class="item<?=($i >= 7 ? ' not-active' : '')?>">
+				<div class="item<?=($i >= 12 ? ' not-active' : '')?>">
 	<?if(!empty($item['COLOUR'])) {?>
 					<div class="top">
 						<div class="name"><?=$item['NAME']?></div>
@@ -318,7 +318,7 @@ foreach ($arResult['PROGRAMM'] as $key => $item) {?>
 				</div>
 	<?$i++;
 }?>
-				<div class="see-all">Показать еще {{numbers}} <?=inclination('этапа', array('этап', 'этапа', 'этапов'))?></div>
+				<div class="see-all">Показать еще {{numbers}} <?=inclination('этапа', array('этап', 'этапа', 'этапа'))?></div>
 			</div>
 		</div>
 	</div>

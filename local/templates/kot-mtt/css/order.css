@@ -141,6 +141,23 @@ form {
         transform: translateX(-50%); }
         form.course-main .form-section + .background__data img.pc {
           display: none; }
+    @media (min-width: 768px) {
+      form.course-main {
+        display: flex;
+        flex-direction: row;
+        gap: 78px; }
+        form.course-main h2 img {
+          top: 60px;
+          bottom: unset;
+          transform: unset; }
+        form.course-main .form-section {
+          flex: 0 0 387px; }
+          form.course-main .form-section + .background__data {
+            left: 50%; }
+            form.course-main .form-section + .background__data img.mob {
+              display: none; }
+            form.course-main .form-section + .background__data img.pc {
+              display: block; } }
 
 section.course__bottom {
   overflow: hidden;
