@@ -234,6 +234,88 @@ form {
 				}
 			}
 		}
+		@include media-up(medium) {
+			display: flex;
+			flex-direction: row;
+			gap: 78px;
+			h2 {
+				span {
+				}
+				img {
+					top: 60px;
+					bottom: unset;
+					transform: unset;
+				}
+			}
+			.form-section {
+				flex: 0 0 387px;
+				&:after {
+				}
+				.form-group {
+					label {
+						span {
+						}
+					}
+					input {
+					}
+				}
+				.form-submit {
+					button {
+					}
+					.no-submit {
+					}
+					.checkbox__block {
+						input {
+						}
+						label {
+							.check {
+							}
+							a {
+							}	
+						}
+					}
+				}
+				& + .background__data {
+					left: 50%;
+					img {
+						&.mob {
+							display: none;
+						}
+						&.pc {
+							display: block;
+						}
+					}
+				}
+			}
+			&.active {
+				.form-section {
+					.form-group {
+						label {
+							span {
+							}
+						}
+						input {
+						}
+					}
+					.form-submit {
+						button {
+						}
+						.no-submit {
+						}
+						.checkbox__block {
+							input {
+							}
+							label {
+								.check {
+								}
+								a {
+								}	
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }
 section.course__bottom {

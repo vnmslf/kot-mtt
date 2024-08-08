@@ -125,6 +125,7 @@ $ElementID = $APPLICATION->IncludeComponent(
 	)
 );?>
 <section class="course__bottom">
+	<div class="container">
 <?$APPLICATION->IncludeComponent(
 	'bitrix:main.include',
 	'',
@@ -135,4 +136,5 @@ $ElementID = $APPLICATION->IncludeComponent(
 		'MODAL_BUTTON_TEXT' => 'Отправить заявку'
 	)
 );?>
+	</div>
 </section>

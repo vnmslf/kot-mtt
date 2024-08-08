@@ -1,0 +1,39 @@
+<?require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
+$APPLICATION->SetTitle('request');
+?>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<?$session = \Bitrix\Main\Application::getInstance()->getSession();
+if (!$session->has('request')) {
+	$session->set('request', randString(12));
+}
+pre($session);?>
+<?require($_SERVER['DOCUMENT_ROOT'].'/bitrix/footer.php');?>
