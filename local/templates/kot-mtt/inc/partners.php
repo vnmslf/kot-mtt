@@ -25,7 +25,7 @@
 	<h2>Партнеры</h2>
 	<div class="list__partners">
 		<div class="partner">
-			<img src="<?=SITE_TEMPLATE_PATH?>/images/footer/gipsi.svg" alt="Гипси" />
+			<img src="<?=SITE_TEMPLATE_PATH?>/images/footer/gipsi.png" alt="Gipsi" />
 		</div>
 		<div class="partner">
 			<img src="<?=SITE_TEMPLATE_PATH?>/images/footer/skillbox.svg" alt="Skillbox" />
