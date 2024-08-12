@@ -54,7 +54,7 @@ $arResult['ADVANTAGES'] = [];
 foreach ($arResult['PROPERTIES']['ADVANTAGES']['VALUE'] as $key => $value) {
 	$obElement = CIBlockElement::GetByID($value);
 	if($arEl = $obElement->GetNext()) {
-		$arResult['ADVANTAGES'][$key]['CAPTION'] = $arEl['NAME'];
+		$arResult['ADVANTAGES'][$key]['CAPTION'] = typograf($arEl['NAME']);
 		$arResult['ADVANTAGES'][$key]['TEXT'] = $arEl['PREVIEW_TEXT'];
 	}
 }
