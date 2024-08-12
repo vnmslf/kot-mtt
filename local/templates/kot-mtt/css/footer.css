@@ -47,8 +47,8 @@ footer {
           justify-content: center;
           align-items: center; }
           footer .container .partners .list__partners .partner:nth-child(1) img {
-            width: 52.53px;
-            height: 72.81px; }
+            width: 72px;
+            height: 72px; }
           footer .container .partners .list__partners .partner:nth-child(2) img {
             width: 116.95px;
             height: 26.26px; }
@@ -90,7 +90,10 @@ footer {
           text-align: left; }
         footer .container .partners .list__partners {
           justify-content: space-between; }
-          footer .container .partners .list__partners .partner:nth-child(1) img, footer .container .partners .list__partners .partner:nth-child(2) img, footer .container .partners .list__partners .partner:nth-child(3) img, footer .container .partners .list__partners .partner:nth-child(4) img, footer .container .partners .list__partners .partner:nth-child(5) img {
+          footer .container .partners .list__partners .partner:nth-child(1) img {
+            width: 140px;
+            height: 140px; }
+          footer .container .partners .list__partners .partner:nth-child(2) img, footer .container .partners .list__partners .partner:nth-child(3) img, footer .container .partners .list__partners .partner:nth-child(4) img, footer .container .partners .list__partners .partner:nth-child(5) img {
             width: unset;
             height: unset; } }
 

@@ -11,8 +11,6 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
-use Bitrix\Main\Page\Asset;
-Asset::getInstance()->addJs(SITE_TEMPLATE_PATH.'/js/redirect.min.js');
 $APPLICATION->IncludeComponent(
 	'bitrix:news.list',
 	'',

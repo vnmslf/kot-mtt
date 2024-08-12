@@ -1,0 +1,144 @@
+@import "./../../../../../../../scss/style";
+section.courses__list {
+	padding-top: 120px;
+	.container {
+		flex-direction: column;
+		gap: 32px;
+		.article {
+			background: rgba($advantages, .3);
+			border-radius: 20px;
+			position: relative;
+			overflow: hidden;
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			&:after {
+				content: '';
+				position: absolute;
+				z-index: 0;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				border-radius: 20px;
+				padding: 1px; 
+				background:linear-gradient(53deg, rgba($white, 0), rgba($white, 1), rgba($white, 0), rgba($white, .56), rgba($white, .48), rgba($white, .56)); 
+				-webkit-mask: 
+				linear-gradient(#fff 0 0) content-box, 
+				linear-gradient(#fff 0 0);
+				-webkit-mask-composite: xor;
+				mask-composite: exclude;
+			}
+			.top {
+				display: flex;
+				justify-content: center;
+				picture {
+					position: relative;
+					img {
+					}
+					& + picture {
+						position: absolute;
+						top: 0;
+						left: 50%;
+						width: max-content;
+						transform: translateX(-50%);
+						animation: opacity 4s ease-in infinite;
+					}
+				}
+			}
+			.bottom {
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+				padding: 0 16px 25px;
+				flex: 1 0 auto;
+				h2 {
+					font-size: 16px;
+					line-height: 21px;
+				}
+				p {
+					margin: 0 0 10px;
+					-webkit-line-clamp: 3;
+					display: -webkit-box;
+					-webkit-box-orient: vertical;
+					overflow: hidden;
+					font-size: 14px;
+					line-height: 18px;
+					color: $light_gray;
+				}
+				span.date {
+					margin-top: auto;
+					font-size: 16px;
+					line-height: 21px;
+					color: $light_gray;
+				}
+			}
+		}
+	}
+	@include media-up(medium) {
+		.container {
+			flex-direction: row;
+			flex-wrap: wrap;
+			.article {
+				flex: 0 0 calc(33% - 18px);
+				&:after {
+				}
+				.top {
+					picture {
+						img {
+							max-height: 240px;
+						}
+						& + picture {
+							animation: unset;
+						}
+					}
+				}
+				.bottom {
+					padding: 0 25px 20px;
+					h2 {
+						font-size: 24px;
+						line-height: 28px;
+					}
+					p {
+						font-size: 18px;
+						line-height: 21px;
+					}
+					span.date {
+					}
+				}
+				&:hover {
+					&:after {
+					}
+					.top {
+						picture {
+							img {
+							}
+							& + picture {
+								animation: opacity 1.5s ease-out infinite;
+							}
+						}
+					}
+					.bottom {
+						h2 {
+						}
+						p {
+						}
+						span.date {
+						}
+					}	
+				}
+			}
+		}
+	}
+}
+@keyframes opacity {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}

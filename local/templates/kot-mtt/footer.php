@@ -19,7 +19,7 @@ if($url_without_question == '/') {?>
 );?>
 <?}?>
 			<div class="last__block">
-				ООО “КОТ-МТТ”
+				“КОТ-МТТ”
 				<a href="/privacy/">Политика конфиденциальности</a>
 			</div>
 		</div>
