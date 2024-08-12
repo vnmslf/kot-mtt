@@ -1,21 +1,18 @@
 <?
 include_once ($_SERVER['DOCUMENT_ROOT'].'/local/vendor/autoload.php');
-if (isset($_GET['noinit']) && !empty($_GET['noinit']))
-{
+if (isset($_GET['noinit']) && !empty($_GET['noinit'])) {
 	$strNoInit = strval($_GET['noinit']);
-	if ($strNoInit == 'N')
-	{
+	if ($strNoInit == 'N') {
 		if (isset($_SESSION['NO_INIT']))
 			unset($_SESSION['NO_INIT']);
-	}
-	elseif ($strNoInit == 'Y')
-	{
+	} elseif ($strNoInit == 'Y') {
 		$_SESSION['NO_INIT'] = 'Y';
 	}
 }
 if (!(isset($_SESSION['NO_INIT']) && $_SESSION['NO_INIT'] == 'Y')) {
-	if (file_exists($_SERVER['DOCUMENT_ROOT'].'/local/php_interface/autoload.php'))
+	if (file_exists($_SERVER['DOCUMENT_ROOT'].'/local/php_interface/autoload.php')) {
 		require_once($_SERVER['DOCUMENT_ROOT'].'/local/php_interface/autoload.php');
+	}
 }
 AddEventHandler('main', 'OnEndBufferContent', 'deleteKernelJs');
 function pre($data, $flag = true) {
@@ -81,6 +78,24 @@ function OnBeforeIBlockElementHandler(&$arFields) {
 		$typoText = $t->apply($arFields['DETAIL_TEXT']);
 		$arFields['DETAIL_TEXT'] = $typoText;
 	}
+}
+
+function typograf($string) {
+	$t = new \Akh\Typograf\Typograf();
+	$simpleRule = new class extends \Akh\Typograf\Rule\AbstractRule {
+		public $name = 'Замена "при" и "это"';
+		protected $sort = 1000;
+		public function handler(string $text): string {
+			$text = str_replace("при ", "при&nbsp;", $text);
+			$text = str_replace("При ", "При&nbsp;", $text);
+			$text = str_replace("это ", "это&nbsp;", $text);
+			$text = str_replace("Это ", "Это&nbsp;", $text);
+			return $text;
+		}
+	};
+	$t->addRule($simpleRule);
+	$typoText = $t->apply($string);
+	return $typoText;
 }
 
 \Bitrix\Main\EventManager::getInstance()->addEventHandler(
