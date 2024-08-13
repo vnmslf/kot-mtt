@@ -75,23 +75,26 @@ if(count($arResult['MEMBERS']) > 0) {
 				<div class="nav"></div>
 			</div>
 			<div class="team-carousel owl-carousel">
-<?foreach ($arResult['MEMBERS'] as $key => $arItem) {?>
+<?foreach ($arResult['MEMBERS'] as $key => $member) {?>
 				<div class="member">
 					<picture>
-	<?foreach ($arItem['DP'] as $keyMedia => $valueMedia) {
+	<?foreach ($member['DP'] as $keyMedia => $valueMedia) {
 		if($keyMedia !== 'default') {
 			$explode = explode('-', $keyMedia);
 			$start = $explode[0];
 			$end = $explode[1];?>
-						<source srcset="<?=$arItem['DP'][$keyMedia]['src']?>" media="(min-width: <?=$start?>px)<?if($end !== 'max') {?> and (max-width: <?=$end?>px)<?}?>" type="image/webp" />
+						<source srcset="<?=$member['DP'][$keyMedia]['src']?>" media="(min-width: <?=$start?>px)<?if($end !== 'max') {?> and (max-width: <?=$end?>px)<?}?>" type="image/webp" />
 		<?}
 	}?>
-						<img srcset="<?=$arItem['DP']['default']?>" alt="<?=$arItem['NAME']?>" />
+						<img srcset="<?=$member['DP']['default']?>" alt="<?=$member['NAME']?>" />
 					</picture>
+					<div class="info">
+						<div class="name"><?=$member['NAME']?></div>
+						<div class="text"><?=$member['PROPERTIES']['SPEEDRUN']['~VALUE']['TEXT']?></div>
+					</div>
 				</div>
 <?}?>
 			</div>
 		</div>
 	</div>
 </section>
-<?//pre($arResult['ITEMS'])?>
