@@ -1,4 +1,4 @@
-<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
+<?if(!defined('B_PROLOG_INCLUDED')||B_PROLOG_INCLUDED!==true)die();?>
 <div class="partners">
 	<svg width="754" height="857" viewBox="0 0 754 857" fill="none" xmlns="http://www.w3.org/2000/svg">
 		<g opacity="0.5">

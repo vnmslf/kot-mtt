@@ -1,0 +1,128 @@
+@import "./../scss/style";
+section.enter-the-team {
+	padding-top: 100px;
+	.container {
+		flex-direction: column;
+		gap: 20px;
+		h1 {
+			font-size: 30px;
+			span {
+				color: $accent_red;
+			}
+		}
+		.form__block {
+			display: flex;
+			flex-direction: column;
+			.top {
+				display: flex;
+				flex-direction: column;
+				gap: 20px;
+				.pre__info {
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					gap: 4px;
+					font-size: 18px;
+					font-family: "TacticSans", sans-serif;
+					svg {
+						width: 36px;
+						height: 36px;
+						path {
+							stroke: $accent_red;
+						}
+					}
+				}
+				.points {
+					display: flex;
+					flex-direction: column;
+					gap: 8px;
+					.point {
+						padding: 12px;
+						background: rgba($advantages, .3);
+						border-radius: 20px;
+						font-family: "TacticSans", sans-serif;
+						font-size: 14px;
+						position: relative;
+						&:after {
+							content: '';
+							position: absolute;
+							z-index: 0;
+							top: 0;
+							left: 0;
+							right: 0;
+							bottom: 0;
+							border-radius: 20px;
+							padding: 1px; 
+							background:linear-gradient(53deg, rgba($white, 0), rgba($white, 1), rgba($white, 0), rgba($white, .56), rgba($white, .48), rgba($white, .56)); 
+							-webkit-mask: 
+							linear-gradient(#fff 0 0) content-box, 
+							linear-gradient(#fff 0 0);
+							-webkit-mask-composite: xor;
+							mask-composite: exclude;
+						}
+						span {
+							font-weight: 600;
+						}
+					}
+				}
+				.approve {
+					flex: 0 0 100%;
+					.management {
+						display: flex;
+						flex-direction: row;
+						align-items: center;
+						gap: 9px;
+						margin-top: 13px;
+						position: relative;
+						z-index: 2;
+						input {
+							margin: 0;
+							opacity: 0;
+						}
+						label {
+							font-weight: 400;
+							font-size: 14px;
+							line-height: 14px;
+							position: relative;
+							z-index: 1;
+							.check {
+								content: '';
+								position: absolute;
+								z-index: 2;
+								top: 50%;
+								left: -6px;
+								border-radius: 4px;
+								padding: 3px;
+								background: $white;
+								transform: translate(-100%, -50%);
+							}
+							a {
+								color: $rose;
+								text-decoration: underline;
+							}	
+						}
+					}
+					.arrow {
+						display: flex;
+						justify-content: center;
+						svg {
+							width: 70px;
+							height: 70px;
+							g {
+								path {
+									fill: $accent_red;
+								}
+							}
+						}
+					}
+					.comment {
+					}
+				}
+			}
+			.bottom {
+			}
+		}
+	}
+	@include media-up(medium) {
+	}
+}
