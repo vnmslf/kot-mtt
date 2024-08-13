@@ -114,7 +114,69 @@ section.team {
 			}
 		}
 		.team__block {
-			display: none;
+			.team-carousel {
+				&.owl-carousel {
+					.member {
+						picture {
+							position: relative;
+							z-index: 1;
+							source {
+							}
+							img {
+							}
+						}
+						.info {
+							position: relative;
+							z-index: 2;
+							border-radius: 20px;
+							padding: 20px;
+							background: $advantages;
+							margin-top: -20px;
+							font-family: "TacticSans", sans-serif;
+							.name {
+								font-weight: 600;
+								font-size: 16px;
+								line-height: 21px;
+							}
+							.text {
+								font-size: 14px;
+								line-height: 21px;
+								color: $light_gray;
+							}
+						}
+					}
+					.owl-dots {
+						background: $gray;
+						border-radius: 1000px;
+						height: 8px;
+						margin-top: 18px;
+						display: flex;
+						justify-content: space-between;
+						button {
+							display: inline-flex;
+							height: 8px;
+							border: 0;
+							position: relative;
+							top: 0;
+							flex: 1 0 max-content;
+							span {
+								display: inline-block;
+								height: 100%;
+								width: 100%;
+								position: absolute;
+								top: 0;
+								left: 0;
+							}
+							&.active {
+								span {
+									background: $accent_red;
+									border-radius: 1000px;
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 	@include media-up(medium) {
@@ -212,15 +274,36 @@ section.team {
 					}
 				}
 				.team-carousel {
-					width: 130%;
-					.member {
-						picture {
-							width: 488px;
-							display: block;
-							source {
+					width: 120%;
+					&.owl-carousel {
+						.member {
+							picture {
+								source {
+								}
+								img {
+								}
 							}
-							img {
-								width: 488px;
+							.info {
+								display: flex;
+								flex-direction: column;
+								gap: 4px;
+								.name {
+									font-size: 24px;
+								}
+								.text {
+									font-size: 16px;
+									line-height: 24px;
+								}
+							}
+						}
+						.owl-dots {
+							button {
+								span {
+								}
+								&.active {
+									span {
+									}
+								}
 							}
 						}
 					}
