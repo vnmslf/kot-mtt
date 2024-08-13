@@ -1,121 +1,99 @@
 /* colors*/
 /* breakpoints*/
 section.enter-the-team {
-  padding-top: 100px;
-}
-section.enter-the-team .container {
-  flex-direction: column;
-  gap: 20px;
-}
-section.enter-the-team .container h1 {
-  font-size: 30px;
-}
-section.enter-the-team .container h1 span {
-  color: #ff1414;
-}
-section.enter-the-team .container .form__block {
-  display: flex;
-  flex-direction: column;
-}
-section.enter-the-team .container .form__block .top {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-section.enter-the-team .container .form__block .top .pre__info {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 4px;
-  font-size: 18px;
-  font-family: "TacticSans", sans-serif;
-}
-section.enter-the-team .container .form__block .top .pre__info svg {
-  width: 36px;
-  height: 36px;
-}
-section.enter-the-team .container .form__block .top .pre__info svg path {
-  stroke: #ff1414;
-}
-section.enter-the-team .container .form__block .top .points {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-section.enter-the-team .container .form__block .top .points .point {
-  padding: 12px;
-  background: rgba(51, 12, 17, 0.3);
-  border-radius: 20px;
-  font-family: "TacticSans", sans-serif;
-  font-size: 14px;
-  position: relative;
-}
-section.enter-the-team .container .form__block .top .points .point:after {
-  content: "";
-  position: absolute;
-  z-index: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 20px;
-  padding: 1px;
-  background: linear-gradient(53deg, rgba(255, 255, 255, 0), white, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.56), rgba(255, 255, 255, 0.48), rgba(255, 255, 255, 0.56));
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-}
-section.enter-the-team .container .form__block .top .points .point span {
-  font-weight: 600;
-}
-section.enter-the-team .container .form__block .top .approve {
-  flex: 0 0 100%;
-}
-section.enter-the-team .container .form__block .top .approve .management {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 9px;
-  margin-top: 13px;
-  position: relative;
-  z-index: 2;
-}
-section.enter-the-team .container .form__block .top .approve .management input {
-  margin: 0;
-  opacity: 0;
-}
-section.enter-the-team .container .form__block .top .approve .management label {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 14px;
-  position: relative;
-  z-index: 1;
-}
-section.enter-the-team .container .form__block .top .approve .management label .check {
-  content: "";
-  position: absolute;
-  z-index: 2;
-  top: 50%;
-  left: -6px;
-  border-radius: 4px;
-  padding: 3px;
-  background: #fff;
-  transform: translate(-100%, -50%);
-}
-section.enter-the-team .container .form__block .top .approve .management label a {
-  color: #db6868;
-  text-decoration: underline;
-}
-section.enter-the-team .container .form__block .top .approve .arrow {
-  display: flex;
-  justify-content: center;
-}
-section.enter-the-team .container .form__block .top .approve .arrow svg {
-  width: 70px;
-  height: 70px;
-}
-section.enter-the-team .container .form__block .top .approve .arrow svg g path {
-  fill: #ff1414;
-}
+  padding-top: 100px; }
+  section.enter-the-team .container {
+    flex-direction: column;
+    gap: 20px; }
+    section.enter-the-team .container h1 {
+      font-size: 30px; }
+      section.enter-the-team .container h1 span {
+        color: #ff1414; }
+    section.enter-the-team .container .form__block {
+      display: flex;
+      flex-direction: column; }
+      section.enter-the-team .container .form__block .top {
+        display: flex;
+        flex-direction: column;
+        gap: 20px; }
+        section.enter-the-team .container .form__block .top .pre__info {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 4px;
+          font-size: 18px;
+          font-family: "TacticSans", sans-serif; }
+          section.enter-the-team .container .form__block .top .pre__info svg {
+            width: 36px;
+            height: 36px; }
+            section.enter-the-team .container .form__block .top .pre__info svg path {
+              stroke: #ff1414; }
+        section.enter-the-team .container .form__block .top .points {
+          display: flex;
+          flex-direction: column;
+          gap: 8px; }
+          section.enter-the-team .container .form__block .top .points .point {
+            padding: 12px;
+            background: rgba(51, 12, 17, 0.3);
+            border-radius: 20px;
+            font-family: "TacticSans", sans-serif;
+            font-size: 14px;
+            position: relative; }
+            section.enter-the-team .container .form__block .top .points .point:after {
+              content: '';
+              position: absolute;
+              z-index: 0;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              border-radius: 20px;
+              padding: 1px;
+              background: linear-gradient(53deg, rgba(255, 255, 255, 0), white, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.56), rgba(255, 255, 255, 0.48), rgba(255, 255, 255, 0.56));
+              -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+              -webkit-mask-composite: xor;
+              mask-composite: exclude; }
+            section.enter-the-team .container .form__block .top .points .point span {
+              font-weight: 600; }
+        section.enter-the-team .container .form__block .top .approve {
+          flex: 0 0 100%; }
+          section.enter-the-team .container .form__block .top .approve .management {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 9px;
+            margin-top: 13px;
+            position: relative;
+            z-index: 2; }
+            section.enter-the-team .container .form__block .top .approve .management input {
+              margin: 0;
+              opacity: 0; }
+            section.enter-the-team .container .form__block .top .approve .management label {
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 14px;
+              position: relative;
+              z-index: 1; }
+              section.enter-the-team .container .form__block .top .approve .management label .check {
+                content: '';
+                position: absolute;
+                z-index: 2;
+                top: 50%;
+                left: -6px;
+                border-radius: 4px;
+                padding: 3px;
+                background: #fff;
+                transform: translate(-100%, -50%); }
+              section.enter-the-team .container .form__block .top .approve .management label a {
+                color: #db6868;
+                text-decoration: underline; }
+          section.enter-the-team .container .form__block .top .approve .arrow {
+            display: flex;
+            justify-content: center; }
+            section.enter-the-team .container .form__block .top .approve .arrow svg {
+              width: 70px;
+              height: 70px; }
+              section.enter-the-team .container .form__block .top .approve .arrow svg g path {
+                fill: #ff1414; }
 
 /*# sourceMappingURL=enter-the-team.css.map */
