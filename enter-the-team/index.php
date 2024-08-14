@@ -23,10 +23,10 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH.'/js/enter-the-team.min.js');
 					<div class="point">Можешь <span>показать профит на&nbsp;рабочем лимите</span></div>
 					<div class="point"><span>Хорошая репутация</span> и&nbsp;отсутствие арбитража</div>
 				</div>
-				<div class="approve">
+				<div class="approve__block">
 					<div class="management">
-						<label for="approve">
-							<input type="checkbox" name="approve" id="approve" value="" />
+						<label class="approve" for="approve">
+							<input type="checkbox" name="approve" id="approve" value="" checked="checked" />
 							<svg class="check" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd" d="M8.9325 1.92165C9.21223 2.19981 9.21351 2.65207 8.93535 2.9318L3.82141 8.07466C3.68734 8.20949 3.50505 8.2853 3.31491 8.2853C3.12477 8.2853 2.94248 8.20949 2.80841 8.07466L1.06521 6.3216C0.787051 6.04187 0.788326 5.58961 1.06806 5.31145C1.34779 5.03329 1.80005 5.03457 2.07821 5.3143L3.31491 6.558L7.92235 1.9245C8.20051 1.64477 8.65277 1.6435 8.9325 1.92165Z" fill="white" />
 							</svg>

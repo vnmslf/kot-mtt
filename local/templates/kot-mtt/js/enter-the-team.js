@@ -9,3 +9,17 @@ $(document).on('click', '.check', function() {
 		form.addClass('active');
 	}
 })
+$(document).on('click', '.approve', function() {
+	var _this = $('.approve');
+	if(_this.find('input').attr('checked') == 'checked') {
+		_this.removeClass('yes');
+		_this.find('input').attr('checked', '');
+	} else {
+		_this.addClass('yes');
+		_this.find('input').checked('checked');
+	}
+})
+$(document).on('click', '.approve', function() {
+	var _this = $('.approve');
+	_this.toggleClass('lolo');
+})
