@@ -1,5 +1,6 @@
 <?if(!defined('B_PROLOG_INCLUDED')||B_PROLOG_INCLUDED!==true)die();
 use Bitrix\Main\Page\Asset;
+Asset::getInstance()->addJs(SITE_TEMPLATE_PATH.'/js/order.min.js');
 Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/order.min.css');
 Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/enter-the-team__form.min.css');
 $prefix = 'enter';?>
