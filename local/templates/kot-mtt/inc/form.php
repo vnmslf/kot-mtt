@@ -163,7 +163,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 			return false;
 		}
 
-		$pattern = "/(http|https)\:\/\/(www\.)?[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/";
+		//$pattern = "/(http|https)\:\/\/(www\.)?[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/";
 
 		if( preg_match_all( $pattern, $submitted, $urls ) ) {
 			return count($urls);
