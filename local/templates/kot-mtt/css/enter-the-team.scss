@@ -1,6 +1,7 @@
 @import "./../scss/style";
 section.enter-the-team {
 	padding-top: 100px;
+	overflow: hidden;
 	.container {
 		flex-direction: column;
 		gap: 20px;
@@ -13,6 +14,7 @@ section.enter-the-team {
 		.form__block {
 			display: flex;
 			flex-direction: column;
+			gap: 50px;
 			.top {
 				display: flex;
 				flex-direction: column;
@@ -67,6 +69,9 @@ section.enter-the-team {
 				}
 				.approve__block {
 					flex: 0 0 100%;
+					display: flex;
+					flex-direction: column;
+					gap: 10px;
 					.management {
 						display: flex;
 						flex-direction: row;
@@ -75,31 +80,30 @@ section.enter-the-team {
 						margin-top: 13px;
 						position: relative;
 						z-index: 2;
-						input {
-							margin: 0;
-							//opacity: 0;
-						}
 						label {
-							font-weight: 400;
-							font-size: 14px;
-							line-height: 14px;
-							position: relative;
-							z-index: 1;
-							.check {
-								content: '';
-								position: absolute;
-								z-index: -1;
-								top: 50%;
-								left: -6px;
-								border-radius: 4px;
-								padding: 3px;
-								background: $white;
-								transform: translate(0, -50%);
+							&.approve {
+								display: flex;
+								flex-direction: row;
+								align-items: center;
+								gap: 6px;
+								font-weight: 400;
+								font-size: 14px;
+								line-height: 14px;
+								.check {
+									border-radius: 4px;
+									padding: 3px;
+									background: $white;
+									@include default_transition(.2s);
+								}
+								span {
+									font-family: "TacticSans", sans-serif;
+								}
+								&.yes {
+									.check {
+										background: $accent_red;
+									}
+								}
 							}
-							a {
-								color: $rose;
-								text-decoration: underline;
-							}	
 						}
 					}
 					.arrow {
@@ -108,6 +112,7 @@ section.enter-the-team {
 						svg {
 							width: 70px;
 							height: 70px;
+							transform: rotate(180deg);
 							g {
 								path {
 									fill: $accent_red;
@@ -116,13 +121,126 @@ section.enter-the-team {
 						}
 					}
 					.comment {
+						text-align: center;
 					}
 				}
 			}
 			.bottom {
+				&.anketa {
+					&:not(.yes) {
+						position: relative;
+						&:before {
+							content: '';
+							position: absolute;
+							z-index: 2;
+							top: -10px;
+							left: -10px;
+							right: -10px;
+							bottom: -10px;
+							display: block;
+							background: rgba($advantages, .5);
+						}
+					}
+				}
 			}
 		}
 	}
 	@include media-up(medium) {
+		padding-top: 150px;
+		.container {
+			gap: 50px;
+			h1 {
+				span {
+				}
+			}
+			.form__block {
+				gap: 80px;
+				.top {
+					.pre__info {
+						gap: 8px;
+						font-size: 22px;
+						svg {
+							path {
+							}
+						}
+					}
+					.points {
+						flex-direction: row;
+						flex-wrap: wrap;
+						.point {
+							flex: 0 0 calc(50% - 44px);
+							padding: 20px;
+							font-size: 22px;
+							&:after {
+							}
+							span {
+							}
+						}
+					}
+					.approve__block {
+						align-items: center;
+						.management {
+							label {
+								&.approve {
+									.check {
+									}
+									span {
+									}
+									&.yes {
+										.check {
+										}
+									}
+								}
+							}
+						}
+						.arrow {
+							svg {
+								g {
+									path {
+									}
+								}
+							}
+						}
+						.comment {
+						}
+					}
+				}
+				.bottom {
+					padding-bottom: 20px;
+					&.anketa {
+						&:not(.yes) {
+							&:before {
+								left: -200%;
+								right: -200%;
+							}
+						}
+					}
+				}
+			}
+		}
 	}
+}
+::-webkit-input-placeholder {
+	color: $dark_white;
+	opacity: .6;
+}
+:-moz-placeholder {
+	color: $dark_white;
+	opacity: .6;
+}
+::-moz-placeholder {
+	color: $dark_white;
+	opacity: .6;
+}
+:-ms-input-placeholder {
+	color: $dark_white;
+	opacity: .6;
+}
+::-ms-input-placeholder {
+	color: $dark_white;
+	opacity: .6;
+}
+::placeholder {
+	color: $dark_white;
+	opacity: .6;
 }

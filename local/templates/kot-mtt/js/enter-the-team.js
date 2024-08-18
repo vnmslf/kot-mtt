@@ -1,6 +1,9 @@
 $(document).ready(function() {
 	$('.masked__phone').mask('+7 (999) 999-99-99');
 })
+$(document).ready(function() {
+	$('.masked__birthday').mask('99/99/99');
+})
 $(document).on('click', '.check', function() {
 	var form = $(this).parents('form');
 	if(form.hasClass('active')) {
@@ -10,16 +13,13 @@ $(document).on('click', '.check', function() {
 	}
 })
 $(document).on('click', '.approve', function() {
-	var _this = $('.approve');
-	if(_this.find('input').attr('checked') == 'checked') {
+	var _this = $('.approve'),
+		anketa = $('.anketa')
+	if(_this.hasClass('yes')) {
 		_this.removeClass('yes');
-		_this.find('input').attr('checked', '');
+		anketa.removeClass('yes');
 	} else {
 		_this.addClass('yes');
-		_this.find('input').checked('checked');
+		anketa.addClass('yes');
 	}
-})
-$(document).on('click', '.approve', function() {
-	var _this = $('.approve');
-	_this.toggleClass('lolo');
 })
