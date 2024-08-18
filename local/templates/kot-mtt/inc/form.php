@@ -97,9 +97,9 @@ $message = array(
 ---------------------------------------------------*/
 
 $spam_keywords = array(
-	'viagra',
-	'cialis',
-	'levitra'
+	//'viagra',
+	//'cialis',
+	//'levitra'
 );
 
 $allowed_urls = 1;
@@ -176,6 +176,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 		if( spam_keyword_check( $spam_submit, $spam_keywords ) || spam_url_check( $spam_submit ) > $allowed_urls ) {
 			// A successful message is displayed to the submitter that makes him think that the Form has been sent so that he cannot modify the keywords to prevent SPAM
 			echo '{ "alert": "success", "message": "' . $message['success'] . '" }';
+			header('Location: https://kot-mtt.com/thank-you/');
 			exit;
 		}
 	}
@@ -453,7 +454,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 		if( $autores && !empty( $replyto_e ) ) {
 			$send_arEmail = $autoresponder->Send();
 		}
-		header('Location: http://dev.kot-mtt.com/thank-you/');
+		header('Location: https://kot-mtt.com/thank-you/');
 	} else {
 		echo '{ "alert": "error", "message": "' . $message['error'] . '<br><br><strong>Reason:</strong><br>' . $mail->ErrorInfo . '" }';
 	}
