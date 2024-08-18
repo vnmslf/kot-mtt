@@ -45,7 +45,7 @@ $toemails[] = array(
 ---------------------------------------------------*/
 
 $fromemail = array(
-				'email' => 'admin@professional161.ru', // Company's Email Address (preferably currently used Domain Name)
+				'email' => 'admin@kot-mtt.com', // Company's Email Address (preferably currently used Domain Name)
 				'name' => 'Администратор' // Company Name
 			);
 
