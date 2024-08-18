@@ -27,16 +27,16 @@ require '../phpmailer/src/SMTP.php';
 $toemails = array();
 
 $toemails[] = array(
-				'email' => 'admin@professional161.ru',
-				'name' => 'Заявка с сайта kot-mtt.com'
+				'email' => 'admin@professional161.ru', // Your Email Address
+				'name' => 'Заявка с сайта kot-mtt.com' // Your Name
 			);
 $toemails[] = array(
-				'email' => 'rak.robot@gmail.com',
-				'name' => 'Заявка с сайта kot-mtt.com'
+				'email' => 'rak.robot@gmail.com', // Your Email Address
+				'name' => 'Заявка с сайта kot-mtt.com' // Your Name
 			);
 $toemails[] = array(
-				'email' => 'byhalooleg@gmail.com',
-				'name' => 'Заявка с сайта kot-mtt.com'
+				'email' => 'admin@professional161.ru, laborant217@yandex.ru, vnmslf@gmail.com', // Your Email Address
+				'name' => 'Заявка с сайта kot-mtt.com' // Your Name
 			);
 
 
