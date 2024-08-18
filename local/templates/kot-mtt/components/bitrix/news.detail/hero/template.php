@@ -37,7 +37,7 @@ $this->setFrameMode(true);?>
 				</li>
 <?}?>
 			</ul>
-			<div class="order__btn" data-modal="team">Оставить заявку в команду</div>
+			<a href="/enter-the-team/" class="order__btn">Оставить заявку в команду</a>
 		</div>
 		<div class="advantages">
 <?foreach ($arResult['ADVANTAGES'] as $key => $value) {?>
