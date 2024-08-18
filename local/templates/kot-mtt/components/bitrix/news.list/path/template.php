@@ -58,7 +58,7 @@ $this->setFrameMode(true);
 		</div>
 		<div class="cta">
 			<p>Узнай откуда начнешь свой путь в команде школы покера КОТ-MTT</p>
-			<div class="order__btn" data-modal="team">Подать заявку</div>
+			<a href="/enter-the-team/" class="order__btn">Подать заявку</a>
 		</div>
 	</div>
 </section>
