@@ -51,7 +51,7 @@ $this->setFrameMode(true);
 	<?if($arItem['PREVIEW_TEXT'] !== '') {?>
 					<p><?=$arItem['PREVIEW_TEXT']?></p>
 	<?}?>
-					<div class="order__btn">Оставить заявку</div>
+					<div class="order__btn" data-modal="team">Оставить заявку</div>
 				</div>
 			</div>
 <?}?>
