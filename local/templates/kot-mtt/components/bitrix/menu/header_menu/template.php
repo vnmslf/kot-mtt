@@ -81,7 +81,7 @@ if (!empty($arResult)) {?>
 				</svg>
 			</a>
 		</div>
-		<a href="enter-the-team" class="order__btn">
+		<a href="/enter-the-team/" class="order__btn">
 			<span class="zero-up">Оставить заявку в команду</span>
 			<span class="medium-up">Подать заявку</span>
 		</a>
