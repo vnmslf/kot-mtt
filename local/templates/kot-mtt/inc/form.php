@@ -24,14 +24,36 @@ require '../phpmailer/src/SMTP.php';
 	Receiver's Email
 ---------------------------------------------------*/
 
-$toemails = array();
-
-$toemails[0] = array('admin@professional161.ru');
-$toemails[1] = array('rak.robot@gmail.com');
-$toemails[2] = array('vnmslf@gmail.com');
-$toemails[3] = array('manager@kot.mtt.com');
-$toemails[4] = array('byhalooleg@gmail.com');
-$toemails[5] = array('kot74.request@gmail.com');
+$toemails = array(
+	array(
+		'email' => 'admin@professional161.ru', // Your Email Address
+		'name' => 'web' // Your Name
+	),
+	array(
+		'email' => 'rak.robot@gmail.com', // Your Email Address
+		'name' => 'rak robot' // Your Name
+	),
+	array(
+		'email' => 'vnmslf@gmail.com', // Your Email Address
+		'name' => 'vnmslf' // Your Name
+	),
+	array(
+		'email' => 'laborant217@yandex.ru', // Your Email Address
+		'name' => 'lab' // Your Name
+	),
+	array(
+		'email' => 'manager@kot.mtt.com', // Your Email Address
+		'name' => 'manager' // Your Name
+	),
+	array(
+		'email' => 'byhalooleg@gmail.com', // Your Email Address
+		'name' => 'byhalooleg' // Your Name
+	),
+	array(
+		'email' => 'kot74.request@gmail.com', // Your Email Address
+		'name' => 'kot74' // Your Name
+	),
+);
 
 
 /*-------------------------------------------------
@@ -275,7 +297,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 	}
 
 	foreach( $toemails as $toemail ) {
-		$mail->AddAddress( $toemail);
+		$mail->AddAddress( $toemail['email'] , $toemail['name'] );
 	}
 
 	$unsets = array( 'prefix', 'subject', 'replyto', 'template', 'html_title', 'message', 'autoresponder', 'ar_subject', 'ar_title', 'ar_message', 'ar_footer', $prefix . 'botcheck', 'g-recaptcha-response', 'h-captcha-response', 'force_recaptcha', $prefix . 'submit' );
