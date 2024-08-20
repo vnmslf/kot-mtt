@@ -26,30 +26,12 @@ require '../phpmailer/src/SMTP.php';
 
 $toemails = array();
 
-$toemails[0] = array(
-				'email' => 'admin@professional161.ru', // Your Email Address
-				'name' => 'Заявка с сайта kot-mtt.com' // Your Name
-			);
-$toemails[1] = array(
-				'email' => 'rak.robot@gmail.com', // Your Email Address
-				'name' => 'Заявка с сайта kot-mtt.com' // Your Name
-			);
-$toemails[2] = array(
-				'email' => 'vnmslf@gmail.com', // Your Email Address
-				'name' => 'Заявка с сайта kot-mtt.com' // Your Name
-			);
-$toemails[3] = array(
-				'email' => 'manager@kot.mtt.com', // Your Email Address
-				'name' => 'Заявка с сайта kot-mtt.com' // Your Name
-			);
-$toemails[4] = array(
-				'email' => 'byhalooleg@gmail.com', // Your Email Address
-				'name' => 'Заявка с сайта kot-mtt.com' // Your Name
-			);
-$toemails[5] = array(
-				'email' => 'kot74.request@gmail.com', // Your Email Address
-				'name' => 'Заявка с сайта kot-mtt.com' // Your Name
-			);
+$toemails[0] = array('admin@professional161.ru');
+$toemails[1] = array('rak.robot@gmail.com');
+$toemails[2] = array('vnmslf@gmail.com');
+$toemails[3] = array('manager@kot.mtt.com');
+$toemails[4] = array('byhalooleg@gmail.com');
+$toemails[5] = array('kot74.request@gmail.com');
 
 
 /*-------------------------------------------------
@@ -293,7 +275,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 	}
 
 	foreach( $toemails as $toemail ) {
-		$mail->AddAddress( $toemail['email'] , $toemail['name'] );
+		$mail->AddAddress( $toemail);
 	}
 
 	$unsets = array( 'prefix', 'subject', 'replyto', 'template', 'html_title', 'message', 'autoresponder', 'ar_subject', 'ar_title', 'ar_message', 'ar_footer', $prefix . 'botcheck', 'g-recaptcha-response', 'h-captcha-response', 'force_recaptcha', $prefix . 'submit' );
