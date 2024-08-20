@@ -43,6 +43,39 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH.'/js/enter-the-team.min.js');
 				</div>
 			</div>
 			<div class="bottom anketa yes">
+<?/*
+$toemails = array(
+	array(
+		'email' => 'admin@professional161.ru', // Your Email Address
+		'name' => 'Заявка с сайта kot-mtt.com' // Your Name
+	),
+	array(
+		'email' => 'rak.robot@gmail.com', // Your Email Address
+		'name' => 'Заявка с сайта kot-mtt.com' // Your Name
+	),
+	array(
+		'email' => 'vnmslf@gmail.com', // Your Email Address
+		'name' => 'Заявка с сайта kot-mtt.com' // Your Name
+	),
+	array(
+		'email' => 'manager@kot.mtt.com', // Your Email Address
+		'name' => 'Заявка с сайта kot-mtt.com' // Your Name
+	),
+	array(
+		'email' => 'byhalooleg@gmail.com', // Your Email Address
+		'name' => 'Заявка с сайта kot-mtt.com' // Your Name
+	),
+	array(
+		'email' => 'kot74.request@gmail.com', // Your Email Address
+		'name' => 'Заявка с сайта kot-mtt.com' // Your Name
+	)
+);
+pre($toemails);
+foreach($toemails as $toemail) {
+	pre($toemail['email']);
+	pre($toemail['name']);
+}*/
+?>
 <?$APPLICATION->IncludeComponent(
 	'bitrix:main.include',
 	'',
