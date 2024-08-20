@@ -23,35 +23,33 @@ require '../phpmailer/src/SMTP.php';
 /*-------------------------------------------------
 	Receiver's Email
 ---------------------------------------------------*/
-$toemail__first = array(
-	array(
-		'email' => 'admin@professional161.ru', // Your Email Address
-		'name' => 'Заявка с сайта kot-mtt.com' // Your Name
-	),
-);
 
-$toemails = array(
-	array(
-		'email' => 'rak.robot@gmail.com', // Your Email Address
-		'name' => 'Заявка с сайта kot-mtt.com' // Your Name
-	),
-	array(
-		'email' => 'vnmslf@gmail.com', // Your Email Address
-		'name' => 'Заявка с сайта kot-mtt.com' // Your Name
-	),
-	array(
-		'email' => 'manager@kot.mtt.com', // Your Email Address
-		'name' => 'Заявка с сайта kot-mtt.com' // Your Name
-	),
-	array(
-		'email' => 'byhalooleg@gmail.com', // Your Email Address
-		'name' => 'Заявка с сайта kot-mtt.com' // Your Name
-	),
-	array(
-		'email' => 'kot74.request@gmail.com', // Your Email Address
-		'name' => 'Заявка с сайта kot-mtt.com' // Your Name
-	)
-);
+$toemails = array();
+
+$toemails[0] = array(
+				'email' => 'admin@professional161.ru', // Your Email Address
+				'name' => 'Заявка с сайта kot-mtt.com' // Your Name
+			);
+$toemails[1] = array(
+				'email' => 'rak.robot@gmail.com', // Your Email Address
+				'name' => 'Заявка с сайта kot-mtt.com' // Your Name
+			);
+$toemails[2] = array(
+				'email' => 'vnmslf@gmail.com', // Your Email Address
+				'name' => 'Заявка с сайта kot-mtt.com' // Your Name
+			);
+$toemails[3] = array(
+				'email' => 'manager@kot.mtt.com', // Your Email Address
+				'name' => 'Заявка с сайта kot-mtt.com' // Your Name
+			);
+$toemails[4] = array(
+				'email' => 'byhalooleg@gmail.com', // Your Email Address
+				'name' => 'Заявка с сайта kot-mtt.com' // Your Name
+			);
+$toemails[5] = array(
+				'email' => 'kot74.request@gmail.com', // Your Email Address
+				'name' => 'Заявка с сайта kot-mtt.com' // Your Name
+			);
 
 
 /*-------------------------------------------------
@@ -294,16 +292,9 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 		}
 	}
 
-	$mail->AddAddress( $toemail__first[0]['email'] , $toemail__first[0]['name'] );
-	$mail->AddAddress( $toemails[0]['email'] , $toemails[0]['name'] );
-	$mail->AddAddress( $toemails[1]['email'] , $toemails[1]['name'] );
-	$mail->AddAddress( $toemails[2]['email'] , $toemails[2]['name'] );
-	$mail->AddAddress( $toemails[3]['email'] , $toemails[3]['name'] );
-	$mail->AddAddress( $toemails[4]['email'] , $toemails[4]['name'] );
-	$mail->AddAddress( $toemails[5]['email'] , $toemails[5]['name'] );
-	/*foreach( $toemails as $toemail ) {
+	foreach( $toemails as $toemail ) {
 		$mail->AddAddress( $toemail['email'] , $toemail['name'] );
-	}*/
+	}
 
 	$unsets = array( 'prefix', 'subject', 'replyto', 'template', 'html_title', 'message', 'autoresponder', 'ar_subject', 'ar_title', 'ar_message', 'ar_footer', $prefix . 'botcheck', 'g-recaptcha-response', 'h-captcha-response', 'force_recaptcha', $prefix . 'submit' );
 
