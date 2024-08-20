@@ -35,7 +35,19 @@ $toemails[] = array(
 				'name' => 'Заявка с сайта kot-mtt.com' // Your Name
 			);
 $toemails[] = array(
-				'email' => 'admin@professional161.ru, laborant217@yandex.ru, vnmslf@gmail.com', // Your Email Address
+				'email' => 'vnmslf@gmail.com', // Your Email Address
+				'name' => 'Заявка с сайта kot-mtt.com' // Your Name
+			);
+$toemails[] = array(
+				'email' => 'manager@kot.mtt.com', // Your Email Address
+				'name' => 'Заявка с сайта kot-mtt.com' // Your Name
+			);
+$toemails[] = array(
+				'email' => 'byhalooleg@gmail.com', // Your Email Address
+				'name' => 'Заявка с сайта kot-mtt.com' // Your Name
+			);
+$toemails[] = array(
+				'email' => 'kot74.request@gmail.com', // Your Email Address
 				'name' => 'Заявка с сайта kot-mtt.com' // Your Name
 			);
 
