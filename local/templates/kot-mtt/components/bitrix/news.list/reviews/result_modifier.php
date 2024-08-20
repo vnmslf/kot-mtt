@@ -62,4 +62,11 @@ foreach ($arResult['ITEMS'] as $key => $arItem) {
 		}
 	}
 }
+if(array_search('COURSE', $arParams['PROPERTY_CODE'])) {
+	foreach ($arResult['ITEMS'] as $key => $arItem) {
+		if(!$arItem['PROPERTIES']['COURSE']['VALUE']) {
+			unset($arResult['ITEMS'][$key]);
+		}
+	}
+}
 ?>
