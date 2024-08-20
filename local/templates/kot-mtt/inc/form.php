@@ -23,12 +23,14 @@ require '../phpmailer/src/SMTP.php';
 /*-------------------------------------------------
 	Receiver's Email
 ---------------------------------------------------*/
-
-$toemails = array(
+$toemail__first = array(
 	array(
 		'email' => 'admin@professional161.ru', // Your Email Address
 		'name' => 'Заявка с сайта kot-mtt.com' // Your Name
 	),
+);
+
+$toemails = array(
 	array(
 		'email' => 'rak.robot@gmail.com', // Your Email Address
 		'name' => 'Заявка с сайта kot-mtt.com' // Your Name
@@ -292,8 +294,9 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 		}
 	}
 
+	$mail->AddAddress( $toemail__first[0]['email'] , $toemail__first[0]['name'] );
 	foreach( $toemails as $toemail ) {
-		$mail->AddAddress( $toemail['email'] , $toemail['name'] );
+		$mail->AddCC( $toemail['email'] , $toemail['name'] );
 	}
 
 	$unsets = array( 'prefix', 'subject', 'replyto', 'template', 'html_title', 'message', 'autoresponder', 'ar_subject', 'ar_title', 'ar_message', 'ar_footer', $prefix . 'botcheck', 'g-recaptcha-response', 'h-captcha-response', 'force_recaptcha', $prefix . 'submit' );
