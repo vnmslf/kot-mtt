@@ -24,32 +24,32 @@ require '../phpmailer/src/SMTP.php';
 	Receiver's Email
 ---------------------------------------------------*/
 
-$toemails = array();
-
-$toemails[] = array(
-				'email' => 'admin@professional161.ru', // Your Email Address
-				'name' => 'Заявка с сайта kot-mtt.com' // Your Name
-			);
-$toemails[] = array(
-				'email' => 'rak.robot@gmail.com', // Your Email Address
-				'name' => 'Заявка с сайта kot-mtt.com' // Your Name
-			);
-$toemails[] = array(
-				'email' => 'vnmslf@gmail.com', // Your Email Address
-				'name' => 'Заявка с сайта kot-mtt.com' // Your Name
-			);
-$toemails[] = array(
-				'email' => 'manager@kot.mtt.com', // Your Email Address
-				'name' => 'Заявка с сайта kot-mtt.com' // Your Name
-			);
-$toemails[] = array(
-				'email' => 'byhalooleg@gmail.com', // Your Email Address
-				'name' => 'Заявка с сайта kot-mtt.com' // Your Name
-			);
-$toemails[] = array(
-				'email' => 'kot74.request@gmail.com', // Your Email Address
-				'name' => 'Заявка с сайта kot-mtt.com' // Your Name
-			);
+$toemails = array(
+	array(
+		'email' => 'admin@professional161.ru', // Your Email Address
+		'name' => 'Заявка с сайта kot-mtt.com' // Your Name
+	),
+	array(
+		'email' => 'rak.robot@gmail.com', // Your Email Address
+		'name' => 'Заявка с сайта kot-mtt.com' // Your Name
+	),
+	array(
+		'email' => 'vnmslf@gmail.com', // Your Email Address
+		'name' => 'Заявка с сайта kot-mtt.com' // Your Name
+	),
+	array(
+		'email' => 'manager@kot.mtt.com', // Your Email Address
+		'name' => 'Заявка с сайта kot-mtt.com' // Your Name
+	),
+	array(
+		'email' => 'byhalooleg@gmail.com', // Your Email Address
+		'name' => 'Заявка с сайта kot-mtt.com' // Your Name
+	),
+	array(
+		'email' => 'kot74.request@gmail.com', // Your Email Address
+		'name' => 'Заявка с сайта kot-mtt.com' // Your Name
+	)
+);
 
 
 /*-------------------------------------------------
