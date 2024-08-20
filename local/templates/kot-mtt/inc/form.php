@@ -295,9 +295,15 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 	}
 
 	$mail->AddAddress( $toemail__first[0]['email'] , $toemail__first[0]['name'] );
-	foreach( $toemails as $toemail ) {
-		$mail->AddCC( $toemail['email'] , $toemail['name'] );
-	}
+	$mail->AddAddress( $toemails[0]['email'] , $toemails[0]['name'] );
+	$mail->AddAddress( $toemails[1]['email'] , $toemails[1]['name'] );
+	$mail->AddAddress( $toemails[2]['email'] , $toemails[2]['name'] );
+	$mail->AddAddress( $toemails[3]['email'] , $toemails[3]['name'] );
+	$mail->AddAddress( $toemails[4]['email'] , $toemails[4]['name'] );
+	$mail->AddAddress( $toemails[5]['email'] , $toemails[5]['name'] );
+	/*foreach( $toemails as $toemail ) {
+		$mail->AddAddress( $toemail['email'] , $toemail['name'] );
+	}*/
 
 	$unsets = array( 'prefix', 'subject', 'replyto', 'template', 'html_title', 'message', 'autoresponder', 'ar_subject', 'ar_title', 'ar_message', 'ar_footer', $prefix . 'botcheck', 'g-recaptcha-response', 'h-captcha-response', 'force_recaptcha', $prefix . 'submit' );
 
