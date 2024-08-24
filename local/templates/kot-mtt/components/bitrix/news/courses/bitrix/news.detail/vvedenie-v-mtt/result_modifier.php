@@ -1,4 +1,5 @@
 <?if(!defined('B_PROLOG_INCLUDED')||B_PROLOG_INCLUDED!==true)die();
+\Bitrix\Main\Loader::includeModule('iblock');
 $width_mobile = [
 	'mobile' => [
 		'start' => '0',
@@ -105,6 +106,66 @@ $width_mentors = [
 if($arResult['PREVIEW_PICTURE']) {
 	$arResult['PP'] = make_picture_width($arResult['PREVIEW_PICTURE'], $width);
 }
+$fs_m = make_picture_width(CFile::GetFileArray($arResult['PROPERTIES']['FIRST_SECTION_MOBILE']['VALUE']), $width_mobile);
+$fs = make_picture_width(CFile::GetFileArray($arResult['PROPERTIES']['FIRST_SECTION']['VALUE']), $width);
+unset($fs_m['default']);
+$arResult['FS'] = array_merge($fs_m, $fs);
+
+$iblockTable = \Bitrix\Iblock\Iblock::wakeUp(\Dao\App::ib('Static')->id())->getEntityDataClass();
+$elements = $iblockTable::getList([
+	'select' => ['ID', 'CODE', 'PREVIEW_PICTURE', 'HERO_CAPTION_' => 'HERO_CAPTION'],
+	'filter' => ['=ACTIVE' => 'Y'],
+])->fetchAll();
+foreach ($elements as $element) {
+	if($element['CODE'] == 'chto-ty-poluchish-s-nami') {
+		$arResult['WITH']['START']['PP'] = make_picture_width(CFile::GetFileArray($element['PREVIEW_PICTURE']), $width);
+		$arResult['WITH']['START']['CAPTION'] = $element['HERO_CAPTION_VALUE'];
+	}
+}
+$arSelect = Array(
+	'ID',
+	'NAME',
+	'DETAIL_PICTURE',
+	'PROPERTY_SPEEDRUN'
+);
+$arFilter = Array(
+	'IBLOCK_ID' => \Dao\App::ib('Team')->id(),
+	'ACTIVE_DATE' => 'Y',
+	'ACTIVE' => 'Y'
+);
+$res = CIBlockElement::GetList(
+	Array(),
+	$arFilter,
+	false,
+	Array(
+		'nPageSize' => 50
+	),
+	$arSelect
+);
+$k = 0;
+while($ob = $res->GetNextElement()) {
+	$arFields = $ob->GetFields();
+	if($arFields['~PROPERTY_SPEEDRUN_VALUE']['TEXT']) {
+		$arResult['TEAM'][$k]['NAME'] = $arFields['NAME'];
+		$arResult['TEAM'][$k]['PICTURE'] = make_picture_width(CFile::GetFileArray($arFields['DETAIL_PICTURE']), $width_all);
+		$arResult['TEAM'][$k]['SPEEDRUN'] = $arFields['~PROPERTY_SPEEDRUN_VALUE']['TEXT'];
+		$k++;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 $arSelect = Array(
 	'ID',
 	'PREVIEW_TEXT',
@@ -150,7 +211,7 @@ $arFilter = Array(
 	'IBLOCK_ID' => \Dao\App::ib('Static')->id(),
 	'ACTIVE_DATE' => 'Y',
 	'ACTIVE' => 'Y',
-	'CODE' => 'our-test'
+	'CODE' => 'our-test-mtt'
 );
 $res = CIBlockElement::GetList(
 	Array(),
