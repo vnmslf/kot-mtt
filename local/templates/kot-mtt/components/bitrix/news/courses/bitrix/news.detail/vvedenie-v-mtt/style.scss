@@ -225,6 +225,8 @@ section.course {
 			display: flex;
 			flex-direction: column;
 			gap: 20px;
+			position: relative;
+			z-index: 2;
 			.top {
 				h2 {
 					text-align: center;

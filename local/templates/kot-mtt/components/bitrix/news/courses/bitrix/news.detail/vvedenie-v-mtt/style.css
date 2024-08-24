@@ -152,7 +152,9 @@ section.course {
     section.course .container .ninth__section {
       display: flex;
       flex-direction: column;
-      gap: 20px; }
+      gap: 20px;
+      position: relative;
+      z-index: 2; }
       section.course .container .ninth__section .top h2 {
         text-align: center; }
       section.course .container .ninth__section .middle {
