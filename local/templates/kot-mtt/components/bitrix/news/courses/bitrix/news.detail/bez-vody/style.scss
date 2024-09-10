@@ -1,0 +1,127 @@
+@import "./../../../../../../../scss/style";
+section.course {
+	padding-top: 120px;
+	overflow: hidden;
+	.container {
+		flex-direction: column;
+		gap: 100px;
+		.first__section {
+			display: flex;
+			flex-direction: column;
+			gap: 34px;
+			img {
+				&.mobile {
+				}
+				&.pc {
+					display: none;
+				}
+			}
+			picture {
+				&.mobile {
+				}
+				&.pc {
+					display: none;
+				}
+			}
+			.info {
+				text-align: center;
+				font-weight: 600;
+				display: flex;
+				flex-direction: column;
+				gap: 19px;
+				h1 {
+					font-size: 20px;
+					line-height: 28px;
+				}
+				h2 {
+					font-size: 16px;
+					line-height: 22px;
+				}
+				.order__btn {
+					@include default_btn($accent_red, $dark_red);
+					font-family: "TacticSans", sans-serif;
+					width: 100%;
+					font-weight: 500;
+					font-size: 14px;
+					line-height: 17px;
+				}
+			}
+		}
+		.second__section {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			h2 {
+				text-align: center;
+			}
+			.after__course {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				width: 1200px;
+				transform: translateX(-60%);
+				gap: 6px;
+				.after__course-row {
+					display: flex;
+					flex-direction: row;
+					gap: 6px;
+					width: 1200px;
+					&:nth-child(2) {
+						transform: translateX(40%);
+					}
+					.after__course-block {
+						background: rgba($advantages, .3);
+						padding: 20px;
+						border-radius: 20px;
+						flex: 0 0 30%;
+						height: 90px;
+						position: relative;
+						font-weight: 600;
+						font-size: 16px;
+						font-family: "TacticSans", sans-serif;
+						&:after {
+							content: '';
+							position: absolute;
+							z-index: 0;
+							top: 0;
+							left: 0;
+							right: 0;
+							bottom: 0;
+							border-radius: 20px;
+							padding: 1px; 
+							background:linear-gradient(53deg, rgba($white, 0), rgba($white, 1), rgba($white, 0), rgba($white, .56), rgba($white, .48), rgba($white, .56)); 
+							-webkit-mask: 
+							linear-gradient(#fff 0 0) content-box, 
+							linear-gradient(#fff 0 0);
+							-webkit-mask-composite: xor;
+							mask-composite: exclude;
+						}
+					}
+				}
+			}
+		}
+	}
+	@include media-up(medium) {
+		.container {
+			gap: 150px;
+			.first__section {
+				img {
+					&.mobile {
+						display: none;
+					}
+					&.pc {
+						display: block;
+					}
+				}
+				picture {
+					&.mobile {
+						display: none;
+					}
+					&.pc {
+						display: block;
+					}
+				}
+			}
+		}
+	}
+}
